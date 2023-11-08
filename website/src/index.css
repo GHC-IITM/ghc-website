@@ -1,0 +1,9 @@
+.active{
+    background-color: #E53E3E;
+    border-radius: 0.375rem;
+    color: white;
+}
+
+.active:hover{
+    color: unset;
+}
