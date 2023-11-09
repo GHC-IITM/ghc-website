@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
     Box,
     Flex,
@@ -17,6 +18,8 @@ import {
     FormControl,
 } from '@chakra-ui/react'
 import SignUpField from '../components/SignUpField'
+import { useMutation } from "react-query";
+import signup from "../utils/mutations/signup";
 
 const avatars = [
     {
@@ -63,14 +66,115 @@ const Blur = (props: IconProps) => {
 }
 
 export default function JoinOurTeam() {
+    const [step, setStep] = useState<number>(4);
+    const [input, setInput] = useState({
+        email: "", password: "", teamname: "", homeUniversity: "", activemembers: undefined, attendeventmembers: undefined, teamrepresentetive: "", emailrepresentetive: "", numberrepresentetive: undefined, teamlogo: "", officialteamname: "", teamaddress: "", country: "", postalcode: undefined
+    });
+    const [loading, setLoading] = useState<boolean>(false)
+
+    const mutation = useMutation(signup);
+
+    function handleImageChange(e: any) {
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onloadend = function () {
+            var dataUrl = reader.result;
+            var base64data = (dataUrl as string)?.split(',')[1];
+            console.log(base64data);
+
+            if (base64data) {
+
+                setInput({
+                    ...input,
+                    teamlogo: base64data as string || "",
+                });
+            }
+        }
+    }
+
+    function handleChange(evt: any) {
+        const value = evt.target.value;
+        setInput({
+            ...input,
+            [evt.target.name]: value
+        });
+    }
+
+    async function handleSubmit() {
+        setLoading(true)
+        console.log(input)
+
+        const response = await mutation.mutateAsync(input);
+        console.log(response)
+
+        setLoading(false)
+    }
+
+    const Form1 = () => {
+        return (
+            <>
+                <SignUpField onChange={handleChange} value={input.email} id="email" label='Email address' placeholder='firstname@lastname.io' type='email' />
+                <SignUpField onChange={handleChange} value={input.password} id="password" label='Password' placeholder='Password' type='password' />
+            </>
+        )
+    }
+
+    const Form2 = () => {
+        return (
+            <>
+                <SignUpField onChange={handleChange} value={input.teamname} id="teamname" label='Team Name' placeholder='Ex: Loid hyperloop' type='text' />
+                <SignUpField onChange={handleChange} value={input.officialteamname} id="officialteamname" label='Official Team Name' placeholder='Ex: Loid HyperloopOne' type='text' />
+                <SignUpField onChange={handleChange} value={input.homeUniversity} id="homeUniversity" label='Home University' placeholder='IIT Madras' type='text' />
+            </>
+        )
+    }
+
+    const Form3 = () => {
+        return (
+            <>
+                <Stack display={'flex'} flexDirection={'row'} spacing={2}>
+                    <SignUpField onChange={handleChange} value={input.activemembers} id="activemembers" label='Active Members' placeholder='50' type='number' />
+                    <SignUpField onChange={handleChange} value={input.attendeventmembers} id="attendeventmembers" label='Event Members' placeholder='15' type='number' />
+                </Stack>
+                <SignUpField onChange={handleChange} value={input.numberrepresentetive} id="numberrepresentetive" label='No.of Reps' placeholder='2' type='number' />
+
+                <Stack display={'flex'} flexDirection={'row'} spacing={2}>
+                    <SignUpField onChange={handleChange} value={input.teamrepresentetive} id="teamrepresentetive" label='Team Rep' placeholder='Ex: Shaun' type='text' />
+                    <SignUpField onChange={handleChange} value={input.emailrepresentetive} id="emailrepresentetive" label='Rep Email' placeholder='firstname@provider.io' type='email' />
+                </Stack>
+
+            </>
+        )
+    }
+
+    const Form4 = () => {
+        return (
+            <>
+                <SignUpField
+                    onChange={handleImageChange}
+                    value={undefined}
+                    id="teamlogo"
+                    label='Logo File'
+                    placeholder=''
+                    type='file'
+                />
+                <SignUpField onChange={handleChange} value={input.teamaddress} id="teamaddress" label='Team Address' placeholder='Jane street, Northumberland Rd' type='text' />
+                <Stack display={'flex'} flexDirection={'row'} spacing={2}>
+                    <SignUpField onChange={handleChange} value={input.country} id="country" label='Country' placeholder='Ex: India' type='text' />
+                    <SignUpField onChange={handleChange} value={input.postalcode} id="postalcode" label='Postal Code' placeholder='Ex: 540056' type='text' />
+                </Stack>
+            </>
+        )
+    }
+
     return (
-        <Box position={'relative'}>
+        <Box position={'relative'} maxHeight={'100vh'} overflowY={'hidden'}>
             <Container
                 as={SimpleGrid}
                 maxW={'7xl'}
                 columns={{ base: 1, md: 2 }}
                 spacing={{ base: 10, lg: 32 }}
-                py={{ base: 10, sm: 20, lg: 32 }}>
+                py={{ base: 10, sm: 20, lg: 16 }}>
                 <Stack spacing={{ base: 10, md: 20 }}>
                     <Heading
                         zIndex={100}
@@ -154,36 +258,14 @@ export default function JoinOurTeam() {
                                 !
                             </Text>
                         </Heading>
-                        <Text color={'gray.500'} fontSize={{ base: 'sm', sm: 'md' }}>
-                            We’re looking for amazing engineers just like you! Become a part of our
-                            rockstar engineering team and skyrocket your career!
-                        </Text>
                     </Stack>
                     <Box as={'form'} mt={8}>
-                        <Stack spacing={2}>
-
-                            <SignUpField id="email" label='Email address' placeholder='firstname@lastname.io' type='email' />
-                            <SignUpField id="password" label='Password' placeholder='Password' type='password' />
-                            <SignUpField id="teamname" label='Team Name' placeholder='Ex: Loid hyperloop' type='text' />
-                            <SignUpField id="homeUniversity" label='Home University' placeholder='IIT Madras' type='text' />
-                            <SignUpField id="activemembers" label='Active Members' placeholder='50' type='number' />
-                            <SignUpField id="attendeventmembers" label='Event Members' placeholder='15' type='number' />
-
-                            <Flex>
-                                <SignUpField id="teamrepresentetive" label='Team Rep' placeholder='Ex: Shaun' type='text' />
-                                <SignUpField id="emailrepresentetive" label='Rep Email' placeholder='firstname@provider.io' type='email' />
-                            </Flex>
-
-                            <SignUpField id="numberrepresentetive" label='No.of Reps' placeholder='2' type='number' />
-                            <SignUpField id="teamlogo" label='Logo URL' placeholder='https://logo_img.com' type='text' />
-                            <SignUpField id="officialteamname" label='Official Team Name' placeholder='Ex: Loid HyperloopOne' type='text' />
-                            <SignUpField id="teamaddress" label='Team Address' placeholder='Jane street, Northumberland Rd' type='text' />
-                            <SignUpField id="country" label='Country' placeholder='Ex: India' type='text' />
-                            <SignUpField id="postalcode" label='Postal Code' placeholder='Ex: 540056' type='text' />
-
-
+                        <Stack key={step} spacing={2}>
+                            {step == 1 ? <Form1 /> : step == 2 ? <Form2 /> : step == 3 ? <Form3 /> : <Form4 />}
                         </Stack>
-                        <Button
+                        {/* <img src={file} /> */}
+                        {step === 4 ? <Button
+                            onClick={handleSubmit}
                             fontFamily={'heading'}
                             mt={8}
                             w={'full'}
@@ -192,11 +274,45 @@ export default function JoinOurTeam() {
                             _hover={{
                                 bgGradient: 'linear(to-r, red.400,pink.400)',
                                 boxShadow: 'xl',
-                            }}>
+                            }}
+                            isLoading={loading}
+                        >
                             Submit
-                        </Button>
+                        </Button> : <Stack display={'flex'} flexDirection={'row'} spacing={4}>
+                            <Button
+                                fontFamily={'heading'}
+                                mt={8}
+                                w={'full'}
+                                variant={'outline'}
+                                colorScheme={'red'}
+                                _hover={{
+                                    bgGradient: 'linear(to-r, red.400,pink.400)',
+                                    boxShadow: 'xl',
+                                    color: 'white'
+                                }}
+                                onClick={() => setStep((prev) => prev - 1)}
+                                isDisabled={step === 1}
+                            >
+                                Back
+                            </Button>
+                            <Button
+                                fontFamily={'heading'}
+                                mt={8}
+                                w={'full'}
+                                bgGradient="linear(to-r, red.400,pink.400)"
+                                color={'white'}
+                                _hover={{
+                                    bgGradient: 'linear(to-r, red.400,pink.400)',
+                                    boxShadow: 'xl',
+                                }}
+                                onClick={() => setStep((prev) => prev + 1)}
+                            >
+                                Next
+                            </Button>
+                        </Stack>
+                        }
                     </Box>
-                    form
+
                 </Stack>
             </Container>
             <Blur position={'absolute'} top={-10} left={-10} style={{ filter: 'blur(70px)' }} />

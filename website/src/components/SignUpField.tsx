@@ -1,18 +1,20 @@
 import { FormControl, FormLabel, Input } from '@chakra-ui/react'
-import React from 'react'
 
 type PropTypes = {
     id: string;
     placeholder: string;
     type: React.HTMLInputTypeAttribute;
     label: string;
+    onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+    value?: string | number | readonly string[] | undefined;
 }
 
-const SignUpField: React.FC<PropTypes> = ({ id, placeholder, type, label }) => {
+const SignUpField: React.FC<PropTypes> = ({ id, placeholder, type, label, onChange, value }) => {
     return (
         <FormControl isRequired id={id}>
             <FormLabel color={'gray.600'}>{label}</FormLabel>
             <Input
+                name={id}
                 placeholder={placeholder}
                 type={type}
                 bg={'gray.100'}
@@ -21,6 +23,8 @@ const SignUpField: React.FC<PropTypes> = ({ id, placeholder, type, label }) => {
                 _placeholder={{
                     color: 'gray.500',
                 }}
+                onChange={onChange}
+                value={value}
             />
         </FormControl>
     )
