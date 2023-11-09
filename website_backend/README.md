@@ -28,7 +28,7 @@ node server.js
 
 * Website: rippleinfosoft.com
 * Github: [@mitesh-200228](https://github.com/mitesh-200228)
-* LinkedIn: [@Mitesh Bediya](https://linkedin.com/in/Mitesh Bediya)
+* LinkedIn: [@Mitesh Bediya](https://www.linkedin.com/in/mitesh-bediya-7a2318201/)
 
 ## Show your support
 
