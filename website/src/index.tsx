@@ -50,7 +50,6 @@ root.render(
     <ColorModeScript />
     <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
-
         <RouterProvider router={router} fallbackElement={<App />} />
       </QueryClientProvider>
     </ChakraProvider>
