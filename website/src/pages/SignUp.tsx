@@ -13,7 +13,10 @@ import {
     useBreakpointValue,
     IconProps,
     Icon,
+    FormLabel,
+    FormControl,
 } from '@chakra-ui/react'
+import SignUpField from '../components/SignUpField'
 
 const avatars = [
     {
@@ -139,7 +142,7 @@ export default function JoinOurTeam() {
                     bg={'gray.50'}
                     rounded={'xl'}
                     p={{ base: 4, sm: 6, md: 8 }}
-                    spacing={{ base: 8 }}
+                    spacing={{ base: 0 }}
                     maxW={{ lg: 'lg' }}>
                     <Stack spacing={4}>
                         <Heading
@@ -157,26 +160,28 @@ export default function JoinOurTeam() {
                         </Text>
                     </Stack>
                     <Box as={'form'} mt={8}>
-                        <Stack spacing={4}>
-                            <Input
-                                placeholder="firstname@lastname.io"
-                                bg={'gray.100'}
-                                border={0}
-                                color={'gray.500'}
-                                _placeholder={{
-                                    color: 'gray.500',
-                                }}
-                            />
-                            <Input
-                                placeholder="Password"
-                                bg={'gray.100'}
-                                border={0}
-                                color={'gray.500'}
-                                type='password'
-                                _placeholder={{
-                                    color: 'gray.500',
-                                }}
-                            />
+                        <Stack spacing={2}>
+
+                            <SignUpField id="email" label='Email address' placeholder='firstname@lastname.io' type='email' />
+                            <SignUpField id="password" label='Password' placeholder='Password' type='password' />
+                            <SignUpField id="teamname" label='Team Name' placeholder='Ex: Loid hyperloop' type='text' />
+                            <SignUpField id="homeUniversity" label='Home University' placeholder='IIT Madras' type='text' />
+                            <SignUpField id="activemembers" label='Active Members' placeholder='50' type='number' />
+                            <SignUpField id="attendeventmembers" label='Event Members' placeholder='15' type='number' />
+
+                            <Flex>
+                                <SignUpField id="teamrepresentetive" label='Team Rep' placeholder='Ex: Shaun' type='text' />
+                                <SignUpField id="emailrepresentetive" label='Rep Email' placeholder='firstname@provider.io' type='email' />
+                            </Flex>
+
+                            <SignUpField id="numberrepresentetive" label='No.of Reps' placeholder='2' type='number' />
+                            <SignUpField id="teamlogo" label='Logo URL' placeholder='https://logo_img.com' type='text' />
+                            <SignUpField id="officialteamname" label='Official Team Name' placeholder='Ex: Loid HyperloopOne' type='text' />
+                            <SignUpField id="teamaddress" label='Team Address' placeholder='Jane street, Northumberland Rd' type='text' />
+                            <SignUpField id="country" label='Country' placeholder='Ex: India' type='text' />
+                            <SignUpField id="postalcode" label='Postal Code' placeholder='Ex: 540056' type='text' />
+
+
                         </Stack>
                         <Button
                             fontFamily={'heading'}

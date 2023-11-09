@@ -12,12 +12,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "./utils/queryClient"
 import "./index.css"
 
 // Pages
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
+import Contact from "./pages/Contact"
 
 const router = createBrowserRouter([
   {
@@ -25,12 +28,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path:"/login",
+    path: "/login",
     element: <Login />,
   },
   {
-    path:"/signup",
+    path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 
@@ -42,7 +49,10 @@ root.render(
   <React.StrictMode>
     <ColorModeScript />
     <ChakraProvider theme={theme}>
-      <RouterProvider router={router} fallbackElement={<App />} />
+      <QueryClientProvider client={queryClient}>
+
+        <RouterProvider router={router} fallbackElement={<App />} />
+      </QueryClientProvider>
     </ChakraProvider>
   </React.StrictMode>,
 )
