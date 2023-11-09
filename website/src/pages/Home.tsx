@@ -1,7 +1,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import TimeLine from '../components/TimeLine';
 import Footer from '../components/Footer';
+import Business from '../components/Business';
+import FAQ from '../components/FAQ';
 import { Box } from '@chakra-ui/react';
 
 const Home: React.FC<any> = () => {
@@ -9,7 +12,9 @@ const Home: React.FC<any> = () => {
         <Box maxWidth={'full'}>
             <Navbar />
             <HeroSection />
-
+            <Business/>
+            <TimeLine/>
+            <FAQ/>
             <Footer />
         </Box>
     )

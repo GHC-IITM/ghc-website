@@ -21,7 +21,7 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
 import Contact from "./pages/Contact"
-s
+
 const router = createBrowserRouter([
   {
     path: "/",
