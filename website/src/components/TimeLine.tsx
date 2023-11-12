@@ -40,12 +40,12 @@ const milestones = [
     }
 ];
 
-const Milestones = () => {
+const Milestones: React.FC<any> = ({ id }: { id: string }) => {
     const isMobile = useBreakpointValue({ base: true, md: false });
     const isDesktop = useBreakpointValue({ base: false, md: true });
 
     return (
-        <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+        <Container id={id} maxWidth="7xl" p={{ base: 2, sm: 10 }}>
             <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
                 TimeLine of GHC
             </chakra.h3>

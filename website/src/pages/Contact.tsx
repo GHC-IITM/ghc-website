@@ -66,7 +66,7 @@ export default function ContactFormWithSocialButtons() {
                                 base: '4xl',
                                 md: '5xl',
                             }}
-                            >
+                        >
                             Get in Touch
                         </Heading>
 

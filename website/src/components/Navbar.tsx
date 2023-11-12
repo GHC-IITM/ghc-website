@@ -25,7 +25,7 @@ interface Props {
     href: string,
 }
 
-const Links = ['Home', 'About', 'Contact', 'Login'];
+const Links = ['Home', 'About', 'Contact', 'Team', 'Login'];
 const urls: any = { 'Home': "/", 'About': "/about", 'Contact': "/contact", 'Team': "/team", 'Login': "/login" };
 
 const NavLink: React.FC<Props> = (props: Props) => {
@@ -68,12 +68,14 @@ export default function WithAction() {
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={'center'}>
-                        <Text
-                            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-                            fontFamily={'heading'}
-                            fontWeight={700}
-                            color={useColorModeValue('gray.800', 'white')}
-                        >GHC</Text>
+                        <Link to='/'>
+                            <Text
+                                textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+                                fontFamily={'heading'}
+                                fontWeight={700}
+                                color={useColorModeValue('gray.800', 'white')}
+                            >GHC</Text>
+                        </Link>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                             {Links.map((link) => (
                                 <NavLink href={urls[link]} key={urls[link]}>{link}</NavLink>

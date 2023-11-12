@@ -12,9 +12,9 @@ const Home: React.FC<any> = () => {
         <Box maxWidth={'full'}>
             <Navbar />
             <HeroSection />
-            <Business/>
-            <TimeLine/>
-            <FAQ/>
+            <Business />
+            <TimeLine id='timeline' />
+            <FAQ />
             <Footer />
         </Box>
     )

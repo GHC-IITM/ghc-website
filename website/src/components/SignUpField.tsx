@@ -20,6 +20,7 @@ const SignUpField: React.FC<PropTypes> = ({ id, placeholder, type, label, onChan
                 bg={'gray.100'}
                 border={0}
                 color={'gray.500'}
+                focusBorderColor='red.400'
                 _placeholder={{
                     color: 'gray.500',
                 }}

@@ -44,7 +44,7 @@ export default function CallToActionWithVideo() {
                         </Text>
                         <br />
                         <Text as={'span'} color={'red.400'}>
-                            Global Hyperloop Competetion
+                            Global Hyperloop Competition
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
@@ -54,12 +54,14 @@ export default function CallToActionWithVideo() {
                     </Text>
                     <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
                         <Button
+                            as='a'
+                            href='#timeline'
                             rounded={'full'}
                             size={'lg'}
                             fontWeight={'bold'}
                             px={6}
                             colorScheme={'red'}
-                            bg={'red.400'}  
+                            bg={'red.400'}
                             _hover={{ bg: 'red.500' }}>
                             Get started
                         </Button>
@@ -79,7 +81,7 @@ export default function CallToActionWithVideo() {
                     align={'center'}
                     position={'relative'}
                     w={'full'}
-                    >
+                >
                     <Blob
                         w={'150%'}
                         h={'150%'}
