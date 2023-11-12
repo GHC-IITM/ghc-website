@@ -17,9 +17,9 @@ import {
     useColorModeValue,
     VStack,
 } from '@chakra-ui/react'
-import { BsPerson, BsX } from 'react-icons/bs'
+import { BsPerson } from 'react-icons/bs'
 import { MdEmail, MdMailOutline } from 'react-icons/md'
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -65,7 +65,8 @@ export default function ContactFormWithSocialButtons() {
                             fontSize={{
                                 base: '4xl',
                                 md: '5xl',
-                            }}>
+                            }}
+                            >
                             Get in Touch
                         </Heading>
 
@@ -101,7 +102,7 @@ export default function ContactFormWithSocialButtons() {
                                         variant="ghost"
                                         size="lg"
                                         fontSize="3xl"
-                                        icon={<FaGithub />}
+                                        icon={<FaInstagram />}
                                         _hover={{
                                             bg: 'red.500',
                                             color: useColorModeValue('white', 'gray.700'),
@@ -115,7 +116,7 @@ export default function ContactFormWithSocialButtons() {
                                         aria-label="twitter"
                                         variant="ghost"
                                         size="lg"
-                                        icon={<BsX size="28px" />}
+                                        icon={<FaTwitter size="28px" />}
                                         _hover={{
                                             bg: 'red.500',
                                             color: useColorModeValue('white', 'gray.700'),

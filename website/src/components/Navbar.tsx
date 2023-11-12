@@ -25,7 +25,7 @@ interface Props {
     href: string,
 }
 
-const Links = ['Home', 'About', 'Contact', 'Team', 'Login'];
+const Links = ['Home', 'About', 'Contact', 'Login'];
 const urls: any = { 'Home': "/", 'About': "/about", 'Contact': "/contact", 'Team': "/team", 'Login': "/login" };
 
 const NavLink: React.FC<Props> = (props: Props) => {

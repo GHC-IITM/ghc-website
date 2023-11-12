@@ -18,7 +18,7 @@ export default function SimpleAccordion() {
     <Flex
       minH={'50vh'}
       align={'center'}
-      marginBottom={'2%'}
+      marginBottom={'5%'}
       justify={'center'}
       flexDirection={'column'}
     //   bg={useColorModeValue('gray.50', 'gray.800')}
@@ -36,7 +36,7 @@ export default function SimpleAccordion() {
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
-              <Text color="gray.600">
+              <Text color="gray.500">
                 Chakra UI is a simple and modular component library that gives developers
                 the building blocks they need to create web applications.
               </Text>
@@ -52,7 +52,7 @@ export default function SimpleAccordion() {
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
-              <Text color="gray.600">
+              <Text color="gray.500">
                 Chakra UI offers a variety of advantages including ease of use,
                 accessibility, and customization options. It also provides a comprehensive
                 set of UI components and is fully compatible with React.
@@ -69,7 +69,7 @@ export default function SimpleAccordion() {
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
-              <Text color="gray.600">
+              <Text color="gray.500">
                 To get started with Chakra UI, you can install it via npm or yarn, and
                 then import the components you need in your project. The Chakra UI
                 documentation is also a great resource for getting started and learning

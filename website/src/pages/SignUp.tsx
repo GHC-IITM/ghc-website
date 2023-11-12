@@ -66,7 +66,7 @@ const Blur = (props: IconProps) => {
 }
 
 export default function JoinOurTeam() {
-    const [step, setStep] = useState<number>(4);
+    const [step, setStep] = useState<number>(1);
     const [input, setInput] = useState({
         email: "", password: "", teamname: "", homeUniversity: "", activemembers: undefined, attendeventmembers: undefined, teamrepresentetive: "", emailrepresentetive: "", numberrepresentetive: undefined, teamlogo: "", officialteamname: "", teamaddress: "", country: "", postalcode: undefined
     });
@@ -264,52 +264,69 @@ export default function JoinOurTeam() {
                             {step == 1 ? <Form1 /> : step == 2 ? <Form2 /> : step == 3 ? <Form3 /> : <Form4 />}
                         </Stack>
                         {/* <img src={file} /> */}
-                        {step === 4 ? <Button
-                            onClick={handleSubmit}
-                            fontFamily={'heading'}
-                            mt={8}
-                            w={'full'}
-                            bgGradient="linear(to-r, red.400,pink.400)"
-                            color={'white'}
-                            _hover={{
-                                bgGradient: 'linear(to-r, red.400,pink.400)',
-                                boxShadow: 'xl',
-                            }}
-                            isLoading={loading}
-                        >
-                            Submit
-                        </Button> : <Stack display={'flex'} flexDirection={'row'} spacing={4}>
-                            <Button
-                                fontFamily={'heading'}
-                                mt={8}
-                                w={'full'}
-                                variant={'outline'}
-                                colorScheme={'red'}
-                                _hover={{
-                                    bgGradient: 'linear(to-r, red.400,pink.400)',
-                                    boxShadow: 'xl',
-                                    color: 'white'
-                                }}
-                                onClick={() => setStep((prev) => prev - 1)}
-                                isDisabled={step === 1}
-                            >
-                                Back
-                            </Button>
-                            <Button
-                                fontFamily={'heading'}
-                                mt={8}
-                                w={'full'}
-                                bgGradient="linear(to-r, red.400,pink.400)"
-                                color={'white'}
-                                _hover={{
-                                    bgGradient: 'linear(to-r, red.400,pink.400)',
-                                    boxShadow: 'xl',
-                                }}
-                                onClick={() => setStep((prev) => prev + 1)}
-                            >
-                                Next
-                            </Button>
-                        </Stack>
+                        {step === 4 ?
+                            <Stack display={'flex'} flexDirection={'row'} spacing={4}>
+                                <Button
+                                    fontFamily={'heading'}
+                                    mt={8}
+                                    w={'full'}
+                                    variant={'outline'}
+                                    colorScheme={'red'}
+                                    _hover={{
+                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        boxShadow: 'xl',
+                                        color: 'white'
+                                    }}
+                                    onClick={() => setStep((prev) => prev - 1)}
+                                >
+                                    Back
+                                </Button>
+                                <Button
+                                    onClick={handleSubmit}
+                                    fontFamily={'heading'}
+                                    mt={8}
+                                    w={'full'}
+                                    bgGradient="linear(to-r, red.400,pink.400)"
+                                    color={'white'}
+                                    _hover={{
+                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        boxShadow: 'xl',
+                                    }}
+                                    isLoading={loading}
+                                >
+                                    Submit
+                                </Button></Stack> : <Stack display={'flex'} flexDirection={'row'} spacing={4}>
+                                <Button
+                                    fontFamily={'heading'}
+                                    mt={8}
+                                    w={'full'}
+                                    variant={'outline'}
+                                    colorScheme={'red'}
+                                    _hover={{
+                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        boxShadow: 'xl',
+                                        color: 'white'
+                                    }}
+                                    onClick={() => setStep((prev) => prev - 1)}
+                                    isDisabled={step === 1}
+                                >
+                                    Back
+                                </Button>
+                                <Button
+                                    fontFamily={'heading'}
+                                    mt={8}
+                                    w={'full'}
+                                    bgGradient="linear(to-r, red.400,pink.400)"
+                                    color={'white'}
+                                    _hover={{
+                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        boxShadow: 'xl',
+                                    }}
+                                    onClick={() => setStep((prev) => prev + 1)}
+                                >
+                                    Next
+                                </Button>
+                            </Stack>
                         }
                     </Box>
 
