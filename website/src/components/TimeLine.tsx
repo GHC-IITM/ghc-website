@@ -14,29 +14,29 @@ import {
 const milestones = [
     {
         id: 1,
-        date: 'MARCH 30, 2022',
-        title: 'Chakra Hackathon',
-        description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`
+        date: 'January 2024',
+        title: 'Lecture Series',
+        description:"An online lecture series covering the major concepts related to hyperloop"
     },
     {
         id: 2,
-        date: 'July 30, 2021',
-        title: 'Open Source, first contribution',
-        description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`
+        date: 'JAN-FEB 2024',
+        title: 'Case Study',
+        description: `A online case study competition for teams`
     },
     {
         id: 3,
-        date: 'July 30, 2018',
-        title: 'Freelancing, started working for myself',
+        date: 'March 2024',
+        title: 'The Conference',
         description:
-            'Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.'
+            'The conference brings together leading companies, visionary speakers and hyperloop enthusiastic teams!'
     },
     {
         id: 4,
-        date: 'July 30, 2018',
-        title: 'Freelancing, started working for myself',
+        date: 'January 2025',
+        title: 'Global Hyperloop competition',
         description:
-            'Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.'
+            'With a 400m tube we will conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.'
     }
 ];
 
@@ -45,9 +45,9 @@ const Milestones: React.FC<any> = ({ id }: { id: string }) => {
     const isDesktop = useBreakpointValue({ base: false, md: true });
 
     return (
-        <Container id={id} maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+        <Container id={id} maxWidth="7xl" p={8} mb={8}>
             <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
-                TimeLine of GHC
+                TimeLine of GHC 1.0
             </chakra.h3>
             {milestones.map((milestone) => (
                 <Flex key={milestone.id} mb="10px">
@@ -109,7 +109,7 @@ const Card = ({ id, title, description, date }: CardProps) => {
         <HStack
             flex={1}
             p={{ base: 3, sm: 6 }}
-            bg={useColorModeValue('gray.100', 'gray.800')}
+            bg={useColorModeValue('gray.100', 'gray.700')}
             spacing={5}
             rounded="lg"
             alignItems="center"

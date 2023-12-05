@@ -47,14 +47,15 @@ export default function SplitWithImage() {
             p={2}
             alignSelf={'flex-start'}
             rounded={'md'}>
-            Our Story
+            Our Vision
           </Text>
-          <Heading>Global Hyperloop Competition in India!</Heading>
+          <Heading>What is Global Hyperloop Competition?</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore
+            The Global Hyperloop Competition, hosted by the Indian Institute of Technology, Madras, introduces the Hyperloop to India, providing a global platform for innovative teams. It aims to showcase and propagate hyperloop concepts worldwide, fostering a transformative spirit among young minds in the field of transportation.
           </Text>
-          <Stack
+          <Text color={'gray.500'} fontSize={'lg'}>
+With a 400m tube on the edge we have a vision to conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.          </Text>
+          {/* <Stack
             spacing={4}
             divider={
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
@@ -74,14 +75,14 @@ export default function SplitWithImage() {
               iconBg={useColorModeValue('purple.100', 'purple.900')}
               text={'Market Analysis'}
             />
-          </Stack>
+          </Stack> */}
         </Stack>
         <Flex>
           <Image
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+              'https://th.bing.com/th/id/OIG.qwy3pP6MlqIrlvkcjX7b?pid=ImgGn'
             }
             objectFit={'cover'}
           />

@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 import {
   ChakraProvider,
-  theme,
 } from "@chakra-ui/react"
 import {
   createBrowserRouter,
@@ -21,8 +20,12 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
 import Contact from "./pages/Contact"
-import About from "./pages/About"
-import Team from "./pages/Team"
+import MissionNdVission from "./pages/about/MissionNdVission"
+import Team from "./pages/about/Team"
+import Dashboard from "./pages/Dashboard"
+import theme from "./utils/theme"
+import GHC1 from "./pages/events/GHC1"
+import Activity from "./pages/about/Activity"
 
 const router = createBrowserRouter([
   {
@@ -42,12 +45,24 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
-    path: "/about",
-    element: <About />,
+    path: "/about/mission",
+    element: <MissionNdVission />,
   },
   {
-    path: "/team",
+    path: "/about/team",
     element: <Team />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "/events/ghc1.0",
+    element: <GHC1 />,
+  },
+  {
+    path: "/about/activity",
+    element: <Activity />,
   },
 ]);
 

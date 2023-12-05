@@ -8,10 +8,10 @@ import {
     Avatar,
     useColorModeValue,
 } from '@chakra-ui/react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import BasicStatistics from '../components/Stats'
-import OurTeam from '../components/OurTeam'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import BasicStatistics from '../../components/Stats'
+import OurTeam from '../../components/OurTeam'
 
 interface Props {
     children: React.ReactNode

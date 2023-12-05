@@ -10,9 +10,10 @@ import {
     IconButton,
     useColorModeValue,
 } from '@chakra-ui/react'
-import { ReactNode } from 'react'
+import { ReactNode, useState } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 // const Logo = (props: any) => {
 //     return (
@@ -69,11 +70,13 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 }
 
 export default function LargeWithNewsletter() {
+    const [email, setEmail] = useState("");
+
     return (
         <Box
-            bg={useColorModeValue('gray.50', 'gray.900')}
+            bg={useColorModeValue('gray.100', 'gray.900')}
             color={useColorModeValue('gray.700', 'gray.200')}
-            >
+        >
             <Container as={Stack} maxW={'6xl'} py={10} >
                 <SimpleGrid
                     templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
@@ -85,17 +88,17 @@ export default function LargeWithNewsletter() {
                         </Box>
                         <Text fontSize={'sm'}>© 2023 GHC . All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
-                            <SocialButton label={'Twitter'} href={'#'}>
+                            <SocialButton label={'Instagram'} href="https://www.instagram.com/ghc_india/">
+                                <FaInstagram />
+                            </SocialButton>
+                            <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/company/global-hyperloop-competition-iitm/mycompany/'}>
+                                <FaLinkedin />
+                            </SocialButton>
+                            <SocialButton label={'Twitter'} href={'https://twitter.com/GHCIITM'}>
                                 <FaTwitter />
                             </SocialButton>
                             <SocialButton label={'YouTube'} href={'#'}>
                                 <FaYoutube />
-                            </SocialButton>
-                            <SocialButton label={'Instagram'} href={'#'}>
-                                <FaInstagram />
-                            </SocialButton>
-                            <SocialButton label={'Linkedingit '} href={'#'}>
-                                <FaLinkedin />
                             </SocialButton>
                         </Stack>
                     </Stack>
@@ -139,6 +142,8 @@ export default function LargeWithNewsletter() {
                         <ListHeader>Contact Us</ListHeader>
                         <Stack direction={'row'}>
                             <Input
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
                                 placeholder={'Your email address'}
                                 bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
                                 border={0}
@@ -147,15 +152,17 @@ export default function LargeWithNewsletter() {
                                 }}
                                 focusBorderColor='red.400'
                             />
-                            <IconButton
-                                bg={useColorModeValue('red.400', 'red.600')}
-                                color={useColorModeValue('white', 'gray.200')}
-                                _hover={{
-                                    bg: useColorModeValue('red.600', 'red.400'),
-                                }}
-                                aria-label="Contact"
-                                icon={<BiMailSend />}
-                            />
+                            <Link to={`/contact?email=${email}`}>
+                                <IconButton
+                                    bg={useColorModeValue('red.400', 'red.600')}
+                                    color={useColorModeValue('white', 'gray.200')}
+                                    _hover={{
+                                        bg: useColorModeValue('red.600', 'red.400'),
+                                    }}
+                                    aria-label="Contact"
+                                    icon={<BiMailSend />}
+                                />
+                            </Link>
                         </Stack>
                     </Stack>
                 </SimpleGrid>

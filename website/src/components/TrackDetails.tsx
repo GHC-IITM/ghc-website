@@ -43,9 +43,7 @@ export default function TrackDetails() {
                                 400m vaacum tube
                             </Heading>
                             <Text fontSize={'xl'} color={'gray.400'}>
-                                The NewLife™ technology allows you to monitor your crops and get complete
-                                insights at real time. The proprietary software/hardware ecosystem
-                                prevents your plants from getting neglected.
+                                The hyperloop track features a 4-meter diameter tube spanning a length of 400 meters, designed to maximize efficiency and speed in transportation. With a focus on aerodynamic excellence, the spacious tube minimizes air resistance, allowing hyperloop pods to achieve high velocities with reduced energy consumption.
                             </Text>
                         </Box>
 
@@ -77,38 +75,18 @@ const StatsText = ({ children }: { children: ReactNode }) => (
 
 const stats = [
     {
-        title: '10+',
+        title: 'Length 400m',
         content: (
             <>
-                <StatsText>Software modules</StatsText> for detailed monitoring and real-time
-                analytics
+                <StatsText>It's Huge Length</StatsText> enhances acceleration and deceleration capabilities, optimizing the overall efficiency of the transportation system.
             </>
         ),
     },
     {
-        title: '24/7',
+        title: 'Diameter 4m',
         content: (
             <>
-                <StatsText>Analytics</StatsText> enabled right in your dashboard without history
-                limitations
-            </>
-        ),
-    },
-    {
-        title: '13%',
-        content: (
-            <>
-                <StatsText>Farms</StatsText> in North America has chosen NewLife™ as their
-                management solution
-            </>
-        ),
-    },
-    {
-        title: '250M+',
-        content: (
-            <>
-                <StatsText>Plants</StatsText> currently connected and monitored by the NewLife™
-                software
+                <StatsText>4-meter diameter tube</StatsText> for a hyperloop pod provides enhanced aerodynamic efficiency, minimizing air resistance and allowing for higher speeds with reduced energy consumption.
             </>
         ),
     },

@@ -1,8 +1,7 @@
-export default async function signup(values: any) {
+export default async function contact(values: any) {
     const API_URL = process.env.REACT_APP_API_URL;
-    console.log(JSON.stringify(values))
 
-    const res = await fetch(`${API_URL}/register`, {
+    const res = await fetch(`${API_URL}/contact`, {
         headers: {
             "Content-Type": "application/json",
         },

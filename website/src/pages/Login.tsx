@@ -10,14 +10,19 @@ import {
     Heading,
     Text,
     useColorModeValue,
+    Link,
 } from '@chakra-ui/react'
 import { Form, Formik } from "formik";
 import { useMutation } from "react-query";
 import login from '../utils/mutations/login';
+import { useState } from 'react';
+import { useNavigate, Link as ReactLink } from "react-router-dom";
 
 export default function SimpleCard() {
 
     const mutation = useMutation(login);
+    const navigate = useNavigate();
+    const [error, setError] = useState<string | undefined>()
 
     return (
         <Flex
@@ -36,15 +41,24 @@ export default function SimpleCard() {
                     rounded={'lg'}
                     bg={useColorModeValue('white', 'gray.700')}
                     boxShadow={'lg'}
-                    p={8}>
+                    p={8}
+                >
                     <Formik
                         initialValues={{
                             email: "",
                             password: "",
                         }}
-                        onSubmit={async (values, { setErrors }) => {
+                        onSubmit={async (values) => {
                             const response = await mutation.mutateAsync(values);
-                            console.log(response)
+                            console.log(response);
+
+                            if (response.message === "Login success!") {
+                                const token = response.token;
+                                localStorage.setItem('qid', token);
+                                navigate("/dashboard")
+                            } else {
+                                setError(response.message)
+                            }
                         }}
                     >
                         {({ isSubmitting, handleChange, values }) => (
@@ -63,8 +77,8 @@ export default function SimpleCard() {
                                             direction={{ base: 'column', sm: 'row' }}
                                             align={'start'}
                                             justify={'space-between'}>
-                                            <Checkbox colorScheme='red'>Remember me</Checkbox>
-                                            <Text color={'red.400'}>Terms & Condn </Text>
+                                            <Checkbox defaultChecked={true} colorScheme='red'>Remember me</Checkbox>
+                                            {/* <Text color={'red.400'}>Terms & Condn </Text> */}
                                         </Stack>
                                         <Button
                                             type="submit"
@@ -82,6 +96,12 @@ export default function SimpleCard() {
                                         </Button>
                                     </Stack>
                                 </Stack>
+                                <Text align={'center'} color={'red.600'} pt={2}>
+                                    {error}
+                                </Text>
+                                <Text pt={2} align={'center'}>
+                                    Don't have an account yet? <Link as={ReactLink} color={'red.400'} to='/signup'>Register Now!</Link>
+                                </Text>
                             </Form>
 
                         )}

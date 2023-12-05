@@ -13,6 +13,8 @@ import {
     IconProps,
     useColorModeValue,
 } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function CallToActionWithVideo() {
     return (
@@ -48,31 +50,37 @@ export default function CallToActionWithVideo() {
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
-                        Snippy is a rich coding snippets app that lets you create your own code
-                        snippets, categorize them, and even sync them in the cloud so you can use them
-                        anywhere. All that is free!
+                        Welcome to the Global Hyperloop Competition, where innovation knows no bounds!. Unleash your creativity, accelerate breakthroughs, and be part of the revolution – the Hyperloop revolution starts here!
                     </Text>
                     <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-                        <Button
-                            as='a'
-                            href='#timeline'
-                            rounded={'full'}
-                            size={'lg'}
-                            fontWeight={'bold'}
-                            px={6}
-                            colorScheme={'red'}
-                            bg={'red.400'}
-                            _hover={{ bg: 'red.500' }}>
-                            Get started
-                        </Button>
-                        <Button
-                            rounded={'full'}
-                            size={'lg'}
-                            fontWeight={'normal'}
-                            px={6}
-                            leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                            How It Works
-                        </Button>
+                        <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
+                            <Link to={"/signup"}>
+                                <Button
+                                    rounded={'full'}
+                                    size={'lg'}
+                                    fontWeight={'bold'}
+                                    px={6}
+                                    colorScheme={'red'}
+                                    bg={'red.400'}
+                                    _hover={{ bg: 'red.500' }}>
+                                    Get started
+                                </Button>
+                            </Link>
+                        </motion.div>
+
+                        <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
+                            <Link to={'/about/mission#what-is-hyperloop'}>
+                                <Button
+                                    rounded={'full'}
+                                    size={'lg'}
+                                    fontWeight={'normal'}
+                                    px={6}
+                                    leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
+                                >
+                                    How It Works
+                                </Button>
+                            </Link>
+                        </motion.div>
                     </Stack>
                 </Stack>
                 <Flex
