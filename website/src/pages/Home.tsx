@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
+import HeroSection from '../components/HomeHero';
 import TimeLine from '../components/TimeLine';
 import Footer from '../components/Footer';
 import Business from '../components/Business';

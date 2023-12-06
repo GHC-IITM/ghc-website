@@ -14,25 +14,19 @@ import {
 const milestones = [
     {
         id: 1,
-        date: 'January 2024',
-        title: 'Lecture Series',
-        description:"An online lecture series covering the major concepts related to hyperloop"
+        date: 'JAN-FEB 2024',
+        title: 'Inaugural of the 400m vaccum tube',
+        description: `Inaguration of the 400m vaccum tube by a important personality!`
     },
     {
         id: 2,
-        date: 'JAN-FEB 2024',
-        title: 'Case Study',
-        description: `A online case study competition for teams`
-    },
-    {
-        id: 3,
         date: 'March 2024',
         title: 'The Conference',
         description:
             'The conference brings together leading companies, visionary speakers and hyperloop enthusiastic teams!'
     },
     {
-        id: 4,
+        id: 3,
         date: 'January 2025',
         title: 'Global Hyperloop competition',
         description:

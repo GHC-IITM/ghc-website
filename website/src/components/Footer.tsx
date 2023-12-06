@@ -11,9 +11,10 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import { ReactNode, useState } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaPhone, FaMailBulk } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
+import { MdMail, MdPhone } from 'react-icons/md'
 
 // const Logo = (props: any) => {
 //     return (
@@ -97,28 +98,26 @@ export default function LargeWithNewsletter() {
                             <SocialButton label={'Twitter'} href={'https://twitter.com/GHCIITM'}>
                                 <FaTwitter />
                             </SocialButton>
-                            <SocialButton label={'YouTube'} href={'#'}>
+                            <SocialButton label={'YouTube'} href={'https://www.youtube.com/channel/UCevcN_ISH3AZ5eujROl7UAQ'}>
                                 <FaYoutube />
                             </SocialButton>
                         </Stack>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Company</ListHeader>
-                        <Box as="a" href={'#'}>
-                            About us
+                        <Box as="a" href={'/about/mission'}>
+                            Our Mission and Vision
                         </Box>
                         <Box as="a" href={'#'}>
                             Blog
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box as="a" href={'/contact'}>
                             Contact us
                         </Box>
-                        <Box as="a" href={'#'}>
-                            Pricing
+                        <Box as="a" href={'/about/team'}>
+                            Our Team
                         </Box>
-                        <Box as="a" href={'#'}>
-                            Testimonials
-                        </Box>
+
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Support</ListHeader>
@@ -134,13 +133,11 @@ export default function LargeWithNewsletter() {
                         <Box as="a" href={'#'}>
                             Privacy Policy
                         </Box>
-                        <Box as="a" href={'#'}>
-                            Satus
-                        </Box>
+
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Contact Us</ListHeader>
-                        <Stack direction={'row'}>
+                        <Stack direction={'row'} w={''}>
                             <Input
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
@@ -163,6 +160,10 @@ export default function LargeWithNewsletter() {
                                     icon={<BiMailSend />}
                                 />
                             </Link>
+                        </Stack>
+                        <Stack mt={6} direction={'row'} w='80%'>
+                            <IconButton as='a' href='tel:+91-8437655909' width={'50%'} icon={<MdPhone />} aria-label='phone' />
+                            <IconButton as='a' href='mailto: ghc@smail.iitm.ac.in' width={'50%'} icon={<MdMail />} aria-label='email' />
                         </Stack>
                     </Stack>
                 </SimpleGrid>

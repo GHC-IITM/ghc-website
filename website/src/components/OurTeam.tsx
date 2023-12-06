@@ -35,24 +35,33 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function OurTeam() {
     return (
-        <Container maxW={'5xl'} py={12}>
+        <Container maxW={'5xl'} py={12} mb={10}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+                <Flex>
+                    <Image
+                        rounded={'md'}
+                        alt={'feature image'}
+                        src={
+                            'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+                        }
+                        objectFit={'cover'}
+                    />
+                </Flex>
                 <Stack spacing={4}>
                     <Text
                         textTransform={'uppercase'}
-                        color={'red.400'}
+                        color={'blue.400'}
                         fontWeight={600}
                         fontSize={'sm'}
-                        bg={useColorModeValue('red.50', 'red.900')}
+                        bg={useColorModeValue('blue.50', 'blue.900')}
                         p={2}
                         alignSelf={'flex-start'}
                         rounded={'md'}>
                         Our Story
                     </Text>
-                    <Heading>A hyperloop Promoting Team!</Heading>
+                    <Heading>A Hyperloop Promoting Team!</Heading>
                     <Text color={'gray.500'} fontSize={'lg'}>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore
+                        Meet our dynamic team—a fusion of diverse talents driven by a shared passion for excellence. With expertise spanning various domains, we thrive on collaboration and innovation. Together, we navigate challenges, turning them into opportunities.
                     </Text>
                     <Stack
                         spacing={4}
@@ -76,16 +85,7 @@ export default function OurTeam() {
                         />
                     </Stack>
                 </Stack>
-                <Flex>
-                    <Image
-                        rounded={'md'}
-                        alt={'feature image'}
-                        src={
-                            'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-                        }
-                        objectFit={'cover'}
-                    />
-                </Flex>
+
             </SimpleGrid>
         </Container>
     )

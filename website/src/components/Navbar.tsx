@@ -367,7 +367,7 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Our Mission',
                 href: "/about/mission",
-                subLabel: "Learn about our Vission, Mission"
+                subLabel: "Learn about our Vision, Mission"
             },
             {
                 label: "Activity",

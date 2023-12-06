@@ -25,7 +25,7 @@ import TrackDetails from '../../components/TrackDetails'
 
 export default function Simple() {
     return (
-        <Container maxW={'7xl'} px={0}>
+        <Container maxW={'7xl'} px={0} >
             <Box width={'full'}>
                 <Navbar />
             </Box>

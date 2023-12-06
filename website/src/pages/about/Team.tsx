@@ -7,11 +7,14 @@ import {
     Container,
     Avatar,
     useColorModeValue,
+    Image,
 } from '@chakra-ui/react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import BasicStatistics from '../../components/Stats'
 import OurTeam from '../../components/OurTeam'
+import TeamHero from '../../components/TeamHero'
+import Advisors from '../../components/Advisors'
 
 interface Props {
     children: React.ReactNode
@@ -100,12 +103,15 @@ const TestimonialAvatar = ({
     )
 }
 
-export default function WithSpeechBubbles() {
+export default function Team() {
     return (
-        <Box bg={useColorModeValue('white', 'gray.800')}>
+        <Box maxWidth={'full'} bg={useColorModeValue('white', 'gray.800')}>
             <Box width={'full'}>
                 <Navbar />
             </Box>
+
+            <TeamHero />
+            {/* 
             <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
                 <Stack spacing={0} align={'center'}>
                     <Heading>Our Team Heads Speak</Heading>
@@ -179,8 +185,34 @@ export default function WithSpeechBubbles() {
                         />
                     </Testimonial>
                 </Stack>
-                <BasicStatistics />
-            </Container>
+                 <BasicStatistics /> 
+            </Container> */}
+
+            <Advisors />
+
+            <Stack direction={{ base: 'column-reverse', md: 'row' }} maxW='5xl' py={10} mt={20} align={'center'} id={'heads'}>
+                <Stack spacing={2} as={Container} maxW={'3xl'} textAlign={'center'} py={4} mb={10}>
+                    <Heading fontSize={{ base: '2xl', sm: '5xl' }} fontWeight={'bold'}>
+                        Arpit Garg
+                    </Heading>
+                    <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={{ base: 'sm', sm: 'lg' }}>
+                        GHC Head
+                    </Text>
+                    <Text color={useColorModeValue('gray.600', 'gray.200')} fontSize={{ base: 'sm', sm: 'lg' }}>
+                        Email: ghc@smail.iitm.ac.in
+                    </Text>
+                    <Text color={useColorModeValue('gray.600', 'gray.200')} fontSize={{ base: 'sm', sm: 'lg' }}>
+                        Phone: +91-8437655909
+                    </Text>
+                </Stack>
+                <Image
+                    src={'/arpit.jpg'}
+                    borderRadius={'none'}
+                    h={300}
+                    w={300}
+                    alt={'/arpit.jpg'}
+                />
+            </Stack>
 
             <OurTeam />
             <Box width={'full'}>

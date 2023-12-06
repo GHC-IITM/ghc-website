@@ -54,7 +54,7 @@ export default function SplitWithImage() {
             The Global Hyperloop Competition, hosted by the Indian Institute of Technology, Madras, introduces the Hyperloop to India, providing a global platform for innovative teams. It aims to showcase and propagate hyperloop concepts worldwide, fostering a transformative spirit among young minds in the field of transportation.
           </Text>
           <Text color={'gray.500'} fontSize={'lg'}>
-With a 400m tube on the edge we have a vision to conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.          </Text>
+            With a 400m tube on the edge we have a vision to conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.          </Text>
           {/* <Stack
             spacing={4}
             divider={

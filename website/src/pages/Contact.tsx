@@ -24,7 +24,7 @@ import {
     useDisclosure,
 } from '@chakra-ui/react'
 import { BsPerson } from 'react-icons/bs'
-import { MdEmail, MdMailOutline } from 'react-icons/md'
+import { MdEmail, MdMailOutline, MdPhone } from 'react-icons/md'
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -59,6 +59,7 @@ function useQuery() {
 
 export default function ContactFormWithSocialButtons() {
     const { hasCopied, onCopy } = useClipboard('ghc@smail.iitm.ac.in');
+    const { hasCopied: hasPhoneCopied, onCopy: onPhoneCopy } = useClipboard('+91 8437655909');
     const mutation = useMutation(contact);
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
@@ -177,6 +178,24 @@ export default function ContactFormWithSocialButtons() {
                                             color: useColorModeValue('white', 'gray.700'),
                                         }}
                                         onClick={onCopy}
+                                        isRound
+                                    />
+                                </Tooltip>
+                                <Tooltip
+                                    label={hasPhoneCopied ? 'Phone number Copied!' : 'Copy Phone number'}
+                                    closeOnClick={false}
+                                    hasArrow>
+                                    <IconButton
+                                        aria-label="phone"
+                                        variant="ghost"
+                                        size="lg"
+                                        fontSize="3xl"
+                                        icon={<MdPhone />}
+                                        _hover={{
+                                            bg: 'red.500',
+                                            color: useColorModeValue('white', 'gray.700'),
+                                        }}
+                                        onClick={onPhoneCopy}
                                         isRound
                                     />
                                 </Tooltip>
