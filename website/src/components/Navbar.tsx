@@ -117,7 +117,6 @@ export default function WithSubnavigation() {
 
                                 <Link to={'/signup'}>
                                     <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-
                                         <Button
                                             fontSize={'sm'}
                                             rounded={'full'}
@@ -136,20 +135,22 @@ export default function WithSubnavigation() {
                             </>
                         ) : (
                             <>
-                                <Button
-                                    fontSize={'sm'}
-                                    fontWeight={600}
-                                    colorScheme={'red'}
-                                    bg={'red.400'}
-                                    _hover={{
-                                        bg: 'red.500',
-                                    }}
-                                    rightIcon={<BsPencilSquare />}
-                                    onClick={() => navigate('/dashboard')}
-                                    rounded={'full'}
-                                >
-                                    Team
-                                </Button>
+                                <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
+                                    <Button
+                                        fontSize={'sm'}
+                                        fontWeight={600}
+                                        colorScheme={'red'}
+                                        bg={'red.400'}
+                                        _hover={{
+                                            bg: 'red.500',
+                                        }}
+                                        rightIcon={<BsPencilSquare />}
+                                        onClick={() => navigate('/dashboard')}
+                                        rounded={'full'}
+                                    >
+                                        Team
+                                    </Button>
+                                </motion.div>
                                 <Button onClick={toggleColorMode}>
                                     {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                                 </Button>

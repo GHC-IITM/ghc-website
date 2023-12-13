@@ -40,7 +40,7 @@ const Milestones: React.FC<any> = ({ id }: { id: string }) => {
 
     return (
         <Container id={id} maxWidth="7xl" p={8} mb={8}>
-            <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
+            <chakra.h3 fontSize="4xl" fontWeight="bold" mb={10} textAlign="center">
                 TimeLine of GHC 1.0
             </chakra.h3>
             {milestones.map((milestone) => (

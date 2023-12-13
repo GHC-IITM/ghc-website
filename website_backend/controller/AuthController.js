@@ -42,12 +42,15 @@ function AuthController() {
                         return data;
                     }).catch(err => {
                         console.log(err)
-                        return res.status(403).json({ message: 'Invalid password' });
+                        return res.status(403).json({ message: 'Internal Server Error' });
                     });
                     if (is_password_correct) {
                         const token = generateToken(team_exist.id);
                         return res.status(200).json({ message: "Login success!", teamData: OBBS(team_exist), token: token });
+                    } else if (!is_password_correct) {
+                        return res.status(403).json({ message: 'Invalid password' });
                     }
+
                     return res.status(500).json({ message: 'Internal Server Error' });
                 }
             } catch (error) {

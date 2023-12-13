@@ -24,6 +24,9 @@ import {
     Heading,
     Stack,
     Button,
+    FormControl,
+    Input,
+    FormLabel,
 } from '@chakra-ui/react'
 import {
     FiHome,
@@ -41,7 +44,7 @@ import { DeleteIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
 import useGetTeam from '../../utils/useGetTeam'
 import { useNavigate, Link } from 'react-router-dom'
 import { usePresence, motion } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { MdBuild } from 'react-icons/md';
 
 interface LinkItemProps {
@@ -84,7 +87,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             {...rest}>
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
                 <Link to="/">
-                    <Image src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
+                    <Image src={useColorModeValue('/GHC-LOGO-gray.900.png', '/GHC-logo.png')} h={6} />
                 </Link>
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
@@ -267,6 +270,12 @@ const Loading = () => {
 const ProfilePage = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [team, isLoading, isError] = useGetTeam();
+    const [email, setEmail] = useState("");
+    const [oldPassword, setOldPassword] = useState("");
+    const [newPassword, setNewPassword] = useState("");
+
+
+    const bgColor = useColorModeValue('white', 'gray.900');
 
     return (
         <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -310,6 +319,49 @@ const ProfilePage = () => {
                                 Delete Account
                             </Button>
                         </Stack>
+
+                        <VStack mt={10} w={'full'} alignItems={'flex-start'} bg={bgColor} borderWidth={'1px'} borderRadius={'md'}>
+                            <VStack p={8} pb={0} spacing={4} mb={4} textAlign={'left'} alignItems={'flex-start'} >
+                                <Heading fontSize={'2xl'}>{"Verify Your Email"}</Heading>
+                                <Text fontSize={'sm'}>Verify your email to start using all of our websites features!</Text>
+                                <FormControl isRequired isDisabled id={"Verify Your Email"}>
+                                    <Input focusBorderColor='red.400' type={'email'} onChange={e => setEmail(e.target.value)} value={team?.email} />
+                                </FormControl>
+                            </VStack>
+
+                            <VStack borderTopWidth={'1px'} w={'full'} px={8} py={4} >
+                                <HStack justifyContent={'flex-end'} w={'full'}  >
+                                    <Button size='sm' bg={'gray.100'} color={'gray.900'} _hover={{ opacity: 0.7 }} variant='solid'>
+                                        Verify
+                                    </Button>
+                                </HStack>
+                            </VStack>
+                        </VStack>
+
+                        <VStack mt={10} w={'full'} alignItems={'flex-start'} bg={bgColor} borderWidth={'1px'} borderRadius={'md'}>
+                            <VStack p={8} pb={0} spacing={4} mb={4} textAlign={'left'} alignItems={'flex-start'} >
+                                <Heading fontSize={'2xl'}>Change Password</Heading>
+                                <Text fontSize={'sm'}>Empower Your Security: Renew Your Shield with a New Password!</Text>
+                                <FormControl w={'full'} isRequired id={"Change Password"}>
+                                    <FormLabel>Old Password</FormLabel>
+                                    <Input focusBorderColor='red.400' type={'password'} onChange={e => setOldPassword(e.target.value)} value={oldPassword} />
+                                </FormControl>
+                                <FormControl isRequired id={"New Password"}>
+                                    <FormLabel>New Password</FormLabel>
+                                    <Input focusBorderColor='red.400' type={'password'} onChange={e => setNewPassword(e.target.value)} value={newPassword} />
+                                </FormControl>
+                            </VStack>
+
+                            <VStack borderTopWidth={'1px'} w={'full'} px={8} py={4} >
+                                <HStack justifyContent={'space-between'} w={'full'} >
+                                    <Text fontSize={'sm'} opacity={0.7}>Use maximum 32 characters.</Text>
+                                    <Button size='sm' bg={'gray.100'} color={'gray.900'} _hover={{ opacity: 0.7 }} variant='solid'>
+                                        Confirm
+                                    </Button>
+                                </HStack>
+                            </VStack>
+                        </VStack>
+
 
                     </VStack>
                 </Stack>
