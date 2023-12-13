@@ -37,16 +37,16 @@ export default function OurTeam() {
     return (
         <Container maxW={'5xl'} py={12} mb={10}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                <Flex>
+                {/* <Flex> */}
                     <Image
-                        rounded={'md'}
+                        rounded={'lg'}
                         alt={'feature image'}
                         src={
-                            'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+                            '/pic_with_diro.jpg'
                         }
-                        objectFit={'cover'}
+                        objectFit={'contain'}
                     />
-                </Flex>
+                {/* </Flex> */}
                 <Stack spacing={4}>
                     <Text
                         textTransform={'uppercase'}
@@ -71,17 +71,17 @@ export default function OurTeam() {
                         <Feature
                             icon={<Icon as={FaBusinessTime} color={'yellow.500'} w={5} h={5} />}
                             iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                            text={'Business Planning'}
+                            text={'Time Management'}
                         />
                         <Feature
                             icon={<Icon as={FaMoneyBill} color={'green.500'} w={5} h={5} />}
                             iconBg={useColorModeValue('green.100', 'green.900')}
-                            text={'Financial Planning'}
+                            text={'Innovative Thinking'}
                         />
                         <Feature
                             icon={<Icon as={FaMapMarkedAlt} color={'purple.500'} w={5} h={5} />}
                             iconBg={useColorModeValue('purple.100', 'purple.900')}
-                            text={'Market Analysis'}
+                            text={'Collaborative Spirit'}
                         />
                     </Stack>
                 </Stack>

@@ -37,7 +37,7 @@ const Advisors = () => {
             </Stack>
             <Flex wrap={'wrap'} gridGap={6} alignItems={'center'} justifyContent={'center'} >
                 {advisors.map(advisor => (
-                    <Card adv={advisor} />
+                    <Card key={advisor.name} adv={advisor} />
                 ))}
             </Flex>
         </Container>

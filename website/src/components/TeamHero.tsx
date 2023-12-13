@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 
 export default function TeamHero() {
     return (
-        <Container maxW={'7xl'} overflow={'hidden'} px={10}>
+        <Container maxW={'7xl'} overflow={'hidden'} px={10} mb={10}>
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
@@ -33,6 +33,7 @@ export default function TeamHero() {
                         <Text
                             as={'span'}
                             position={'relative'}
+                            zIndex={2}
                             _after={{
                                 content: "''",
                                 width: 'full',
@@ -105,12 +106,12 @@ export default function TeamHero() {
                         position={'absolute'}
                         top={'-25%'}
                         left={0}
-                        zIndex={-1}
+                        zIndex={0}
                         color={useColorModeValue('red.300', 'red.400')}
                     />
                     <Box
                         position={'relative'}
-                        height={'300px'}
+                        height={{ base: '200px', md: '300px' }}
                         rounded={'2xl'}
                         boxShadow={'2xl'}
                         width={'full'}
@@ -130,12 +131,12 @@ export default function TeamHero() {
                         /> */}
                         <Image
                             alt={'Hero Image'}
-                            fit={'contain'}
+                            fit={'cover'}
                             align={'center'}
                             w={'100%'}
                             h={'100%'}
                             src={
-                                '/team-hero.svg'
+                                'https://th.bing.com/th/id/OIG.pkNmr_FNliJVjpzLlbFL?pid=ImgGn'
                             }
                         />
                     </Box>

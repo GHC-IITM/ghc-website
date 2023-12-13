@@ -1,8 +1,40 @@
-import { Box, Container, Flex, Heading, Image } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Container, Flex, HStack, Heading, Image, VStack, Text, Icon } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import { InstagramEmbed, LinkedInEmbed } from 'react-social-media-embed';
+import { AiOutlineLike } from "react-icons/ai";
+import { CgComment } from "react-icons/cg";
+import { IoIosSend } from "react-icons/io";
+
+const LinkedInCard = ({ image, title, postUrl }: { image: string, title: string, postUrl: string }) => {
+    return (
+        <VStack height={'fit-content'} as={'a'} target='_blank' href={postUrl} borderWidth={'1px'} bg={'gray.50'} py={6} rounded={'md'} maxWidth={'320px'} spacing={4}>
+            <HStack spacing={4}>
+                <Image
+                    src='https://media.licdn.com/dms/image/D560BAQHnhPt5WzYP9g/company-logo_100_100/0/1699265383714?e=1710374400&v=beta&t=GvHPws-aTOay5MdCQ7Y19avhHE7E9DFKn_2-lo2XbuQ'
+                    alt='ghc logo'
+                    h={10} />
+                <VStack textAlign={'left'} align={'left'} spacing={0}>
+                    <Text color={'gray.900'} fontWeight={600} >Global Hyperloop Competition</Text>
+                    <Text color={'gray.500'} fontSize={'xs'}>78 followers</Text>
+                </VStack>
+            </HStack>
+
+            <Box px={4}>
+                <Text color={'gray.700'} fontSize={'sm'}>{title}</Text>
+            </Box>
+
+            <Image src={image} alt='post_image' width={'full'} />
+
+            <HStack mt={4} pt={4} borderTopWidth={'1px'} borderColor={'gray.300'} w={'90%'} h={'fit-content'} spacing={4} color={'gray.600'} justifyContent={'space-evenly'} >
+                <Icon  boxSize={6} as={AiOutlineLike} />
+                <Icon boxSize={6} as={CgComment} />
+                <Icon boxSize={6} as={IoIosSend} />
+            </HStack>
+        </VStack>
+    )
+}
 
 const Activity: React.FC<any> = () => {
     return (
@@ -37,12 +69,8 @@ const Activity: React.FC<any> = () => {
                     </Heading>
                 </Container>
                 <Flex flexWrap="wrap" gridGap={10} justify="center">
-                    <LinkedInEmbed
-                        height={570}
-                        postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_hyperloop-indianhyperloop-sustainability-activity-7135929343804878848-rX17"
-                        url="https://www.linkedin.com/feed/update/urn:li:share:7135929343804878848"
-                        width={325}
-                    />
+                    <LinkedInCard title='The organising team of the Global Hyperloop Competition IITM was fortunate enough to meet the current Chairman of...' image='https://media.licdn.com/dms/image/D4D22AQHH8UNFCgpPtA/feedshare-shrink_800/0/1701938193706?e=1705536000&v=beta&t=aShAK1nU40hWVRn-ZQKYsokMjUA_qTK9BxzPkFNBuf8' postUrl='https://www.linkedin.com/posts/global-hyperloop-competition-iitm_the-organising-team-of-the-global-hyperloop-activity-7138446180790816768-Hgme?utm_source=share&utm_medium=member_desktop' />
+                    <LinkedInCard title='Presenting to you the rapid progress of the 400 m tube - a solid 40 m - made by the tremendous efforts of both IIT Madras and Avishkar Hyperloop...' image='https://media.licdn.com/dms/image/D4E22AQFOnIbSgr2sZQ/feedshare-shrink_1280/0/1701338115987?e=1705536000&v=beta&t=tIRT0h6cPlFnuQaFo5ZX7OSvnSdW9jAA-_jGRMVDU6U' postUrl='https://www.linkedin.com/posts/global-hyperloop-competition-iitm_hyperloop-indianhyperloop-sustainability-activity-7135929343804878848-rX17?utm_source=share&utm_medium=member_desktop' />
                 </Flex>
             </Container>
             <Footer />

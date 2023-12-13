@@ -125,7 +125,7 @@ export default function MissionNdvalues() {
                         <Heading size="md">{'SELF SUSTAINING NATURE'}</Heading>
                     </Box>
                 </Flex> */}
-            
+
             {/* </Container> */}
 
             <Box bg={useColorModeValue('white', 'gray.800')} w={'full'} px={0} py={10}>
@@ -149,7 +149,7 @@ export default function MissionNdvalues() {
                         />
                         <Box px={6} textAlign={'left'} alignSelf={'center'} color={useColorModeValue('gray.600', 'gray.300')}>
                             <Text mb={6} fontSize={'lg'}>
-                                Hyperloop, the “fifth mode of transport”, is a high speed rail system which essentially aims to eliminate the two major sources of friction - rolling friction (friction between the wheels of the train and the rails) and air drag. Moreover, it incorporates the use of magnetic levitation of a “pod” moving within a partially evacuated “tube” thereby, achieving a considerably high speed which can potentially reach till the speed of sound.
+                                Hyperloop, the “fifth mode of transport”, is a high speed rail system which essentially aims to eliminate friction and air drag. Moreover, it incorporates the use of magnetic levitation of a “pod” moving within a partially evacuated “tube” thereby, achieving a considerably high speed which can potentially reach till the speed of sound.
                             </Text>
                             <Text fontSize={'lg'}>
                                 This mode of transport will be marked by its immunity to weather, collision free commute which can move at twice the speed of a plane, with low power consumption and energy storage for 24-hour operations. Moreover, with the effective use of solar energy, this mode of transport can easily sustain itself for long durations.
@@ -162,7 +162,7 @@ export default function MissionNdvalues() {
 
 
             <Image
-                src={"/why-hyp-1.jpg"}
+                src={"/why-hyp.png"}
                 style={{ width: '100vw' }}
                 mt={6}
             />

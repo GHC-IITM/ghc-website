@@ -22,10 +22,12 @@ import SignUp from "./pages/SignUp"
 import Contact from "./pages/Contact"
 import MissionNdVission from "./pages/about/MissionNdVission"
 import Team from "./pages/about/Team"
-import Dashboard from "./pages/Dashboard"
+import Dashboard from "./pages/dashboard/Dashboard"
 import theme from "./utils/theme"
 import GHC1 from "./pages/events/GHC1"
 import Activity from "./pages/about/Activity"
+import ProfilePage from "./pages/dashboard/Profile"
+import SettingsPage from "./pages/dashboard/Settings"
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/dashboard/profile",
+    element: <ProfilePage />,
+  },
+  {
+    path: "/dashboard/settings",
+    element: <SettingsPage />,
   },
   {
     path: "/events/ghc1.0",

@@ -190,7 +190,7 @@ export default function Team() {
 
             <Advisors />
 
-            <Stack direction={{ base: 'column-reverse', md: 'row' }} maxW='5xl' py={10} mt={20} align={'center'} id={'heads'}>
+            <Stack direction={{ base: 'column-reverse', md: 'row' }} maxW='5xl' py={10} my={20} align={'center'} id={'heads'}>
                 <Stack spacing={2} as={Container} maxW={'3xl'} textAlign={'center'} py={4} mb={10}>
                     <Heading fontSize={{ base: '2xl', sm: '5xl' }} fontWeight={'bold'}>
                         Arpit Garg
@@ -207,7 +207,7 @@ export default function Team() {
                 </Stack>
                 <Image
                     src={'/arpit.jpg'}
-                    borderRadius={'none'}
+                    borderRadius={'10px'}
                     h={300}
                     w={300}
                     alt={'/arpit.jpg'}

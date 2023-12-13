@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const SplitWithImage: React.FC<any> = () => {
     return (
-        <Container maxW={'5xl'} py={16} >
+        <Container maxW={'6xl'} py={16} >
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={12}>
                 <VStack spacing={6}>
                     <Image
@@ -43,7 +43,8 @@ const SplitWithImage: React.FC<any> = () => {
                     </Heading>
 
                     <Text color={'gray.500'} fontSize={'lg'}>
-                        A melange of science, technology and innovation, the Global Hyperloop Competition brings to India the preliminary stage of the profound idea of the fifth mode of transport - the Hyperloop.
+                        {/* A melange of science, technology and innovation, the Global Hyperloop Competition brings to India the preliminary stage of the profound idea of the fifth mode of transport - the Hyperloop. */}
+                        
 
                         The Global Hyperloop Competition provides a stage for teams, in India and abroad, to showcase their innovation and research in the extensive field of hyperloop thereby propagating the concept globally.
 

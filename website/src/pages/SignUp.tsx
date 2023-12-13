@@ -141,7 +141,8 @@ export default function JoinOurTeam() {
         reader.readAsDataURL(e.target.files[0]);
         reader.onloadend = function () {
             var dataUrl = reader.result;
-            var base64data = (dataUrl as string)?.split(',')[1];
+            var base64data = dataUrl;
+            // var base64data = (dataUrl as string)?.split(',')[1];
             console.log(base64data);
 
             if (base64data) {

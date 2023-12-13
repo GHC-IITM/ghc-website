@@ -20,6 +20,9 @@ import {
     MenuItem,
     MenuList,
     useColorMode,
+    Image,
+    Heading,
+    Stack,
 } from '@chakra-ui/react'
 import {
     FiHome,
@@ -30,11 +33,14 @@ import {
     FiMenu,
     FiBell,
     FiChevronDown,
+    FiUser,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import useGetTeam from '../utils/useGetTeam'
+import useGetTeam from '../../utils/useGetTeam'
 import { useNavigate, Link } from 'react-router-dom'
+import { usePresence, motion } from 'framer-motion';
+import { useRef, useEffect } from 'react';
 
 interface LinkItemProps {
     name: string
@@ -57,11 +63,10 @@ interface SidebarProps extends BoxProps {
 }
 
 const LinkItems: Array<LinkItemProps> = [
-    { name: 'Home', icon: FiHome, url: "/" },
-    { name: 'Trending', icon: FiTrendingUp },
-    { name: 'Explore', icon: FiCompass },
-    { name: 'Favourites', icon: FiStar },
-    { name: 'Settings', icon: FiSettings },
+    { name: 'Home', icon: FiHome, url: "/dashboard" },
+    { name: 'Explore', icon: FiCompass, url: "/about/activity" },
+    { name: 'Settings', icon: FiSettings, url: "/dashboard/settings" },
+    { name: 'Profile', icon: FiUser, url: "/dashboard/profile" },
 ]
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
@@ -77,9 +82,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             {...rest}>
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
                 <Link to="/">
-                    <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-                        GHC
-                    </Text>
+                    <Image src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
                 </Link>
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
@@ -155,13 +158,14 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
                 icon={<FiMenu />}
             />
             <Link to='/'>
-                <Text
+                {/* <Text
                     display={{ base: 'flex', md: 'none' }}
                     fontSize="2xl"
                     fontFamily="monospace"
                     fontWeight="bold">
                     GHC
-                </Text>
+                </Text> */}
+                <Image display={{ base: 'flex', md: 'none' }} src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
             </Link>
 
             <HStack spacing={{ base: '0', md: '6' }}>
@@ -197,8 +201,12 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
                         // bg={useColorModeValue('white', 'gray.900')}
                         // borderColor={useColorModeValue('gray.200', 'gray.700')}
                         >
-                            <MenuItem>Profile</MenuItem>
-                            <MenuItem>Settings</MenuItem>
+                            <Link to={"/dashboard/profile"}>
+                                <MenuItem>Profile</MenuItem>
+                            </Link>
+                            <Link to={"/dashboard/settings"}>
+                                <MenuItem>Settings</MenuItem>
+                            </Link>
 
                             <MenuDivider />
                             <MenuItem onClick={handleLogout}>Sign out</MenuItem>
@@ -210,29 +218,114 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
     )
 }
 
+const Loading = () => {
+    const ref = useRef(null);
+    const [isPresent, safeToRemove] = usePresence();
+    const [team, isLoading, isError] = useGetTeam();
+
+    const show = {
+        opacity: 1,
+        display: "block",
+    };
+
+    const hide = {
+        opacity: 0,
+        transitionEnd: {
+            display: "none",
+        }
+    };
+
+    useEffect(() => {
+        if (!isPresent) {
+            gsap.to(ref.current, {
+                opacity: 0,
+                onComplete: () => safeToRemove?.()
+            });
+        }
+    }, [isPresent, safeToRemove]);
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={isLoading ? show : hide}
+            ref={ref}
+            transition={{ ease: "easeOut", duration: 3 }}
+        >
+            <Box display={'flex'} alignItems={'center'} justifyContent={'center'} transition={'all ease 12s'} height={'100vh'} width={'100vw'}>
+                <motion.div initial={{ y: 0 }} animate={{ y: 10 }} transition={{ ease: "easeIn" }}>
+                    <Text fontWeight={'extrabold'} fontSize={'6xl'}>GHC</Text>
+                </motion.div>
+            </Box>
+
+        </motion.div>
+    )
+}
+
+const Detail = ({ label, value }: { label: string, value: string }) => {
+    return (
+        <HStack borderColor={useColorModeValue('gray.300', 'gray.700')} borderBottomWidth={'1px'} w={'full'} py={4} px={8} >
+            <Text fontWeight={600} color={useColorModeValue('gray.900', 'gray.100')}>{label}: </Text>
+            <Text fontSize={'xl'} color={useColorModeValue('gray.600', 'gray.500')}>
+                {value}
+            </Text>
+        </HStack>
+    )
+}
+
 const SidebarWithHeader = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [team, isLoading, isError] = useGetTeam();
+    const cardBgColor = useColorModeValue('white', 'gray.800');
 
     return (
         <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
-            <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
-            <Drawer
-                isOpen={isOpen}
-                placement="left"
-                onClose={onClose}
-                returnFocusOnClose={false}
-                onOverlayClick={onClose}
-                size="full">
-                <DrawerContent>
-                    <SidebarContent onClose={onClose} />
-                </DrawerContent>
-            </Drawer>
-            {/* mobilenav */}
-            <MobileNav headName={team?.teamrepresentetive} onOpen={onOpen} />
-            <Box ml={{ base: 0, md: 60 }} p="4">
-                {/* Content */}
-            </Box>
+            {isLoading ? <Loading /> : (<>
+                <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
+                <Drawer
+                    isOpen={isOpen}
+                    placement="left"
+                    onClose={onClose}
+                    returnFocusOnClose={false}
+                    onOverlayClick={onClose}
+                    size="full">
+                    <DrawerContent>
+                        <SidebarContent onClose={onClose} />
+                    </DrawerContent>
+                </Drawer>
+                {/* mobilenav */}
+                <MobileNav headName={team?.teamrepresentetive} onOpen={onOpen} />
+                <Stack ml={{ base: 0, md: 60 }} p="8" justify={'center'} align={'center'}>
+                    {/* Content */}
+                    <VStack spacing={8} py={8} px={16} bg={cardBgColor} w={'fit-content'} borderRadius={'lg'} textAlign={'left'}>
+                        <HStack spacing={4} w={'full'}>
+                            <Image
+                                src={team?.teamlogo}
+                                alt={`${team?.teamname} logo`}
+                                height={'24'}
+                                mr={6}
+                            />
+                            <Heading fontSize={{ base: '2xl', md: "5xl" }}>
+                                {team?.officialteamname}
+                            </Heading>
+                        </HStack>
+                        <VStack textAlign={'left'} w={'full'} alignItems={'baseline'}>
+
+                            <Detail label='University' value={team?.homeUniversity} />
+                            <Detail label='Active members' value={team?.activemembers} />
+                            <Detail label='Members attending event' value={team?.attendeventmembers} />
+                            <Detail label='Representative' value={team?.teamrepresentetive} />
+                            <Detail label='Representative Email' value={team?.emailrepresentetive} />
+                            <Detail label='Address' value={team?.teamaddress} />
+                            <Detail label='Country' value={team?.country} />
+                            <Detail label='Postal Code' value={team?.postalcode} />
+
+                        </VStack>
+
+                    </VStack>
+
+                </Stack>
+            </>)}
+
         </Box>
     )
 }

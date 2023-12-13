@@ -20,6 +20,7 @@ import {
     MenuDivider,
     MenuItem,
     MenuList,
+    Image
 } from '@chakra-ui/react'
 import {
     HamburgerIcon,
@@ -73,14 +74,15 @@ export default function WithSubnavigation() {
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'left', md: 'start' }} alignItems={'center'}>
                     <Link to={"/"}>
-                        <Text
+                        {/* <Text
                             textAlign={useBreakpointValue({ base: 'right', md: 'left' })}
                             fontFamily={'heading'}
                             color={useColorModeValue('gray.800', 'white')}
                             fontWeight={"extrabold"}
                         >
                             GHC
-                        </Text>
+                        </Text> */}
+                        <Image src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
                     </Link>
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -142,8 +144,9 @@ export default function WithSubnavigation() {
                                     _hover={{
                                         bg: 'red.500',
                                     }}
-                                    leftIcon={<BsPencilSquare />}
+                                    rightIcon={<BsPencilSquare />}
                                     onClick={() => navigate('/dashboard')}
+                                    rounded={'full'}
                                 >
                                     Team
                                 </Button>
@@ -165,14 +168,14 @@ export default function WithSubnavigation() {
                                         />
                                     </MenuButton>
                                     <MenuList zIndex={100}>
-                                        <Link to={"/profile"}>
+                                        <Link to={"/dashboard/profile"}>
                                             <MenuItem>Profile</MenuItem>
                                         </Link>
                                         <Link to={"/dashboard"}>
                                             <MenuItem>Team</MenuItem>
                                         </Link>
                                         <MenuDivider />
-                                        <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                                        <MenuItem onClick={handleLogout}>Sign Out</MenuItem>
                                     </MenuList>
                                 </Menu>
                             </>

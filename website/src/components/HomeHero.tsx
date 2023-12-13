@@ -15,10 +15,12 @@ import {
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import useGetTeam from '../utils/useGetTeam';
 
-export default function CallToActionWithVideo() {
+export default function HomeHero() {
+    const [team, isLoading, isError] = useGetTeam();
     return (
-        <Container maxW={'7xl'} overflowX={'hidden'}>
+        <Container maxW={'7xl'} px={{ base: 4, md: 6 }} overflow={'hidden'}>
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
@@ -50,11 +52,11 @@ export default function CallToActionWithVideo() {
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
-                        Welcome to the Global Hyperloop Competition, where innovation knows no bounds!. Unleash your creativity, accelerate breakthroughs, and be part of the revolution – the Hyperloop revolution starts here!
+                        Welcome to the Global Hyperloop Competition, where innovation knows no bounds! Unleash your creativity, accelerate breakthroughs, and be a part of the revolution – the Hyperloop revolution starts here!
                     </Text>
                     <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
                         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-                            <Link to={"/signup"}>
+                            <Link to={team ? "/team" : "/signup"}>
                                 <Button
                                     rounded={'full'}
                                     size={'lg'}

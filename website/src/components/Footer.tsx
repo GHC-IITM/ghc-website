@@ -9,6 +9,8 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Image,
+    HStack
 } from '@chakra-ui/react'
 import { ReactNode, useState } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaPhone, FaMailBulk } from 'react-icons/fa'
@@ -44,8 +46,8 @@ const SocialButton = ({
         <chakra.button
             bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
             rounded={'full'}
-            w={8}
-            h={8}
+            w={12}
+            h={10}
             cursor={'pointer'}
             as={'a'}
             href={href}
@@ -70,6 +72,16 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
     )
 }
 
+const FooterLink = ({ children, href }: { children: ReactNode, href: string }) => {
+    return (
+        <Link to={href}>
+            <Box color={'gray.500'} _hover={{ color: "red.400", textDecoration: "underline" }}>
+                {children}
+            </Box>
+        </Link>
+    )
+}
+
 export default function LargeWithNewsletter() {
     const [email, setEmail] = useState("");
 
@@ -83,10 +95,13 @@ export default function LargeWithNewsletter() {
                     templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
                     spacing={8}>
                     <Stack spacing={6}>
-                        <Box>
-                            <Text fontWeight={'bold'} fontFamily={"sans-serif"} fontSize={"lg"}>Global Hyperloop Competetion</Text>
+                        <HStack>
+                            <Link to="/">
+                                <Image src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
+                            </Link>
+                            {/* <Text mt={2} fontWeight={'semibold'} fontFamily={"sans-serif"} fontSize={"md"}>Global Hyperloop Competetion</Text> */}
                             {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
-                        </Box>
+                        </HStack>
                         <Text fontSize={'sm'}>© 2023 GHC . All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
                             <SocialButton label={'Instagram'} href="https://www.instagram.com/ghc_india/">
@@ -105,35 +120,27 @@ export default function LargeWithNewsletter() {
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Company</ListHeader>
-                        <Box as="a" href={'/about/mission'}>
-                            Our Mission and Vision
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Blog
-                        </Box>
-                        <Box as="a" href={'/contact'}>
-                            Contact us
-                        </Box>
-                        <Box as="a" href={'/about/team'}>
+                        <FooterLink href='/about/mission'>
+                            Mission and Vision
+                        </FooterLink>
+                        <FooterLink href='/about/team'>
                             Our Team
-                        </Box>
-
+                        </FooterLink>
+                        <FooterLink href='/about/activity'>
+                            Activity
+                        </FooterLink>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Support</ListHeader>
-                        <Box as="a" href={'#'}>
-                            Help Center
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Terms of Service
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Legal
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Privacy Policy
-                        </Box>
-
+                        <FooterLink href='#'>
+                            Blog
+                        </FooterLink>
+                        <FooterLink href='/contact'>
+                            Contact us
+                        </FooterLink>
+                        <FooterLink href='mailto: ghc@smail.iitm.ac.in'>
+                            Email
+                        </FooterLink>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Contact Us</ListHeader>
