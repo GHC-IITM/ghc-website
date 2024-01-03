@@ -29,7 +29,7 @@ const GHC1 = () => {
                 <Text fontSize={'xl'} mt={4}>
                     With a 400m tube on the edge we have a vision to conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale. The conference will be the first stepping stone to it.
                     <br />
-                    <Text as={'span'} bgGradient="linear(to-tr, red.500, purple.300)" bgClip="text" fontSize={'2xl'} fontWeight={'bold'}>Stay tuned for more updates!</Text>
+                    <Text as={'span'} bgGradient="linear(to-r, red.500, purple.300)" bgClip="text" fontSize={'2xl'} fontWeight={'bold'}>Stay tuned for more updates!</Text>
                 </Text>
             </Box>
 

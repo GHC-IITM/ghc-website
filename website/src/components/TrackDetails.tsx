@@ -40,7 +40,7 @@ export default function TrackDetails() {
                                 Track Details
                             </Text>
                             <Heading color={'white'} mb={5} fontSize={{ base: '3xl', md: '5xl' }}>
-                                400m vaacum tube
+                                400m vacuum tube
                             </Heading>
                             <Text fontSize={'xl'} color={'gray.400'}>
                                 The hyperloop track features a 4-meter diameter tube spanning a length of 400 meters, designed to maximize efficiency and speed in transportation. With a focus on aerodynamic excellence, the spacious tube minimizes air resistance, allowing hyperloop pods to achieve high velocities with reduced energy consumption.
@@ -83,7 +83,7 @@ const stats = [
         ),
     },
     {
-        title: 'Diameter 4m',
+        title: 'Diameter 2m',
         content: (
             <>
                 <StatsText>4-meter diameter tube</StatsText> for a hyperloop pod provides enhanced aerodynamic efficiency, minimizing air resistance and allowing for higher speeds with reduced energy consumption.

@@ -15,6 +15,9 @@ import { QueryClientProvider } from "react-query";
 import { queryClient } from "./utils/queryClient"
 import "./index.css"
 
+// Kumbh Sans font - Supports weights 100-900
+import '@fontsource-variable/kumbh-sans';
+
 // Pages
 import Home from "./pages/Home"
 import Login from "./pages/Login"

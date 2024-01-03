@@ -52,7 +52,7 @@ export default function HomeHero() {
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
-                        Welcome to the Global Hyperloop Competition, where innovation knows no bounds! Unleash your creativity, accelerate breakthroughs, and be a part of the revolution – the Hyperloop revolution starts here!
+                        It's an event, where innovation knows no bounds! Unleash your creativity, accelerate breakthroughs, and be a part of the revolution – the Hyperloop revolution starts here!
                     </Text>
                     <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
                         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
