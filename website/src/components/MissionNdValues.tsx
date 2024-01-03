@@ -72,9 +72,9 @@ export default function MissionNdvalues() {
         py={10}
       >
         <Stack
-          spacing={4}
+          spacing={8}
           as={Container}
-          maxW={"5xl"}
+          maxW={"6xl"}
           textAlign={"center"}
           py={4}
           mb={10}
@@ -95,7 +95,7 @@ export default function MissionNdvalues() {
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Image
               src="https://th.bing.com/th/id/OIG.lL4CeQ.XtLKXdLhOCk8K?pid=ImgGn"
-              width={{ base: "full", md: "45%" }}
+              width={{ base: "full", md: "50%" }}
               objectFit={"contain"}
               rounded={"lg"}
               alt={"feature image"}
