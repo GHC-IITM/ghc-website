@@ -35,7 +35,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function OurTeam() {
     return (
-        <Container maxW={'5xl'} py={12} mb={10}>
+        <Container maxW={'6xl'} py={12} px={4} mb={10}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 {/* <Flex> */}
                     <Image

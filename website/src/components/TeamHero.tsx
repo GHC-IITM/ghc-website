@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 
 export default function TeamHero() {
     return (
-        <Container maxW={'7xl'} overflow={'hidden'} px={10} mb={10}>
+        <Container maxW={'7xl'} overflow={'hidden'} px={8} mb={10}>
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}

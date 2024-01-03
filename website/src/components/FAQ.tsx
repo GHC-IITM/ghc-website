@@ -23,7 +23,7 @@ export default function SimpleAccordion() {
       flexDirection={'column'}
     //   bg={useColorModeValue('gray.50', 'gray.800')}
       >
-        <Text fontWeight={600} fontSize={30} padding={5}>FAQs</Text>
+        <Text fontWeight={600} fontSize={'4xl'} padding={5}>FAQs</Text>
       <Container>
         <Accordion allowMultiple width="100%" maxW="lg" rounded="lg">
           <AccordionItem>
@@ -32,7 +32,7 @@ export default function SimpleAccordion() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="md">What is GHC?</Text>
+              <Text fontSize="xl">What is GHC?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -47,7 +47,7 @@ export default function SimpleAccordion() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="md"> When and Where will GHC be held?</Text>
+              <Text fontSize="xl"> When and Where will GHC be held?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -62,7 +62,7 @@ export default function SimpleAccordion() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="md"> Who can apply?</Text>
+              <Text fontSize="xl"> Who can apply?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
