@@ -84,7 +84,7 @@ export default function SimpleCard() {
                                             type="submit"
                                             fontFamily={'heading'}
                                             w={'full'}
-                                            bgGradient="linear(to-r, red.400,pink.400)"
+                                            bgGradient="linear(to-r, red.400, purple.400)"
                                             color={'white'}
                                             _hover={{
                                                 bgGradient: 'linear(to-r, red.400,pink.400)',

@@ -197,7 +197,7 @@ export default function JoinOurTeam() {
                         lineHeight={1.1}
                         fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}>
                         Register Now for Hyperloop Innovation Challenge {' '}
-                        <Text as={'span'} bgGradient="linear(to-r, red.400,pink.400)" bgClip="text">
+                        <Text as={'span'} bgGradient="linear(to-r, red.400,purple.400)" bgClip="text">
                             !
                         </Text>
                     </Heading>
@@ -218,7 +218,7 @@ export default function JoinOurTeam() {
                                         height: 'full',
                                         rounded: 'full',
                                         transform: 'scale(1.125)',
-                                        bgGradient: 'linear(to-bl, red.400,pink.400)',
+                                        bgGradient: 'linear(to-bl, red.400,purple.400)',
                                         position: 'absolute',
                                         zIndex: -1,
                                         top: 0,
@@ -269,7 +269,7 @@ export default function JoinOurTeam() {
                             lineHeight={1.1}
                             fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
                             Join our journey
-                            <Text as={'span'} bgGradient="linear(to-r, red.400,pink.400)" bgClip="text">
+                            <Text as={'span'} bgGradient="linear(to-r, red.400,purple.400)" bgClip="text">
                                 !
                             </Text>
                         </Heading>
@@ -291,7 +291,7 @@ export default function JoinOurTeam() {
                                     variant={'outline'}
                                     colorScheme={'red'}
                                     _hover={{
-                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        bgGradient: 'linear(to-r, red.400,purple.400)',
                                         boxShadow: 'xl',
                                         color: 'white'
                                     }}
@@ -304,10 +304,10 @@ export default function JoinOurTeam() {
                                     fontFamily={'heading'}
                                     mt={8}
                                     w={'full'}
-                                    bgGradient="linear(to-r, red.400,pink.400)"
+                                    bgGradient="linear(to-r, red.400,purple.400)"
                                     color={'white'}
                                     _hover={{
-                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        bgGradient: 'linear(to-r, red.400,purple.400)',
                                         boxShadow: 'xl',
                                     }}
                                     isLoading={loading}
@@ -321,7 +321,7 @@ export default function JoinOurTeam() {
                                     variant={'outline'}
                                     colorScheme={'red'}
                                     _hover={{
-                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        bgGradient: 'linear(to-r, red.400,purple.400)',
                                         boxShadow: 'xl',
                                         color: 'white'
                                     }}
@@ -334,10 +334,10 @@ export default function JoinOurTeam() {
                                     fontFamily={'heading'}
                                     mt={8}
                                     w={'full'}
-                                    bgGradient="linear(to-r, red.400,pink.400)"
+                                    bgGradient="linear(to-r, red.400,purple.400)"
                                     color={'white'}
                                     _hover={{
-                                        bgGradient: 'linear(to-r, red.400,pink.400)',
+                                        bgGradient: 'linear(to-r, red.400,purple.400)',
                                         boxShadow: 'xl',
                                     }}
                                     onClick={() => setStep((prev) => prev + 1)}

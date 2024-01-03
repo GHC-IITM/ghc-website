@@ -130,7 +130,7 @@ export default function ContactFormWithSocialButtons() {
 
     return (
         <Flex
-            bg={useColorModeValue('white', 'gray.800')}
+            bg={useColorModeValue('gray.50', 'gray.800')}
             align="center"
             justify="center"
             css={{
