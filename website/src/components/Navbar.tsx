@@ -48,7 +48,7 @@ export default function WithSubnavigation() {
   }
 
   return (
-    <Box zIndex={100} maxW={"7xl"}>
+    <Box zIndex={100}>
       <Flex
         bg={useColorModeValue("gray.100", "gray.900")}
         color={useColorModeValue("gray.600", "white")}
