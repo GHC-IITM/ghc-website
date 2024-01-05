@@ -48,7 +48,7 @@ export default function WithSubnavigation() {
   }
 
   return (
-    <Box zIndex={100}>
+    <Box zIndex={100} position={"sticky"} top={0} left={0} w={"full"} boxShadow={'md'} >
       <Flex
         bg={useColorModeValue("gray.100", "gray.900")}
         color={useColorModeValue("gray.600", "white")}
@@ -81,14 +81,6 @@ export default function WithSubnavigation() {
           alignItems={"center"}
         >
           <Link to={"/"}>
-            {/* <Text
-                            textAlign={useBreakpointValue({ base: 'right', md: 'left' })}
-                            fontFamily={'heading'}
-                            color={useColorModeValue('gray.800', 'white')}
-                            fontWeight={"extrabold"}
-                        >
-                            GHC
-                        </Text> */}
             <Image
               src={useColorModeValue("/GHC-LOGO-BLACK.png", "/GHC-logo.png")}
               h={6}

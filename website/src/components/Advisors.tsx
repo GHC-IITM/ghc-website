@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Image, Stack, Text, VisuallyHidden, chakra, useColorModeValue } from '@chakra-ui/react'
+import { Container, Flex, Heading, Image, Stack, Text, VisuallyHidden, chakra, useColorModeValue } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { FaLinkedin } from 'react-icons/fa';
 

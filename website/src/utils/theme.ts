@@ -18,6 +18,7 @@ const theme = extendTheme({
   },
   colors: {
     red: {
+      50: "#e3fffd",
       100: "#2DEADF",
       200: "#2ADFD4",
       300: "#27D4C9",
