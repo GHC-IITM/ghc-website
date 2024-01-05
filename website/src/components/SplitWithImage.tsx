@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const SplitWithImage: React.FC<any> = () => {
     return (
-        <Container maxW={'6xl'} py={16} >
+        <Container maxW={'7xl'} py={16} >
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={12}>
                 <VStack spacing={6}>
                     <Image

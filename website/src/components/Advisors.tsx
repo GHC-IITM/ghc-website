@@ -80,31 +80,31 @@ const SocialButton = ({
 
 const advisors = [
     {
-        imgUrl: 'https://avishkarhyperloop.com/images/team21/Shri%20Ashwini%20Vaishnaw.jpg',
+        imgUrl: '/sav.jpg',
         name: 'Shri Ashwini Vaishnaw',
         titles: `Hon'ble Union Minister for Railways, Communications, Electronics and Information Technology of India`,
         linkedin: 'https://www.linkedin.com/in/ashwini-vaishnaw-0b13a34/'
     },
     {
-        imgUrl: 'https://avishkarhyperloop.com/images/team21/Prof.%20Satya%20Chakravarthy.jpg',
+        imgUrl: '/sc.jpg',
         name: 'Prof. Satya Chakravarthy',
         titles: `Head, National Centre for Combustion R&D, & Prof. of Aerospace Engg., IIT Madras`,
         linkedin: 'https://www.linkedin.com/in/satya-chakravarthy-51326241/'
     },
     {
-        imgUrl: 'https://avishkarhyperloop.com/images/team21/Dr.%20TM%20Muruganandam.jpg',
+        imgUrl: '/tmm.jpg',
         name: 'Dr. TM Muruganandam',
         titles: `Prof at IIT Madras`,
         linkedin: 'https://www.linkedin.com/in/muruganandam-t-m-733253216/'
     },
     {
-        imgUrl: 'https://avishkarhyperloop.com/images/team21/Ravi%20Santhanam.jpg',
+        imgUrl: '/rs.jpg',
         name: 'Ravi Santhanam',
         titles: `Executive Coach - Leaders & Teams`,
         linkedin: 'https://www.linkedin.com/in/muruganandam-t-m-733253216/'
     },
     {
-        imgUrl: 'https://avishkarhyperloop.com/images/team21/Seshan%20Rammohan.jpg',
+        imgUrl: '/sr.jpg',
         name: 'Seshan Rammohan',
         titles: `President Emeritus and Founding Board Member at IIT Madras Foundation`,
         linkedin: 'https://www.linkedin.com/in/seshanrammohan/'
