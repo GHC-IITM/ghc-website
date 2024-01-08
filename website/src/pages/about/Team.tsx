@@ -108,9 +108,7 @@ const TestimonialAvatar = ({
 export default function Team() {
   return (
     <Box maxWidth={"full"} bg={useColorModeValue("white", "gray.800")}>
-      <Box width={"full"}>
-        <Navbar />
-      </Box>
+      <Navbar />
 
       <TeamHero />
       {/* 

@@ -19,12 +19,8 @@ const GHC1 = () => {
 
   return (
     <Container maxW={"7xl"} px={0}>
-      <Box width={"full"}>
-        <Navbar />
-      </Box>
-
+      <Navbar />
       <Hero />
-
       <Box
         py={{ base: 4, md: 20, xl: 30 }}
         px={{ base: 6, md: 8 }}

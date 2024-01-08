@@ -2244,6 +2244,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/kumbh-sans/-/kumbh-sans-5.0.14.tgz#0ee185573af8fd652675af60359469b95e6488d1"
   integrity sha512-VFF+Cl3F3hM9btGsrCN0QAURFqODlVS1/BJ84pwUAwg1Z6p6aUefziYX+G2TRMofsow4z+Grgv2CjlP9C/4SqA==
 
+"@fontsource-variable/kumbh-sans@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.npmjs.org/@fontsource-variable/kumbh-sans/-/kumbh-sans-5.0.14.tgz"
+  integrity sha512-VFF+Cl3F3hM9btGsrCN0QAURFqODlVS1/BJ84pwUAwg1Z6p6aUefziYX+G2TRMofsow4z+Grgv2CjlP9C/4SqA==
+
 "@fontsource-variable/noto-sans-tc@^5.0.3":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@fontsource-variable/noto-sans-tc/-/noto-sans-tc-5.0.4.tgz#1ff8889952b7170301b51aca93dffaabcfba2372"

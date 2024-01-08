@@ -1,5 +1,8 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
+// Supports weights 100-900
+import "@fontsource-variable/kumbh-sans";
+
 // 2. Add your color mode config
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -15,6 +18,7 @@ const theme = extendTheme({
   },
   colors: {
     red: {
+      50: "#e3fffd",
       100: "#2DEADF",
       200: "#2ADFD4",
       300: "#27D4C9",

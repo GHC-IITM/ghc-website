@@ -1,26 +1,21 @@
-import {
-    Box,
-    Container,
-} from '@chakra-ui/react'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
-import MissionNdvalues from '../../components/MissionNdValues'
-import TrackDetails from '../../components/TrackDetails'
+import { Box } from "@chakra-ui/react";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import MissionNdvalues from "../../components/MissionNdValues";
+import TrackDetails from "../../components/TrackDetails";
 
 export default function Simple() {
-    return (
-        <Container maxW={'7xl'} px={0} >
-            <Box width={'full'}>
-                <Navbar />
-            </Box>
+  return (
+    <Box maxWidth={"full"} px={0}>
+      <Navbar />
 
-            <MissionNdvalues />
+      <MissionNdvalues />
 
-            <TrackDetails />
+      <TrackDetails />
 
-            <Box width={'full'}>
-                <Footer />
-            </Box>
-        </Container>
-    )
+      <Box width={"full"}>
+        <Footer />
+      </Box>
+    </Box>
+  );
 }
