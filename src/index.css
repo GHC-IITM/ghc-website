@@ -11,3 +11,7 @@
 .s{
     color: #1A365D;
 }
+
+*{
+    scroll-behavior: smooth;
+}

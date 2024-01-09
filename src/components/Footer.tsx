@@ -9,10 +9,14 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Image,
+    HStack
 } from '@chakra-ui/react'
-import { ReactNode } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import { ReactNode, useState } from 'react'
+import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaPhone, FaMailBulk } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
+import { MdMail, MdPhone } from 'react-icons/md'
 
 // const Logo = (props: any) => {
 //     return (
@@ -42,17 +46,18 @@ const SocialButton = ({
         <chakra.button
             bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
             rounded={'full'}
-            w={8}
-            h={8}
+            w={12}
+            h={10}
             cursor={'pointer'}
             as={'a'}
             href={href}
+            target='_blank'
             display={'inline-flex'}
             alignItems={'center'}
             justifyContent={'center'}
             transition={'background 0.3s ease'}
             _hover={{
-                bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+                bg: useColorModeValue('red.500', 'red.500'),
             }}>
             <VisuallyHidden>{label}</VisuallyHidden>
             {children}
@@ -68,77 +73,82 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
     )
 }
 
+const FooterLink = ({ children, href }: { children: ReactNode, href: string }) => {
+    return (
+        <Link to={href}>
+            <Box color={'gray.500'} _hover={{ color: "red.400", textDecoration: "underline" }}>
+                {children}
+            </Box>
+        </Link>
+    )
+}
+
 export default function LargeWithNewsletter() {
+    const [email, setEmail] = useState("");
+
     return (
         <Box
-            bg={useColorModeValue('gray.50', 'gray.900')}
+            bg={useColorModeValue('gray.100', 'gray.900')}
             color={useColorModeValue('gray.700', 'gray.200')}
-            >
+        >
             <Container as={Stack} maxW={'6xl'} py={10} >
                 <SimpleGrid
                     templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
                     spacing={8}>
                     <Stack spacing={6}>
-                        <Box>
-                            <Text fontWeight={'bold'} fontFamily={"sans-serif"} fontSize={"lg"}>Global Hyperloop Competetion</Text>
+                        <HStack>
+                            <Link to="/">
+                                <Image src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
+                            </Link>
+                            {/* <Text mt={2} fontWeight={'semibold'} fontFamily={"sans-serif"} fontSize={"md"}>Global Hyperloop Competetion</Text> */}
                             {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
-                        </Box>
+                        </HStack>
                         <Text fontSize={'sm'}>© 2023 GHC . All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
-                            <SocialButton label={'Twitter'} href={'#'}>
-                                <FaTwitter />
-                            </SocialButton>
-                            <SocialButton label={'YouTube'} href={'#'}>
-                                <FaYoutube />
-                            </SocialButton>
-                            <SocialButton label={'Instagram'} href={'#'}>
+                            <SocialButton label={'Instagram'} href="https://www.instagram.com/ghc_india/">
                                 <FaInstagram />
                             </SocialButton>
-                            <SocialButton label={'Linkedingit '} href={'#'}>
+                            <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/company/global-hyperloop-competition-iitm/mycompany/'}>
                                 <FaLinkedin />
+                            </SocialButton>
+                            <SocialButton label={'Twitter'} href={'https://twitter.com/GHCIITM'}>
+                                <FaTwitter />
+                            </SocialButton>
+                            <SocialButton label={'YouTube'} href={'https://www.youtube.com/channel/UCevcN_ISH3AZ5eujROl7UAQ'}>
+                                <FaYoutube />
                             </SocialButton>
                         </Stack>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Company</ListHeader>
-                        <Box as="a" href={'#'}>
-                            About us
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Blog
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Contact us
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Pricing
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Testimonials
-                        </Box>
+                        <FooterLink href='/about/mission'>
+                            Mission and Vision
+                        </FooterLink>
+                        <FooterLink href='/about/team'>
+                            Our Team
+                        </FooterLink>
+                        <FooterLink href='/about/activity'>
+                            Activity
+                        </FooterLink>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Support</ListHeader>
-                        <Box as="a" href={'#'}>
-                            Help Center
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Terms of Service
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Legal
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Privacy Policy
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Satus
-                        </Box>
+                        <FooterLink href='#'>
+                            Blog
+                        </FooterLink>
+                        <FooterLink href='/contact'>
+                            Contact us
+                        </FooterLink>
+                        <FooterLink href='mailto: ghc@smail.iitm.ac.in'>
+                            Email
+                        </FooterLink>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Contact Us</ListHeader>
-                        <Stack direction={'row'}>
+                        <Stack direction={'row'} w={''}>
                             <Input
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
                                 placeholder={'Your email address'}
                                 bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
                                 border={0}
@@ -147,15 +157,21 @@ export default function LargeWithNewsletter() {
                                 }}
                                 focusBorderColor='red.400'
                             />
-                            <IconButton
-                                bg={useColorModeValue('red.400', 'red.600')}
-                                color={useColorModeValue('white', 'gray.200')}
-                                _hover={{
-                                    bg: useColorModeValue('red.600', 'red.400'),
-                                }}
-                                aria-label="Contact"
-                                icon={<BiMailSend />}
-                            />
+                            <Link to={`/contact?email=${email}`}>
+                                <IconButton
+                                    bg={useColorModeValue('red.400', 'red.600')}
+                                    color={useColorModeValue('white', 'gray.200')}
+                                    _hover={{
+                                        bg: useColorModeValue('red.600', 'red.400'),
+                                    }}
+                                    aria-label="Contact"
+                                    icon={<BiMailSend />}
+                                />
+                            </Link>
+                        </Stack>
+                        <Stack mt={6} direction={'row'} w='80%'>
+                            <IconButton as='a' href='tel:+91-8437655909' width={'50%'} icon={<MdPhone />} aria-label='phone' />
+                            <IconButton as='a' href='mailto: ghc@smail.iitm.ac.in' width={'50%'} icon={<MdMail />} aria-label='email' />
                         </Stack>
                     </Stack>
                 </SimpleGrid>

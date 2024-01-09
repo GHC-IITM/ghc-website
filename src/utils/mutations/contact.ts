@@ -1,7 +1,7 @@
-export default async function login(values: any) {
+export default async function contact(values: any) {
     const API_URL = process.env.REACT_APP_API_URL;
 
-    const res = await fetch(`${API_URL}/login`, {
+    const res = await fetch(`${API_URL}/contact`, {
         headers: {
             "Content-Type": "application/json",
         },

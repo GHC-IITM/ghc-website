@@ -14,13 +14,12 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import { FaHeadSideVirus } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import useGetTeam from '../utils/useGetTeam';
 
-export default function HomeHero() {
-    const [team, isLoading, isError] = useGetTeam();
+export default function TeamHero() {
     return (
-        <Container maxW={'7xl'} px={{ base: 4, md: 6 }} overflow={'hidden'}>
+        <Container maxW={'7xl'} overflow={'hidden'} px={8} mb={10}>
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
@@ -34,6 +33,7 @@ export default function HomeHero() {
                         <Text
                             as={'span'}
                             position={'relative'}
+                            zIndex={2}
                             _after={{
                                 content: "''",
                                 width: 'full',
@@ -44,7 +44,7 @@ export default function HomeHero() {
                                 bg: 'red.400',
                                 zIndex: -1,
                             }}>
-                            Welcome to,
+                            Meet Our Team,
                         </Text>
                         <br />
                         <Text as={'span'} color={'red.400'}>
@@ -52,36 +52,44 @@ export default function HomeHero() {
                         </Text>
                     </Heading>
                     <Text color={'gray.500'}>
-                        It's an event, where innovation knows no bounds! Unleash your creativity, accelerate breakthroughs, and be a part of the revolution – the Hyperloop revolution starts here!
-                    </Text>
+                        At the forefront of innovation, our team embodies collaboration and brilliance. United in purpose, we redefine boundaries, unlocking new realms of possibility.                    </Text>
                     <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
                         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-                            <Link to={team ? "/team" : "/signup"}>
-                                <Button
-                                    rounded={'full'}
-                                    size={'lg'}
-                                    fontWeight={'bold'}
-                                    px={6}
-                                    colorScheme={'red'}
-                                    bg={'red.400'}
-                                    _hover={{ bg: 'red.500' }}>
-                                    Get started
-                                </Button>
-                            </Link>
+                            {/* <Link to={"/about/team#advisors"}> */}
+                            <Button
+                                rounded={'full'}
+                                size={'lg'}
+                                fontWeight={'bold'}
+                                px={6}
+                                colorScheme={'red'}
+                                bg={'red.400'}
+                                _hover={{ bg: 'red.500' }}
+                                onClick={() => {
+                                    var elmntToView = document.getElementById("advisors");
+                                    elmntToView?.scrollIntoView();
+                                }}
+                            >
+                                Our Advisors
+                            </Button>
+                            {/* </Link> */}
                         </motion.div>
 
                         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-                            <Link to={'/about/mission#what-is-hyperloop'}>
-                                <Button
-                                    rounded={'full'}
-                                    size={'lg'}
-                                    fontWeight={'normal'}
-                                    px={6}
-                                    leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
-                                >
-                                    How It Works
-                                </Button>
-                            </Link>
+                            {/* <Link to={'/about/team#heads'}> */}
+                            <Button
+                                rounded={'full'}
+                                size={'lg'}
+                                fontWeight={'normal'}
+                                px={6}
+                                leftIcon={<FaHeadSideVirus color={'gray.300'} />}
+                                onClick={() => {
+                                    var elmntToView = document.getElementById("heads");
+                                    elmntToView?.scrollIntoView();
+                                }}
+                            >
+                                Team Heads
+                            </Button>
+                            {/* </Link> */}
                         </motion.div>
                     </Stack>
                 </Stack>
@@ -98,16 +106,17 @@ export default function HomeHero() {
                         position={'absolute'}
                         top={'-25%'}
                         left={0}
-                        zIndex={-1}
+                        zIndex={0}
                         color={useColorModeValue('red.300', 'red.400')}
                     />
                     <Box
                         position={'relative'}
-                        height={'300px'}
+                        height={{ base: '200px', md: '300px' }}
                         rounded={'2xl'}
                         boxShadow={'2xl'}
                         width={'full'}
-                        overflow={'hidden'}>
+                        overflow={'hidden'}
+                    >
                         {/* <IconButton
                             aria-label={'Play Button'}
                             variant={'ghost'}
@@ -127,7 +136,7 @@ export default function HomeHero() {
                             w={'100%'}
                             h={'100%'}
                             src={
-                                'https://th.bing.com/th/id/OIG.cZGCpjWFLPNu9FRKq13Q?pid=ImgGn'
+                                'https://th.bing.com/th/id/OIG.pkNmr_FNliJVjpzLlbFL?pid=ImgGn'
                             }
                         />
                     </Box>
