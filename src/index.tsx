@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import { ColorModeScript } from "@chakra-ui/react"
-import * as React from "react"
-import * as ReactDOM from "react-dom/client"
-import { App } from "./App"
-import reportWebVitals from "./reportWebVitals"
-import * as serviceWorker from "./serviceWorker"
-import {
-  ChakraProvider,
-  theme,
-} from "@chakra-ui/react"
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { QueryClientProvider } from "react-query";
-import { queryClient } from "./utils/queryClient"
-import "./index.css"
-
-// Pages
-import Home from "./pages/Home"
-import Login from "./pages/Login"
-import SignUp from "./pages/SignUp"
-import Contact from "./pages/Contact"
-=======
 import { ColorModeScript } from "@chakra-ui/react";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
@@ -51,7 +26,6 @@ import GHC1 from "./pages/events/GHC1";
 import Activity from "./pages/about/Activity";
 import ProfilePage from "./pages/dashboard/Profile";
 import SettingsPage from "./pages/dashboard/Settings";
->>>>>>> nishanth
 
 const router = createBrowserRouter([
   {
@@ -70,13 +44,6 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
-<<<<<<< HEAD
-]);
-
-const container = document.getElementById("root")
-if (!container) throw new Error('Failed to find the root element');
-const root = ReactDOM.createRoot(container)
-=======
   {
     path: "/about/mission",
     element: <MissionNdVission />,
@@ -110,7 +77,6 @@ const root = ReactDOM.createRoot(container)
 const container = document.getElementById("root");
 if (!container) throw new Error("Failed to find the root element");
 const root = ReactDOM.createRoot(container);
->>>>>>> nishanth
 
 root.render(
   <React.StrictMode>
@@ -120,29 +86,15 @@ root.render(
         <RouterProvider router={router} fallbackElement={<App />} />
       </QueryClientProvider>
     </ChakraProvider>
-<<<<<<< HEAD
-  </React.StrictMode>,
-)
-=======
   </React.StrictMode>
 );
->>>>>>> nishanth
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
-<<<<<<< HEAD
-serviceWorker.unregister()
-=======
 serviceWorker.unregister();
->>>>>>> nishanth
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-<<<<<<< HEAD
-reportWebVitals()
-
-=======
 reportWebVitals();
->>>>>>> nishanth

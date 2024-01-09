@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { useState } from "react";
->>>>>>> nishanth
 import {
     Box,
     Flex,
@@ -9,7 +6,6 @@ import {
     Heading,
     Text,
     Container,
-    Input,
     Button,
     SimpleGrid,
     Avatar,
@@ -17,19 +13,12 @@ import {
     useBreakpointValue,
     IconProps,
     Icon,
-    FormLabel,
-    FormControl,
-<<<<<<< HEAD
-} from '@chakra-ui/react'
-import SignUpField from '../components/SignUpField'
-=======
     Link
 } from '@chakra-ui/react'
 import SignUpField from '../components/SignUpField'
 import { useMutation } from "react-query";
 import signup from "../utils/mutations/signup";
 import { useNavigate, Link as ReactLink } from "react-router-dom"
->>>>>>> nishanth
 
 const avatars = [
     {
@@ -75,11 +64,6 @@ const Blur = (props: IconProps) => {
     )
 }
 
-<<<<<<< HEAD
-export default function JoinOurTeam() {
-    return (
-        <Box position={'relative'}>
-=======
 
 const Form1 = ({ handleChange, input }: any) => {
     return (
@@ -198,34 +182,21 @@ export default function JoinOurTeam() {
 
     return (
         <Box position={'relative'} h={'100vh'} overflowY={useBreakpointValue({ md: 'hidden' })}>
->>>>>>> nishanth
             <Container
                 as={SimpleGrid}
                 maxW={'7xl'}
                 columns={{ base: 1, md: 2 }}
                 spacing={{ base: 10, lg: 32 }}
-<<<<<<< HEAD
-                py={{ base: 10, sm: 20, lg: 32 }}>
-=======
                 py={{ base: 10, sm: 20, lg: 16 }}>
->>>>>>> nishanth
                 <Stack spacing={{ base: 10, md: 20 }}>
                     <Heading
                         zIndex={100}
                         lineHeight={1.1}
                         fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}>
-<<<<<<< HEAD
-                        Hyperloop Enthusiasts {' '}
-                        <Text as={'span'} bgGradient="linear(to-r, red.400,pink.400)" bgClip="text">
-                            &
-                        </Text>{' '}
-                        The ones to be
-=======
                         Register Now for Hyperloop Innovation Challenge {' '}
                         <Text as={'span'} bgGradient="linear(to-r, red.400,purple.400)" bgClip="text">
                             !
                         </Text>
->>>>>>> nishanth
                     </Heading>
                     <Stack direction={'row'} spacing={4} align={'center'}>
                         <AvatarGroup>
@@ -244,11 +215,7 @@ export default function JoinOurTeam() {
                                         height: 'full',
                                         rounded: 'full',
                                         transform: 'scale(1.125)',
-<<<<<<< HEAD
-                                        bgGradient: 'linear(to-bl, red.400,pink.400)',
-=======
                                         bgGradient: 'linear(to-bl, red.400,purple.400)',
->>>>>>> nishanth
                                         position: 'absolute',
                                         zIndex: -1,
                                         top: 0,
@@ -299,61 +266,6 @@ export default function JoinOurTeam() {
                             lineHeight={1.1}
                             fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
                             Join our journey
-<<<<<<< HEAD
-                            <Text as={'span'} bgGradient="linear(to-r, red.400,pink.400)" bgClip="text">
-                                !
-                            </Text>
-                        </Heading>
-                        <Text color={'gray.500'} fontSize={{ base: 'sm', sm: 'md' }}>
-                            We’re looking for amazing engineers just like you! Become a part of our
-                            rockstar engineering team and skyrocket your career!
-                        </Text>
-                    </Stack>
-                    <Box as={'form'} mt={8}>
-                        <Stack spacing={2}>
-
-                            <SignUpField id="email" label='Email address' placeholder='firstname@lastname.io' type='email' />
-                            <SignUpField id="password" label='Password' placeholder='Password' type='password' />
-                            <SignUpField id="teamname" label='Team Name' placeholder='Ex: Loid hyperloop' type='text' />
-                            <SignUpField id="homeUniversity" label='Home University' placeholder='IIT Madras' type='text' />
-                            <SignUpField id="activemembers" label='Active Members' placeholder='50' type='number' />
-                            <SignUpField id="attendeventmembers" label='Event Members' placeholder='15' type='number' />
-
-                            <Flex>
-                                <SignUpField id="teamrepresentetive" label='Team Rep' placeholder='Ex: Shaun' type='text' />
-                                <SignUpField id="emailrepresentetive" label='Rep Email' placeholder='firstname@provider.io' type='email' />
-                            </Flex>
-
-                            <SignUpField id="numberrepresentetive" label='No.of Reps' placeholder='2' type='number' />
-                            <SignUpField id="teamlogo" label='Logo URL' placeholder='https://logo_img.com' type='text' />
-                            <SignUpField id="officialteamname" label='Official Team Name' placeholder='Ex: Loid HyperloopOne' type='text' />
-                            <SignUpField id="teamaddress" label='Team Address' placeholder='Jane street, Northumberland Rd' type='text' />
-                            <SignUpField id="country" label='Country' placeholder='Ex: India' type='text' />
-                            <SignUpField id="postalcode" label='Postal Code' placeholder='Ex: 540056' type='text' />
-
-
-                        </Stack>
-                        <Button
-                            fontFamily={'heading'}
-                            mt={8}
-                            w={'full'}
-                            bgGradient="linear(to-r, red.400,pink.400)"
-                            color={'white'}
-                            _hover={{
-                                bgGradient: 'linear(to-r, red.400,pink.400)',
-                                boxShadow: 'xl',
-                            }}>
-                            Submit
-                        </Button>
-                    </Box>
-                    form
-                </Stack>
-            </Container>
-            <Blur position={'absolute'} top={-10} left={-10} style={{ filter: 'blur(70px)' }} />
-        </Box>
-    )
-}
-=======
                             <Text as={'span'} bgGradient="linear(to-r, red.400,purple.400)" bgClip="text">
                                 !
                             </Text>
@@ -361,7 +273,7 @@ export default function JoinOurTeam() {
                     </Stack>
                     <Box as={'form'} mt={8}>
                         <Stack key={step} spacing={2}>
-                            {step == 1 ? <Form1 handleChange={handleChange} input={input} /> : step == 2 ? <Form2 handleChange={handleChange} input={input} /> : step == 3 ? <Form3 handleChange={handleChange} input={input} /> : <Form4 handleChange={handleChange} handleImageChange={handleImageChange} input={input} />}
+                            {step === 1 ? <Form1 handleChange={handleChange} input={input} /> : step === 2 ? <Form2 handleChange={handleChange} input={input} /> : step === 3 ? <Form3 handleChange={handleChange} input={input} /> : <Form4 handleChange={handleChange} handleImageChange={handleImageChange} input={input} />}
                         </Stack>
                         {/* <img src={file} /> */}
                         <Text align={'center'} color={'red.600'} pt={2}>
@@ -445,4 +357,3 @@ export default function JoinOurTeam() {
         </Box>
     )
 }
->>>>>>> nishanth
