@@ -1,4 +1,4 @@
-import { StarIcon } from '@chakra-ui/icons'
+// import { StarIcon } from '@chakra-ui/icons'
 import {
   Container,
   SimpleGrid,
@@ -7,31 +7,29 @@ import {
   Heading,
   Text,
   Stack,
-  StackDivider,
-  Icon,
   useColorModeValue,
 } from '@chakra-ui/react'
 // import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
-import { ReactElement } from 'react'
-import { BiMoney } from 'react-icons/bi'
-import { FaBusinessTime, FaMapMarkedAlt, FaMoneyBill } from 'react-icons/fa'
+// import { ReactElement } from 'react'
+// import { BiMoney } from 'react-icons/bi'
+// import { FaBusinessTime, FaMapMarkedAlt, FaMoneyBill } from 'react-icons/fa'
 
-interface FeatureProps {
-  text: string
-  iconBg: string
-  icon?: ReactElement
-}
+// interface FeatureProps {
+//   text: string
+//   iconBg: string
+//   icon?: ReactElement
+// }
 
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
-  return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
-  )
-}
+// const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+//   return (
+//     <Stack direction={'row'} align={'center'}>
+//       <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
+//         {icon}
+//       </Flex>
+//       <Text fontWeight={600}>{text}</Text>
+//     </Stack>
+//   )
+// }
 
 export default function SplitWithImage() {
   return (

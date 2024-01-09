@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HomeHero";
-import TimeLine from "../components/TimeLine";
 import Footer from "../components/Footer";
 import Business from "../components/Business";
 import FAQ from "../components/FAQ";
@@ -14,7 +13,7 @@ import SplitWithImage from "../components/SplitWithImage";
 const Loading = () => {
   const ref = useRef(null);
   const [isPresent, safeToRemove] = usePresence();
-  const [team, isLoading, isError] = useGetTeam();
+  const [isLoading] = useGetTeam();
 
   const show = {
     opacity: 1,
@@ -67,7 +66,7 @@ const Loading = () => {
 };
 
 const Home: React.FC<any> = () => {
-  const [team, isLoading, isError] = useGetTeam();
+  const [isLoading] = useGetTeam();
 
   return (
     <AnimatePresence exitBeforeEnter>

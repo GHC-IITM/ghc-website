@@ -40,7 +40,7 @@ export default function WithSubnavigation() {
   const { colorMode, toggleColorMode } = useColorMode();
   const navigate = useNavigate();
 
-  const [team, isLoading, isError] = useGetTeam();
+  const [team] = useGetTeam();
 
   function handleLogout() {
     localStorage.removeItem("qid");

@@ -6,7 +6,6 @@ import {
   AccordionButton,
   AccordionPanel,
   Flex,
-  useColorModeValue,
   Text,
   Container,
 } from '@chakra-ui/react'
