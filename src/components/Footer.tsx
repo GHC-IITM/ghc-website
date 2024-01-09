@@ -13,7 +13,7 @@ import {
     HStack
 } from '@chakra-ui/react'
 import { ReactNode, useState } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaPhone, FaMailBulk } from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 import { MdMail, MdPhone } from 'react-icons/md'

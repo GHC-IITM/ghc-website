@@ -223,7 +223,8 @@ const Loading = () => {
     const ref = useRef(null);
     const [isPresent, safeToRemove] = usePresence();
     const [team, isLoading, isError] = useGetTeam();
-
+    console.log(team,isError);
+    
     const show = {
         opacity: 1,
         display: "block",
@@ -288,6 +289,8 @@ const FormElement = ({ handleChange, value, title, tagline, type, bgColor, btnTe
 const SettingsPage = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [team, isLoading, isError] = useGetTeam();
+    console.log(isError);
+    
     const [input, setInput] = useState({
         email: "", password: "", teamname: "", homeUniversity: "", activemembers: undefined, attendeventmembers: undefined, teamrepresentetive: "", emailrepresentetive: "", numberrepresentetive: undefined, teamlogo: "", officialteamname: "", teamaddress: "", country: "", postalcode: undefined
     });

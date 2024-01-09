@@ -30,9 +30,7 @@ import {
 } from '@chakra-ui/react'
 import {
     FiHome,
-    FiTrendingUp,
     FiCompass,
-    FiStar,
     FiSettings,
     FiMenu,
     FiBell,
@@ -226,7 +224,7 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
 const Loading = () => {
     const ref = useRef(null);
     const [isPresent, safeToRemove] = usePresence();
-    const [team, isLoading, isError] = useGetTeam();
+    const [isLoading] = useGetTeam();
 
     const show = {
         opacity: 1,
@@ -269,11 +267,11 @@ const Loading = () => {
 
 const ProfilePage = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [team, isLoading, isError] = useGetTeam();
+    const [team, isLoading] = useGetTeam();
     const [email, setEmail] = useState("");
     const [oldPassword, setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
-
+    console.log(email);
 
     const bgColor = useColorModeValue('white', 'gray.900');
 

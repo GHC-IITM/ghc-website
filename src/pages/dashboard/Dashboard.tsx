@@ -26,9 +26,9 @@ import {
 } from '@chakra-ui/react'
 import {
     FiHome,
-    FiTrendingUp,
+    // FiTrendingUp,
     FiCompass,
-    FiStar,
+    // FiStar,
     FiSettings,
     FiMenu,
     FiBell,
@@ -221,7 +221,7 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
 const Loading = () => {
     const ref = useRef(null);
     const [isPresent, safeToRemove] = usePresence();
-    const [team, isLoading, isError] = useGetTeam();
+    const [isLoading] = useGetTeam();
 
     const show = {
         opacity: 1,
@@ -274,7 +274,7 @@ const Detail = ({ label, value }: { label: string, value: string }) => {
 
 const SidebarWithHeader = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [team, isLoading, isError] = useGetTeam();
+    const [team, isLoading] = useGetTeam();
     const cardBgColor = useColorModeValue('white', 'gray.800');
 
     return (

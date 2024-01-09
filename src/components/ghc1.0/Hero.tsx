@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import { Stack, Container, Box, Flex, Text, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+// import { ReactNode } from 'react'
+import { Stack, Container, Box, Flex, Text, Heading, useColorModeValue } from '@chakra-ui/react'
 
 export default function TrackDetails() {
     return (

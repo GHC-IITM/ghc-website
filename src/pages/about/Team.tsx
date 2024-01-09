@@ -1,109 +1,109 @@
 import {
   Box,
-  Flex,
+  // Flex,
   Heading,
   Text,
   Stack,
   Container,
-  Avatar,
+  // Avatar,
   useColorModeValue,
   Image,
 } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import BasicStatistics from "../../components/Stats";
+// import BasicStatistics from "../../components/Stats";
 import OurTeam from "../../components/OurTeam";
 import TeamHero from "../../components/TeamHero";
 import Advisors from "../../components/Advisors";
 
-interface Props {
-  children: React.ReactNode;
-}
+// interface Props {
+//   children: React.ReactNode;
+// }
 
-const Testimonial = (props: Props) => {
-  const { children } = props;
+// const Testimonial = (props: Props) => {
+//   const { children } = props;
 
-  return <Box>{children}</Box>;
-};
+//   return <Box>{children}</Box>;
+// };
 
-const TestimonialContent = (props: Props) => {
-  const { children } = props;
+// const TestimonialContent = (props: Props) => {
+//   const { children } = props;
 
-  return (
-    <Stack
-      bg={useColorModeValue("white", "gray.900")}
-      boxShadow={"lg"}
-      p={8}
-      rounded={"xl"}
-      align={"center"}
-      pos={"relative"}
-      _after={{
-        content: `""`,
-        w: 0,
-        h: 0,
-        borderLeft: "solid transparent",
-        borderLeftWidth: 16,
-        borderRight: "solid transparent",
-        borderRightWidth: 16,
-        borderTop: "solid",
-        borderTopWidth: 16,
-        borderTopColor: useColorModeValue("white", "gray.900"),
-        pos: "absolute",
-        bottom: "-16px",
-        left: "50%",
-        transform: "translateX(-50%)",
-      }}
-    >
-      {children}
-    </Stack>
-  );
-};
+//   return (
+//     <Stack
+//       bg={useColorModeValue("white", "gray.900")}
+//       boxShadow={"lg"}
+//       p={8}
+//       rounded={"xl"}
+//       align={"center"}
+//       pos={"relative"}
+//       _after={{
+//         content: `""`,
+//         w: 0,
+//         h: 0,
+//         borderLeft: "solid transparent",
+//         borderLeftWidth: 16,
+//         borderRight: "solid transparent",
+//         borderRightWidth: 16,
+//         borderTop: "solid",
+//         borderTopWidth: 16,
+//         borderTopColor: useColorModeValue("white", "gray.900"),
+//         pos: "absolute",
+//         bottom: "-16px",
+//         left: "50%",
+//         transform: "translateX(-50%)",
+//       }}
+//     >
+//       {children}
+//     </Stack>
+//   );
+// };
 
-const TestimonialHeading = (props: Props) => {
-  const { children } = props;
+// const TestimonialHeading = (props: Props) => {
+//   const { children } = props;
 
-  return (
-    <Heading as={"h3"} fontSize={"xl"}>
-      {children}
-    </Heading>
-  );
-};
+//   return (
+//     <Heading as={"h3"} fontSize={"xl"}>
+//       {children}
+//     </Heading>
+//   );
+// };
 
-const TestimonialText = (props: Props) => {
-  const { children } = props;
+// const TestimonialText = (props: Props) => {
+//   const { children } = props;
 
-  return (
-    <Text
-      textAlign={"center"}
-      color={useColorModeValue("gray.600", "gray.400")}
-      fontSize={"sm"}
-    >
-      {children}
-    </Text>
-  );
-};
+//   return (
+//     <Text
+//       textAlign={"center"}
+//       color={useColorModeValue("gray.600", "gray.400")}
+//       fontSize={"sm"}
+//     >
+//       {children}
+//     </Text>
+//   );
+// };
 
-const TestimonialAvatar = ({
-  src,
-  name,
-  title,
-}: {
-  src: string;
-  name: string;
-  title: string;
-}) => {
-  return (
-    <Flex align={"center"} mt={8} direction={"column"}>
-      <Avatar src={src} mb={2} />
-      <Stack spacing={-1} align={"center"}>
-        <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={"sm"} color={"red.400"}>
-          {title}
-        </Text>
-      </Stack>
-    </Flex>
-  );
-};
+// const TestimonialAvatar = ({
+//   src,
+//   name,
+//   title,
+// }: {
+//   src: string;
+//   name: string;
+//   title: string;
+// }) => {
+//   return (
+//     <Flex align={"center"} mt={8} direction={"column"}>
+//       <Avatar src={src} mb={2} />
+//       <Stack spacing={-1} align={"center"}>
+//         <Text fontWeight={600}>{name}</Text>
+//         <Text fontSize={"sm"} color={"red.400"}>
+//           {title}
+//         </Text>
+//       </Stack>
+//     </Flex>
+//   );
+// };
 
 export default function Team() {
   return (
