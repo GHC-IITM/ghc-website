@@ -130,7 +130,7 @@ export default function WithSubnavigation() {
                     }}
                     rightIcon={<RxOpenInNewWindow />}
                   >
-                    Intrest Form
+                    Interest Form
                   </Button>
                 </motion.div>
               </Link>
