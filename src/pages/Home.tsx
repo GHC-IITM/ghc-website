@@ -78,7 +78,6 @@ const Home: React.FC<any> = () => {
           <HeroSection />
           <Business />
           <SplitWithImage />
-          {/* <TimeLine id='timeline' /> */}
           <FAQ />
           <Footer />
         </Box>
