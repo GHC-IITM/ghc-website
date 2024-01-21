@@ -14,9 +14,7 @@ import "./index.css";
 import "@fontsource-variable/kumbh-sans";
 
 // Pages
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import Home from "./pages/Home";  
 import Contact from "./pages/Contact";
 import MissionNdVission from "./pages/about/MissionNdVission";
 import Team from "./pages/about/Team";
@@ -32,14 +30,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/signup",
-    element: <SignUp />,
-  },
+  // {
+  //   path: "/login",
+  //   element: <Login />,
+  // },
+  // {
+  //   path: "/signup",
+  //   element: <SignUp />,
+  // },
   {
     path: "/contact",
     element: <Contact />,

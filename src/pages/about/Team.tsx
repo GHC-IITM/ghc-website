@@ -1,11 +1,9 @@
 import {
   Box,
-  // Flex,
   Heading,
   Text,
   Stack,
   Container,
-  // Avatar,
   useColorModeValue,
   Image,
 } from "@chakra-ui/react";
@@ -202,7 +200,7 @@ export default function Team() {
         <Stack
           spacing={2}
           as={Container}
-          maxW={"3xl"}
+          maxW={"2xl"}
           textAlign={"center"}
           py={4}
           mb={10}

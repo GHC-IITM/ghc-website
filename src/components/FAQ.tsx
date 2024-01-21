@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Accordion,
   AccordionItem,
@@ -46,7 +44,7 @@ export default function SimpleAccordion() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="xl"> When and Where will GHC be held?</Text>
+              <Text fontSize="xl" textAlign={'left'} pr={4}> When and Where will GHC be held?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
