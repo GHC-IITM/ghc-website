@@ -147,12 +147,12 @@ const Activity: React.FC<any> = () => {
         <Flex flexWrap="wrap" gridGap={10} justify="center">
           <LinkedInCard
             title="The organising team of the Global Hyperloop Competition IITM was fortunate enough to meet the current Chairman of..."
-            image="https://media.licdn.com/dms/image/D4D22AQHH8UNFCgpPtA/feedshare-shrink_800/0/1701938193706?e=1705536000&v=beta&t=aShAK1nU40hWVRn-ZQKYsokMjUA_qTK9BxzPkFNBuf8"
+            image="https://media.licdn.com/dms/image/D4D22AQHH8UNFCgpPtA/feedshare-shrink_800/0/1701938193706?e=1708560000&v=beta&t=Bxl16Mp4DXvSUFBcJW-C9cp65CqcYBb7mGJqTJRwxAg"
             postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_the-organising-team-of-the-global-hyperloop-activity-7138446180790816768-Hgme?utm_source=share&utm_medium=member_desktop"
           />
           <LinkedInCard
             title="Presenting to you the rapid progress of the 400 m tube - a solid 40 m - made by the tremendous efforts of both IIT Madras and Avishkar Hyperloop..."
-            image="https://media.licdn.com/dms/image/D4E22AQFOnIbSgr2sZQ/feedshare-shrink_1280/0/1701338115987?e=1705536000&v=beta&t=tIRT0h6cPlFnuQaFo5ZX7OSvnSdW9jAA-_jGRMVDU6U"
+            image="https://media.licdn.com/dms/image/D4E22AQFOnIbSgr2sZQ/feedshare-shrink_1280/0/1701338115987?e=1708560000&v=beta&t=oMXfcmZm-EJzjRwCugP4cKfiSrvGetN-j2MqXARfALY"
             postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_hyperloop-indianhyperloop-sustainability-activity-7135929343804878848-rX17?utm_source=share&utm_medium=member_desktop"
           />
         </Flex>

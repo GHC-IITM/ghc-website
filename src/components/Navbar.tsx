@@ -34,6 +34,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { BsPencilSquare } from "react-icons/bs";
 import useGetTeam from "../utils/useGetTeam";
 import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
+import { RxOpenInNewWindow } from "react-icons/rx";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -48,7 +50,14 @@ export default function WithSubnavigation() {
   }
 
   return (
-    <Box zIndex={100} position={"sticky"} top={0} left={0} w={"full"} boxShadow={'md'} >
+    <Box
+      zIndex={100}
+      position={"sticky"}
+      top={0}
+      left={0}
+      w={"full"}
+      boxShadow={"md"}
+    >
       <Flex
         bg={useColorModeValue("gray.100", "gray.900")}
         color={useColorModeValue("gray.600", "white")}
@@ -104,16 +113,6 @@ export default function WithSubnavigation() {
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-              <Button
-                display={{ base: "none", md: "inline-flex" }}
-                fontSize={"sm"}
-                fontWeight={400}
-                variant={"link"}
-                onClick={() => navigate("/login")}
-              >
-                Sign In
-              </Button>
-
               <Link to={"/signup"}>
                 <motion.div
                   whileTap={{ scale: 0.95 }}
@@ -129,8 +128,9 @@ export default function WithSubnavigation() {
                     _hover={{
                       bg: "red.500",
                     }}
+                    rightIcon={<RxOpenInNewWindow />}
                   >
-                    Sign Up
+                    Intrest Form
                   </Button>
                 </motion.div>
               </Link>
@@ -216,8 +216,11 @@ const DesktopNav: React.FC<any> = () => {
                     bg: bgHoverColor,
                   }}
                   rounded={"md"}
+                  display={"flex"}
+                  alignItems={"center"}
                 >
                   {navItem.label}
+                  {navItem.children && <Icon as={FaChevronDown} ml={2} />}
                 </Box>
               </Link>
             </PopoverTrigger>
@@ -295,7 +298,6 @@ const MobileNav = ({ team }: any) => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-      {!team && <MobileNavItem key={"login"} label="Sign In" href="/login" />}
     </Stack>
   );
 };
