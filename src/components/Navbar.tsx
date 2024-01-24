@@ -108,80 +108,32 @@ export default function WithSubnavigation() {
           spacing={useBreakpointValue({ sm: 1, md: 4 })}
           align={"center"}
         >
-          {!team ? (
-            <>
-              <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
-              <Link to={"/signup"}>
-                <motion.div
-                  whileTap={{ scale: 0.95 }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Button
-                    fontSize={"sm"}
-                    rounded={"full"}
-                    // display={{ base: 'none', md: 'inline-flex' }}
-                    fontWeight={600}
-                    colorScheme={"red"}
-                    bg={"red.400"}
-                    _hover={{
-                      bg: "red.500",
-                    }}
-                    rightIcon={<RxOpenInNewWindow />}
-                  >
-                    Interest Form
-                  </Button>
-                </motion.div>
-              </Link>
-            </>
-          ) : (
-            <>
+          <>
+            <Button onClick={toggleColorMode}>
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
+            <Link to={"/"}>
               <motion.div
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <Button
                   fontSize={"sm"}
+                  rounded={"full"}
+                  // display={{ base: 'none', md: 'inline-flex' }}
                   fontWeight={600}
                   colorScheme={"red"}
                   bg={"red.400"}
                   _hover={{
                     bg: "red.500",
                   }}
-                  rightIcon={<BsPencilSquare />}
-                  onClick={() => navigate("/dashboard")}
-                  rounded={"full"}
+                  rightIcon={<RxOpenInNewWindow />}
                 >
-                  Team
+                  Interest Form
                 </Button>
               </motion.div>
-              <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar size={"sm"} bg={"gray.700"} />
-                </MenuButton>
-                <MenuList zIndex={100}>
-                  <Link to={"/dashboard/profile"}>
-                    <MenuItem>Profile</MenuItem>
-                  </Link>
-                  <Link to={"/dashboard"}>
-                    <MenuItem>Team</MenuItem>
-                  </Link>
-                  <MenuDivider />
-                  <MenuItem onClick={handleLogout}>Sign Out</MenuItem>
-                </MenuList>
-              </Menu>
-            </>
-          )}
+            </Link>
+          </>
         </Stack>
       </Flex>
 

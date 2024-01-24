@@ -20,7 +20,7 @@ const milestones = [
     },
     {
         id: 2,
-        date: 'March 2024',
+        date: 'April 2024',
         title: 'The Conference',
         description:
             'The conference brings together leading companies, visionary speakers and hyperloop enthusiastic teams!'
