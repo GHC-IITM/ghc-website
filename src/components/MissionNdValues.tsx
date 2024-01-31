@@ -94,7 +94,7 @@ export default function MissionNdvalues() {
 
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Image
-              src="https://th.bing.com/th/id/OIG.lL4CeQ.XtLKXdLhOCk8K?pid=ImgGn"
+              src="/hyp-hero.jpeg"
               width={{ base: "full", md: "50%" }}
               objectFit={"contain"}
               rounded={"lg"}
