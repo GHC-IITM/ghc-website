@@ -135,9 +135,7 @@ export default function HomeHero() {
               align={"center"}
               w={"100%"}
               h={"100%"}
-              src={
-                "https://th.bing.com/th/id/OIG.cZGCpjWFLPNu9FRKq13Q?pid=ImgGn"
-              }
+              src={'/home-hero.jpeg'}              
             />
           </Box>
         </Flex>

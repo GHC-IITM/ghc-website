@@ -100,7 +100,7 @@ export default function LargeWithNewsletter() {
                             <Link to="/">
                                 <Image src={useColorModeValue('/GHC-LOGO-BLACK.png', '/GHC-logo.png')} h={6} />
                             </Link>
-                            {/* <Text mt={2} fontWeight={'semibold'} fontFamily={"sans-serif"} fontSize={"md"}>Global Hyperloop Competetion</Text> */}
+                            {/* <Text mt={2} fontWeight={'semibold'} fontSize={"md"}>Global Hyperloop Competetion</Text> */}
                             {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
                         </HStack>
                         <Text fontSize={'sm'}>© 2023 GHC . All rights reserved</Text>
