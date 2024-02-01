@@ -327,6 +327,11 @@ const NAV_ITEMS: Array<NavItem> = [
         subLabel: "Innovation Kickoffs here!",
         href: "/events/ghc1.0",
       },
+      {
+        label: "Lecture Series",
+        subLabel: "High-Value technical insights",
+        href: "/events/lecture-series",
+      },
     ],
   },
   {
