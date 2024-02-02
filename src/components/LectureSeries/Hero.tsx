@@ -95,7 +95,7 @@ export default function LectureHero() {
                 px={6}
                 leftIcon={<FaHeadSideVirus color={"gray.300"} />}
                 onClick={() => {
-                  var elmntToView = document.getElementById("heads");
+                  var elmntToView = document.getElementById("createdBy");
                   elmntToView?.scrollIntoView();
                 }}
               >

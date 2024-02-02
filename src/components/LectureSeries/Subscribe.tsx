@@ -45,7 +45,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 export default function FollowWAChannel() {
   const qrCode = useColorModeValue("/wachannel.png", "/wa-dark.png");
   return (
-    <Container maxW={"7xl"} py={12} px={8}>
+    <Container maxW={"7xl"} py={12} pb={20} px={8}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, md: 20 }}
@@ -63,7 +63,7 @@ export default function FollowWAChannel() {
             alignSelf={"flex-start"}
             rounded={"md"}
           >
-            GHC Online Club!
+            GHC Online Club
           </Text>
           <Heading>
             Follow our WhatsApp Channel to recieve regular updates
@@ -113,7 +113,7 @@ export default function FollowWAChannel() {
               alt={"feature image"}
               src={qrCode}
               objectFit={"contain"}
-              ml={"auto"}
+              ml={{ md: "auto" }}
               h={"80%"}
             />
           </Link>

@@ -3,6 +3,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import LectureHero from "../../components/LectureSeries/Hero";
 import FollowWAChannel from "../../components/LectureSeries/Subscribe";
+import Videos from "../../components/LectureSeries/Videos";
+import CreatedBy from "../../components/LectureSeries/CreatedBy";
 
 const LectureSeries = () => {
   return (
@@ -10,6 +12,8 @@ const LectureSeries = () => {
       <Navbar />
       <LectureHero />
       <FollowWAChannel />
+      <CreatedBy />
+      <Videos />
       <Footer />
     </Container>
   );

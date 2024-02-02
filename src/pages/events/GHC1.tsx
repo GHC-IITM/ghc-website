@@ -1,9 +1,7 @@
 import {
   Box,
   Text,
-  Heading,
   useColorModeValue,
-  VStack,
   Container,
 } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
@@ -55,31 +53,6 @@ const GHC1 = () => {
       </Box>
 
       <TimeLine />
-
-      <VStack
-        py={{ base: 4, md: 12, xl: 16 }}
-        px={{ base: 6, md: 20 }}
-        color={useColorModeValue("gray.800", "gray.400")}
-        maxW={"7xl"}
-        justifySelf={"center"}
-        spacing={4}
-        mb={10}
-      >
-        <Heading
-          color={useColorModeValue("gray.900", "white")}
-          fontSize={{ base: "3xl", md: "5xl" }}
-        >
-          Enlighten & Inspire: Explore Our Lecture Series
-        </Heading>
-        <Text fontSize={"xl"}>
-          The Online Lecture Series organized by the GHC aims to educate the
-          public and college students about the Hyperloop and provide them with
-          high-quality technical insight into the workings of the technologies
-          involved in building groundbreaking mass-transportation systems with
-          the help of the best Hyperloop teams across the country.
-          Stay tuned for more!
-        </Text>
-      </VStack>
 
       <Box width={"full"}>
         <Footer />
