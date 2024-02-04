@@ -42,7 +42,7 @@ export default function Videos() {
               justifyContent="space-between"
               p={4}
             >
-              <Text fontSize="xl">INFRASTRUCTURE</Text>
+              <Text fontSize="xl">PROPULSION</Text>
               <Text
                 display={{ base: "none", md: "block" }}
                 fontSize="lg"
@@ -110,7 +110,12 @@ export default function Videos() {
                 {" "}
                 MECHANICAL
               </Text>
-              <Text fontSize="lg" opacity={0.7} ml={"auto"}>
+              <Text
+                display={{ base: "none", md: "block" }}
+                fontSize="lg"
+                opacity={0.7}
+                ml={"auto"}
+              >
                 {" "}
                 Vegapod Hyperloop (6 Feb)
               </Text>
@@ -139,7 +144,12 @@ export default function Videos() {
                 {" "}
                 SENSE AND CONTROL
               </Text>
-              <Text fontSize="lg" opacity={0.7} ml={"auto"}>
+              <Text
+                display={{ base: "none", md: "block" }}
+                fontSize="lg"
+                opacity={0.7}
+                ml={"auto"}
+              >
                 {" "}
                 Nirmaan Hyperloop (8 Feb)
               </Text>
@@ -165,7 +175,12 @@ export default function Videos() {
               p={4}
             >
               <Text fontSize="xl"> POWER SYSTEM</Text>
-              <Text fontSize="lg" opacity={0.7} ml={"auto"}>
+              <Text
+                display={{ base: "none", md: "block" }}
+                fontSize="lg"
+                opacity={0.7}
+                ml={"auto"}
+              >
                 {" "}
                 Infinity Hyperloop (10 Feb)
               </Text>
@@ -190,8 +205,13 @@ export default function Videos() {
               justifyContent="space-between"
               p={4}
             >
-              <Text fontSize="xl"> PROPULSION</Text>
-              <Text fontSize="lg" opacity={0.7} ml={"auto"}>
+              <Text fontSize="xl"> INFRASTRUCTURE</Text>
+              <Text
+                display={{ base: "none", md: "block" }}
+                fontSize="lg"
+                opacity={0.7}
+                ml={"auto"}
+              >
                 {" "}
                 Avishkar Hyperloop (12 Feb)
               </Text>
