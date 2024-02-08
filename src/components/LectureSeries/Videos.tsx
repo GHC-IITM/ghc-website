@@ -18,7 +18,7 @@ export default function Videos() {
     <Flex
       minH={"50vh"}
       align={"center"}
-      marginBottom={"5%"}
+      marginBottom={"7%"}
       justify={"center"}
       flexDirection={"column"}
       //   bg={useColorModeValue('gray.50', 'gray.800')}
@@ -73,8 +73,10 @@ export default function Videos() {
                 behind propelling the pod through a partial vacuum tube at high
                 speeds. The levitation department is responsible for maintaining
                 the vehicle's elevation above the track via magnetic levitation
-                to lift the pod and keep it suspended during travel. Visit
-                loopMIT at:{" "}
+                to lift the pod and keep it suspended during travel.
+                <br />
+                <br />
+                Visit loopMIT at:{" "}
                 <Link to="https://www.loopmit.in/" target="_blank">
                   <Text color={"red.400"} _hover={{ textDecor: "underline" }}>
                     https://www.loopmit.in/
@@ -121,16 +123,60 @@ export default function Videos() {
               </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
-            <AccordionPanel pb={4}>
+            <AccordionPanel
+              pb={6}
+              display={"flex"}
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Text
-                as={"span"}
-                bgGradient="linear(to-r, red.500, purple.300)"
-                bgClip="text"
-                fontSize={"xl"}
-                fontWeight={"bold"}
+                color="gray.500"
+                w={"85%"}
+                mr={8}
+                mb={{ base: 8, md: 0 }}
+                textAlign={"justify"}
               >
-                Coming Soon!
+                Founded in 2018, Vegapod Hyperloop is a student-driven team from
+                Dr. Vishwanath Karad MIT World Peace University, Pune,
+                Maharashtra working on the scalability and development of
+                Hyperloop technology. At the European Hyperloop Week 2023, the
+                team secured a position amongst the world's top six teams,
+                showcasing a fully operational Hyperloop prototype. They stood
+                as the sole Asian representative to successfully pass the
+                rigorous Testing and Safety Documentation (TSD) round. The
+                mechanical subsystem is responsible for incorporating all the
+                various technologies featured in the Hyperloop into a stable,
+                safe and usable unit. Backed by Indian Institute of Technology
+                Delhi and Indian Institute of Management Ahmedabad, the founders
+                of Vegapod Hyperloop have gone on to co-found Quintrans
+                Hyperloop- a Pune based start-up.
+                <br />
+                <br />
+                Visit Vegapod Hyperloop at:{" "}
+                <Link
+                  to="https://www.linkedin.com/company/teamvegapodhyperloop/"
+                  target="_blank"
+                >
+                  <Text color={"red.400"} _hover={{ textDecor: "underline" }}>
+                    https://www.linkedin.com/company/teamvegapodhyperloop/
+                  </Text>
+                </Link>
               </Text>
+              <Box
+                position={"relative"}
+                height={{ base: "260px", md: "300px" }}
+                rounded={"2xl"}
+                boxShadow={"2xl"}
+                width={"full"}
+                overflow={"hidden"}
+              >
+                <AspectRatio h={"100%"} w={"100%"} ratio={1}>
+                  <iframe
+                    title="Mechanical"
+                    src="https://www.youtube.com/embed/nqHfmi1Js2Y?si=B-V5NH9d1Pqrvzux"
+                    allowFullScreen
+                  />
+                </AspectRatio>
+              </Box>
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -155,16 +201,56 @@ export default function Videos() {
               </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
-            <AccordionPanel pb={4}>
+            <AccordionPanel
+              pb={6}
+              display={"flex"}
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Text
-                as={"span"}
-                bgGradient="linear(to-r, red.500, purple.300)"
-                bgClip="text"
-                fontSize={"xl"}
-                fontWeight={"bold"}
+                color="gray.500"
+                w={"85%"}
+                mr={8}
+                mb={{ base: 8, md: 0 }}
+                textAlign={"justify"}
               >
-                Coming Soon!
+                Founded in 2019, Nirmaan Hyperloop is a committed student
+                organisation at Thakur College of Engineering and Technology,
+                Mumbai, Maharashtra of aspiring engineers, researchers to assist
+                high-pace transportation: Hyperloop. The Team includes numerous
+                domain names like Software, Electronics, Manufacturing,
+                Aerodynamics, Brakes, Propulsion, etc. Since the pod in a
+                Hyperloop is in vacuum, getting access to the various
+                information about the systems when in motion or static is very
+                difficult. The software system is crucial for safety,
+                workability and research for the Hyperloop. Nirmaan Hyperloop
+                has achieved low-latency and high-bandwidth inter-process
+                Communication and has a specialised In-House Graphical
+                User-Interface (GUI).
+                <br />
+                <br />
+                Visit Nirmaan Hyperloop at:{" "}
+                <Link to="https://www.nirmaanhyperloop.com/" target="_blank">
+                  <Text color={"red.400"} _hover={{ textDecor: "underline" }}>
+                    https://www.nirmaanhyperloop.com/
+                  </Text>
+                </Link>
               </Text>
+              <Box
+                position={"relative"}
+                height={{ base: "260px", md: "300px" }}
+                rounded={"2xl"}
+                boxShadow={"2xl"}
+                width={"full"}
+                overflow={"hidden"}
+              >
+                <AspectRatio h={"100%"} w={"100%"} ratio={1}>
+                  <iframe
+                    title="Mechanical"
+                    src="https://www.youtube.com/embed/u6_Gc-h4KNA?si=Trb0Z6xQqvauF8si"
+                    allowFullScreen
+                  />
+                </AspectRatio>
+              </Box>
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>

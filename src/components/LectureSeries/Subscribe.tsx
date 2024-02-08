@@ -45,7 +45,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 export default function FollowWAChannel() {
   const qrCode = useColorModeValue("/wachannel.png", "/wa-dark.png");
   return (
-    <Container maxW={"7xl"} py={12} pb={20} px={8}>
+    <Container maxW={"7xl"} py={12} pb={{ base: 10, md: 20 }} px={8}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, md: 20 }}
