@@ -9,7 +9,7 @@ const CreatedBy = () => {
       <Stack
         align={"center"}
         justifyContent={"space-evenly"}
-        spacing={{ base: 8, md: 10 }}
+        spacing={10}
         py={{ base: 12, md: 20 }}
         direction={{ base: "column", md: "row" }}
         wrap={"wrap"}
