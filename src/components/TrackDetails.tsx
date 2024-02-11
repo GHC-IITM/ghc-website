@@ -99,23 +99,11 @@ const StatsText = ({ children }: { children: ReactNode }) => (
 
 const stats = [
   {
-    title: "Length 400m",
-    content: (
-      <>
-        <StatsText>It's Huge Length</StatsText> enhances acceleration and
-        deceleration capabilities, optimizing the overall efficiency of the
-        transportation system.
-      </>
-    ),
+    title: "400m",
+    content: <>Length</>,
   },
   {
-    title: "Diameter 2m",
-    content: (
-      <>
-        <StatsText>2-meter diameter tube</StatsText> for a hyperloop pod
-        provides enhanced aerodynamic efficiency, minimizing air resistance and
-        allowing for higher speeds with reduced energy consumption.
-      </>
-    ),
+    title: "2m",
+    content: <>Diameter</>,
   },
 ];

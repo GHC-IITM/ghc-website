@@ -272,16 +272,58 @@ export default function Videos() {
               </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
-            <AccordionPanel pb={4}>
+            <AccordionPanel
+              pb={6}
+              display={"flex"}
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Text
-                as={"span"}
-                bgGradient="linear(to-r, red.500, purple.300)"
-                bgClip="text"
-                fontSize={"xl"}
-                fontWeight={"bold"}
+                color="gray.500"
+                w={"85%"}
+                mr={8}
+                mb={{ base: 8, md: 0 }}
+                textAlign={"justify"}
               >
-                Coming Soon!
+                Founded in 2019, Infinity Hyperloop is a team of 25+ zealous
+                undergraduate engineers from several disciplines of IIT Delhi
+                working together to promote interdisciplinary exchanges of
+                knowledge and ideas and bring forth the fifth mode of
+                transportation. As part of their mission, they intend to develop
+                an autonomous scalable pod and develop new technologies to
+                facilitate the commercialization of the Hyperloop system. The
+                Power or Electrical System in Hyperloop controls the amount of
+                electric current, voltage and energy supplied to the pod and
+                track system. It typically uses a complex system of
+                electromagnetic sensors and coils to ensure the safety, speed
+                and reliability of the pod.
+                <br />
+                <br />
+                Visit Infinity Hyperloop at:{" "}
+                <Link
+                  to="https://infinityhyperloop.iitd.ac.in/"
+                  target="_blank"
+                >
+                  <Text color={"red.400"} _hover={{ textDecor: "underline" }}>
+                    https://infinityhyperloop.iitd.ac.in/
+                  </Text>
+                </Link>
               </Text>
+              <Box
+                position={"relative"}
+                height={{ base: "260px", md: "300px" }}
+                rounded={"2xl"}
+                boxShadow={"2xl"}
+                width={"full"}
+                overflow={"hidden"}
+              >
+                <AspectRatio h={"100%"} w={"100%"} ratio={1}>
+                  <iframe
+                    title="Infrastructure"
+                    src="https://www.youtube.com/embed/pBm973y42hA?si=cNx1EqcEICKLKAYs"
+                    allowFullScreen
+                  />
+                </AspectRatio>
+              </Box>
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>

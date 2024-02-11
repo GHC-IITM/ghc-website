@@ -4,7 +4,7 @@ const CreatedBy = () => {
   return (
     <Container id={"createdBy"} maxW={"7xl"} overflow={"hidden"} px={8} mb={10}>
       <Heading textAlign={"center"} fontSize={{ base: "3xl", md: "5xl" }}>
-        Created By
+        Associated Teams
       </Heading>
       <Stack
         align={"center"}

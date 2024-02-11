@@ -128,35 +128,9 @@ export default function LectureHero() {
             width={"full"}
             overflow={"hidden"}
           >
-            {!play ? (
-              <>
-                <IconButton
-                  aria-label={"Play Button"}
-                  variant={"ghost"}
-                  _hover={{ bg: "transparent" }}
-                  icon={<PlayIcon w={12} h={12} />}
-                  size={"lg"}
-                  color={"white"}
-                  position={"absolute"}
-                  left={"50%"}
-                  top={"50%"}
-                  transform={"translateX(-50%) translateY(-50%)"}
-                  onClick={() => setPlay(true)}
-                />
-                <Image
-                  alt={"Hero Image"}
-                  fit={"cover"}
-                  align={"center"}
-                  w={"100%"}
-                  h={"100%"}
-                  src={"/OIG.jpg"}
-                />
-              </>
-            ) : (
-              <AspectRatio h={"100%"} w={"100%"} ratio={1}>
-                <Video />
-              </AspectRatio>
-            )}
+            <AspectRatio h={"100%"} w={"100%"} ratio={1}>
+              <Video />
+            </AspectRatio>
           </Box>
         </Flex>
       </Stack>
@@ -197,14 +171,14 @@ const Video = () => {
       player = new (window as any).YT.Player("player", {
         videoId: "Wm42-ni3RR4", // Replace with the actual YouTube video ID
         events: {
-          onReady: onPlayerReady,
+          // onReady: onPlayerReady,
         },
       });
     };
 
-    const onPlayerReady = (event: any) => {
-      event.target.playVideo(); // Autoplay the video once the player is ready
-    };
+    // const onPlayerReady = (event: any) => {
+    //   event.target.playVideo(); // Autoplay the video once the player is ready
+    // };
 
     // Load the YouTube API script dynamically
     const script = document.createElement("script");

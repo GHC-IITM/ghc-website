@@ -10,13 +10,10 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
-} from "react-icons/io5";
+import { IoAnalyticsSharp, IoSearchSharp } from "react-icons/io5";
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
+import { RiFlashlightLine } from "react-icons/ri";
 
 interface FeatureProps {
   text: string;
@@ -90,7 +87,9 @@ export default function FollowWAChannel() {
               text={"Learn"}
             />
             <Feature
-              icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
+              icon={
+                <Icon as={RiFlashlightLine} color={"green.500"} w={5} h={5} />
+              }
               iconBg={useColorModeValue("green.100", "green.900")}
               text={"Hyperloop Technology"}
             />
