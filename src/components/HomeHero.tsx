@@ -46,7 +46,7 @@ export default function HomeHero() {
                 zIndex: -1,
               }}
             >
-              Welcome to,
+              Introducing the,
             </Text>
             <br />
             <Text as={"span"} color={"red.400"}>
@@ -135,7 +135,7 @@ export default function HomeHero() {
               align={"center"}
               w={"100%"}
               h={"100%"}
-              src={'/home-hero.jpeg'}              
+              src={"/home-hero.jpeg"}
             />
           </Box>
         </Flex>
