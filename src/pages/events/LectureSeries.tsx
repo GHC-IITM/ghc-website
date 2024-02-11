@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import LectureHero from "../../components/LectureSeries/Hero";
 import FollowWAChannel from "../../components/LectureSeries/Subscribe";
 import Videos from "../../components/LectureSeries/Videos";
-import CreatedBy from "../../components/LectureSeries/CreatedBy";
+import CreatedBy from "../../components/LectureSeries/AssociatedTeams";
 
 const LectureSeries = () => {
   return (
