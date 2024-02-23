@@ -24,7 +24,7 @@ export default function LectureHero() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 12, md: 20 }}
+        py={{ base: 12, md: 16 }}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 6 }}>
@@ -56,9 +56,11 @@ export default function LectureHero() {
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            The GHC's Online Lecture Series educates viewers on Hyperloop
-            technology, offering technical insights from leading teams across
-            the country. Start building by heading over to our YouTube channel.{" "}
+            The GHC online lecture series aims to educate the world about the
+            Hyperloop, the technology involved, its feasibility, and its future.
+            <br />
+            Meet 5 leading Hyperloop teams from India - gain technical insights,
+            and learn how to start your own Hyperloop team
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}

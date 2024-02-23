@@ -47,14 +47,14 @@ export default function TrackDetails() {
                   fontSize={"xl"}
                   color={"gray.500"}
                 >
-                  March 2024
+                  April 2024
                 </Text>
                 <Heading
                   color={useColorModeValue("gray.900", "white")}
                   mb={5}
                   fontSize={{ base: "3xl", md: "5xl" }}
                 >
-                  The Conference
+                  Parivahan
                 </Heading>
                 <Text
                   fontSize={"xl"}
