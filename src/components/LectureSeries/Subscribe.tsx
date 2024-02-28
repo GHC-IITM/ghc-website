@@ -60,15 +60,13 @@ export default function FollowWAChannel() {
             alignSelf={"flex-start"}
             rounded={"md"}
           >
-            GHC Online Club
+            REGULAR UPDATES
           </Text>
-          <Heading>
-            Follow our WhatsApp Channel to recieve regular updates
-          </Heading>
+          <Heading>Follow the GHC Online Club</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            We are here to collaborate and learn together about every aspect of
-            the hyperloop technology. We’re truly excited to show you what we
-            have in store for you and cannot wait to make the Global Hyperloop
+            We are here to collaborate and learn about every aspect of the
+            hyperloop technology together. We’re truly excited to show you what we have
+            in store for you and cannot wait to make the Global Hyperloop
             Competition a reality!🔥
           </Text>
           <Stack

@@ -46,7 +46,7 @@ export default function HomeHero() {
                 zIndex: -1,
               }}
             >
-              Introducing the,
+              Introducing,
             </Text>
             <br />
             <Text as={"span"} color={"red.400"}>

@@ -112,15 +112,15 @@ const Activity: React.FC<any> = () => {
         </Container>
         <Flex flexWrap="wrap" gridGap={10} justify="center">
           <InstagramEmbed
-            url="https://www.instagram.com/p/C0PNdE8yxfQ/"
+            url="https://www.instagram.com/p/C35cHSrI_ua/"
             width={328}
           />
           <InstagramEmbed
-            url="https://www.instagram.com/p/CzQx_dSIS4G/"
+            url="https://www.instagram.com/p/C2waXmISkZ7/"
             width={328}
           />
           <InstagramEmbed
-            url="https://www.instagram.com/p/CyIlA8wJnMK/"
+            url="https://www.instagram.com/p/C2wY6hySCYe/"
             width={328}
           />
         </Flex>
@@ -146,15 +146,21 @@ const Activity: React.FC<any> = () => {
         </Container>
         <Flex flexWrap="wrap" gridGap={10} justify="center">
           <LinkedInCard
-            title="The organising team of the Global Hyperloop Competition IITM was fortunate enough to meet the current Chairman of..."
-            image="https://media.licdn.com/dms/image/D4D22AQHH8UNFCgpPtA/feedshare-shrink_800/0/1701938193706?e=1708560000&v=beta&t=Bxl16Mp4DXvSUFBcJW-C9cp65CqcYBb7mGJqTJRwxAg"
-            postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_the-organising-team-of-the-global-hyperloop-activity-7138446180790816768-Hgme?utm_source=share&utm_medium=member_desktop"
+            title="40 m of Indian Institute of Technology, Madras Hyperloop track-&-tube assembly is now done, with 400 m to be reached soon! Asia’s first..."
+            image="https://media.licdn.com/dms/image/D4D22AQF3OSiumJ_Snw/feedshare-shrink_1280/0/1706984737481?e=1712188800&v=beta&t=Xqt3OBJGkA8LPTlWeDGDGn-I3s22rf0vNrwbM5LjDEQ"
+            postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_40-m-of-indian-institute-of-technology-madras-activity-7159612921390481409-A-oF?utm_source=share&utm_medium=member_desktop"
           />
           <LinkedInCard
-            title="Presenting to you the rapid progress of the 400 m tube - a solid 40 m - made by the tremendous efforts of both IIT Madras and Avishkar Hyperloop..."
-            image="https://media.licdn.com/dms/image/D4E22AQFOnIbSgr2sZQ/feedshare-shrink_1280/0/1701338115987?e=1708560000&v=beta&t=oMXfcmZm-EJzjRwCugP4cKfiSrvGetN-j2MqXARfALY"
-            postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_hyperloop-indianhyperloop-sustainability-activity-7135929343804878848-rX17?utm_source=share&utm_medium=member_desktop"
+            title="The final lecture of The Hyperloop Way has been released on YouTube. This video, made by the experts from Avishkar Hyperloop..."
+            image="https://media.licdn.com/dms/image/D5622AQGOgr2LsF3SXg/feedshare-shrink_1280/0/1707753568809?e=1712188800&v=beta&t=YPVoYdV8uDGYzB98ORzC8cSWFhMHerQU7g39qtUfZM0"
+            postUrl="https://www.linkedin.com/posts/global-hyperloop-competition-iitm_the-final-lecture-of-the-hyperloop-way-has-activity-7162837628847947776-2_7J?utm_source=share&utm_medium=member_desktop"
           />
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7162475629643345921"
+            width="320"
+            frameBorder="10"
+            title="Embedded post"
+          ></iframe>
         </Flex>
       </Container>
       <Footer />

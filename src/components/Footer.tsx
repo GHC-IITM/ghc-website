@@ -134,7 +134,7 @@ export default function LargeWithNewsletter() {
                     <Stack align={'flex-start'}>
                         <ListHeader>Support</ListHeader>
                         <FooterLink href='#'>
-                            Blog
+                            Blog (Coming soon)
                         </FooterLink>
                         <FooterLink href='/contact'>
                             Contact us

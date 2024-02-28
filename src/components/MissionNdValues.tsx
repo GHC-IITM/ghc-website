@@ -107,20 +107,19 @@ export default function MissionNdvalues() {
               color={useColorModeValue("gray.600", "gray.300")}
             >
               <Text mb={6} fontSize={"lg"}>
-                Hyperloop, the “fifth mode of transport”, is a high speed rail
-                system which essentially aims to eliminate friction and air
-                drag. Moreover, it incorporates the use of magnetic levitation
-                of a “pod” moving within a partially evacuated “tube” thereby,
-                achieving a considerably high speed which can potentially reach
-                till the speed of sound.
+                Hyperloop, the “fifth mode of transport”, is a high-speed
+                transportation system for long-distance travel. It involves an
+                electromagnetically levitating pod within a vacuum tube thus
+                eliminating friction & air drag and potentially allowing the pod
+                to reach speeds up to Mach 1.0
               </Text>
               <Text fontSize={"lg"}>
                 This mode of transport will be marked by its immunity to
-                weather, collision free commute which can move at twice the
+                weather, collision-free commute which can move at twice the
                 speed of a plane, with low power consumption and energy storage
-                for 24-hour operations. Moreover, with the effective use of
-                solar energy, this mode of transport can easily sustain itself
-                for long durations.
+                for 24-hour operations. Overall the Hyperloop will be a
+                sustainable mode of transportation running on solar or
+                electrical energy.
               </Text>
             </Box>
           </Stack>
@@ -165,13 +164,12 @@ export default function MissionNdvalues() {
             >
               Synergic Research
             </Heading>
-
             <Text color={"gray.500"} fontSize={"lg"} textAlign={"justify"}>
               The Global Hyperloop Competition will essentially serve as a
-              platform for forging innovation among the teams around the world
-              to bring out a plethora of caricature to realise a new mode of
-              transportation - Hyperloop. This is not only a competition, but a
-              pedestal for the world to come together and re-engineer mobility.
+              platform for forging innovation among transportation researchers
+              around the world to pave the way for the development of the
+              Hyperloop technology. This is not only a competition, but a
+              pedestal for the world to come together and re-engineer mobility.
             </Text>
           </VStack>
         </SimpleGrid>
@@ -198,7 +196,7 @@ export default function MissionNdvalues() {
             heading={"The Hyperloop Vision"}
             icon={<Icon as={FcBullish} w={10} h={10} />}
             description={
-              "By explaining the hyperloop technologies and its associated benefits - incredible speed, safety and sustainability - to people, GHC will ensure the development of a massive Hyperloop community over the years to revolutionalise the existing transport system."
+              "By explaining the technologies involved in Hyperloop and its associated benefits - incredible speed, safety and sustainability - to people, GHC will ensure the development of a massive Hyperloop community over the years to revolutionalise the existing transport system."
             }
             href={"#"}
           />
@@ -206,7 +204,7 @@ export default function MissionNdvalues() {
             heading={"The Conference"}
             icon={<Icon as={FcConferenceCall} w={10} h={10} />}
             description={
-              "Serving as a stage for hyperloop enthusiasts, the Conference gives an opportunity for networking and collaboration among students, academicians and industrialists in order to propel the research and development of the hyperloop technologies."
+              "Serving as a stage for Hyperloop enthusiasts, the Conference gives an opportunity for networking and collaboration among students, academicians and industrialists in order to propel the research and development of the hyperloop technologies."
             }
             href={"#"}
           />
@@ -214,7 +212,7 @@ export default function MissionNdvalues() {
             heading={"The Competition"}
             icon={<Icon as={FcApproval} w={10} h={10} />}
             description={
-              "Engaging students and teams to ideate, innovate and develop is the goal of the Competition. The competitive spirit will drive teams to unleash their best innovative spirits to showcase the different perspectives on the hyperloop technology and assist its growth."
+              "The Competetion aims to engage students and teams to ideate, innovate and develop. The competitive spirit will drive teams to showcase different perspectives on the hyperloop technology and assist its growth."
             }
             href={"#"}
           />

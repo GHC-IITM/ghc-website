@@ -14,19 +14,32 @@ import {
 const milestones = [
   {
     id: 1,
-    date: "March 2024",
-    title: "Inaugural of the 400m vacuum  tube",
-    description: `Inauguration of the technological marvel by dignitaries!`,
+    date: "February 2024",
+    title: "The Hyperloop Way",
+    description: `The Hyperloop Way is a lecture series by GHC on YouTube featuring 5 top Hyperloop teams in India.`,
   },
   {
     id: 2,
     date: "April 2024",
-    title: "The Conference",
+    title: "Release of track & tube documentation",
     description:
-      "The conference brings together leading companies, visionary speakers and hyperloop enthusiastic teams!",
+      "The documentation of the track and tube will be released to the public.",
   },
   {
     id: 3,
+    date: "April 2024",
+    title: "The Conference",
+    description:
+      "The conference brings together leading companies, visionary speakers, and enthusiastic Hyperloop student teams on an international collaborative platform!",
+  },
+  {
+    id: 4,
+    date: "September 2024",
+    title: "Inaugural of the 400m vacuum  tube",
+    description: `Inauguration of the technological marvel by dignitaries!`,
+  },
+  {
+    id: 5,
     date: "January 2025",
     title: "Global Hyperloop competition",
     description:
