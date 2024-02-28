@@ -48,21 +48,23 @@ export default function TrackDetails() {
                 fontSize={"xl"}
                 color={"gray.500"}
               >
-                Track Details
+                Vacuum Tube
               </Text>
               <Heading
                 color={"white"}
                 mb={5}
                 fontSize={{ base: "3xl", md: "5xl" }}
               >
-                400m vacuum tube
+                Track & Tube details
               </Heading>
               <Text fontSize={"xl"} color={"gray.400"}>
-                The hyperloop track features a 2-meter diameter tube spanning a
-                length of 400 meters, designed to maximize efficiency and speed
-                in transportation. With a focus on aerodynamic excellence, the
-                spacious tube minimizes air resistance, allowing hyperloop pods
-                to achieve high velocities with reduced energy consumption.
+                The hyperloop track features a tube of 2-meter diameter tube
+                spanning a length of 400 meters, designed to maximize efficiency
+                and speed in transportation. The Global Hyperloop Competition
+                will feature Asia’s first student-run 410m vacuum compatible
+                tube with a focus on aerodynamic excellence, the spacious tube
+                minimizes air resistance, allowing hyperloop pods to achieve
+                high velocities with reduced energy consumption.
               </Text>
             </Box>
 
