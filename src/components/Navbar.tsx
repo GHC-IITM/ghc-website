@@ -112,7 +112,7 @@ export default function WithSubnavigation() {
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-            <Link to={"/"}>
+            {/* <Link to={"/"}>
               <motion.div
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
@@ -132,7 +132,7 @@ export default function WithSubnavigation() {
                   Interest Form
                 </Button>
               </motion.div>
-            </Link>
+            </Link> */}
           </>
         </Stack>
       </Flex>
