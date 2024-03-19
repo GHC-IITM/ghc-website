@@ -103,7 +103,7 @@ export default function LargeWithNewsletter() {
                             {/* <Text mt={2} fontWeight={'semibold'} fontSize={"md"}>Global Hyperloop Competetion</Text> */}
                             {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
                         </HStack>
-                        <Text fontSize={'sm'}>© 2023 GHC . All rights reserved</Text>
+                        <Text fontSize={'sm'}>© 2024 GHC . All rights reserved</Text>
                         <Stack direction={'row'} spacing={6}>
                             <SocialButton label={'Instagram'} href="https://www.instagram.com/ghc_india/">
                                 <FaInstagram />

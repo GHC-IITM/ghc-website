@@ -112,7 +112,7 @@ export default function WithSubnavigation() {
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-            {/* <Link to={"/"}>
+            <Link to={"/register"}>
               <motion.div
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
@@ -129,10 +129,10 @@ export default function WithSubnavigation() {
                   }}
                   rightIcon={<RxOpenInNewWindow />}
                 >
-                  Interest Form
+                  Register Now
                 </Button>
               </motion.div>
-            </Link> */}
+            </Link>
           </>
         </Stack>
       </Flex>
@@ -358,8 +358,4 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Contact Us",
     href: "/contact",
   },
-  {
-    label: "Registration",
-    href: "/register",
-  }
 ];

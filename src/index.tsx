@@ -20,11 +20,13 @@ import MissionNdVission from "./pages/about/MissionNdVission";
 import Team from "./pages/about/Team";
 import Dashboard from "./pages/dashboard/Dashboard";
 import theme from "./utils/theme";
-import GHC1 from "./pages/events/GHC1";
+import GHC1 from "./pages/events/GHC1/GHC1";
 import Activity from "./pages/about/Activity";
 import ProfilePage from "./pages/dashboard/Profile";
 import SettingsPage from "./pages/dashboard/Settings";
 import LectureSeries from "./pages/events/LectureSeries";
+import RegisterForConference from "./pages/events/GHC1/Register";
+import HostelAccomodation from "./pages/events/GHC1/HostelAccomodation";
 import Register from "./pages/Register";
 
 const router = createBrowserRouter([
@@ -67,6 +69,14 @@ const router = createBrowserRouter([
   {
     path: "/events/ghc1.0",
     element: <GHC1 />,
+  },
+  // {
+  //   path: "/events/ghc1.0/register",
+  //   element: <RegisterForConference />,
+  // },
+  {
+    path: "/events/ghc1.0/accomodation",
+    element: <HostelAccomodation />,
   },
   {
     path: "/events/lecture-series",

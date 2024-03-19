@@ -1,14 +1,10 @@
-import {
-  Box,
-  Text,
-  useColorModeValue,
-  Container,
-} from "@chakra-ui/react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Hero from "../../components/ghc1.0/Hero";
-import TimeLine from "../../components/TimeLine";
+import { Box, Text, useColorModeValue, Container } from "@chakra-ui/react";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import Hero from "../../../components/ghc1.0/Hero";
+import TimeLine from "../../../components/TimeLine";
 import { useEffect } from "react";
+import CTA from "../../../components/ghc1.0/CTA";
 
 const GHC1 = () => {
   useEffect(() => {
@@ -20,7 +16,7 @@ const GHC1 = () => {
       <Navbar />
       <Hero />
       <Box
-        py={{ base: 4, md: 20, xl: 30 }}
+        py={{ base: 4, md: 16, xl: 30 }}
         px={{ base: 6, md: 8 }}
         color={useColorModeValue("gray.800", "gray.400")}
         maxW={"7xl"}
@@ -51,6 +47,8 @@ const GHC1 = () => {
           </Text>
         </Text>
       </Box>
+
+      <CTA />
 
       <TimeLine />
 
