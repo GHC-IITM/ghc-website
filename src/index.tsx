@@ -14,7 +14,7 @@ import "./index.css";
 import "@fontsource-variable/kumbh-sans";
 
 // Pages
-import Home from "./pages/Home";  
+import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import MissionNdVission from "./pages/about/MissionNdVission";
 import Team from "./pages/about/Team";
@@ -25,6 +25,7 @@ import Activity from "./pages/about/Activity";
 import ProfilePage from "./pages/dashboard/Profile";
 import SettingsPage from "./pages/dashboard/Settings";
 import LectureSeries from "./pages/events/LectureSeries";
+import Register from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
     path: "/about/activity",
     element: <Activity />,
   },
+  {
+    path: "/register",
+    element: <Register />,
+  }
 ]);
 
 const container = document.getElementById("root");
@@ -87,6 +92,7 @@ root.render(
     <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} fallbackElement={<App />} />
+
       </QueryClientProvider>
     </ChakraProvider>
   </React.StrictMode>
