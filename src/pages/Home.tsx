@@ -9,6 +9,7 @@ import useGetTeam from "../utils/useGetTeam";
 import { AnimatePresence, motion, usePresence } from "framer-motion";
 import { gsap } from "gsap";
 import SplitWithImage from "../components/SplitWithImage";
+import Banner from "../components/ParivahanBanner";
 
 const Loading = () => {
   const ref = useRef(null);
@@ -74,6 +75,7 @@ const Home: React.FC<any> = () => {
         <Loading />
       ) : (
         <Box maxWidth={"full"}>
+          <Banner />
           <Navbar />
           <HeroSection />
           <Business />

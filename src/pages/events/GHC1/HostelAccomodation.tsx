@@ -23,13 +23,13 @@ const HostelAccomodation = () => {
         <Flex p={8} flex={1} align={"center"} justify={"center"}>
           <Stack spacing={4} w={"full"} maxW={"md"}>
             <Heading fontSize={"2xl"}>Accommodation for the Conference</Heading>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input focusBorderColor="red.400" type="email" />
+            <FormControl id="name">
+              <FormLabel>Name</FormLabel>
+              <Input focusBorderColor="red.400" type="text" />
             </FormControl>
-            <FormControl id="password">
-              <FormLabel>Password</FormLabel>
-              <Input focusBorderColor="red.400" type="password" />
+            <FormControl id="email">
+              <FormLabel>Email</FormLabel>
+              <Input focusBorderColor="red.400" type="email" />
             </FormControl>
             <Stack spacing={6}>
               <Stack
@@ -41,7 +41,23 @@ const HostelAccomodation = () => {
                   I will be at IIT Madras on 19, 20 and 21st of April
                 </Checkbox>
               </Stack>
-              <Button colorScheme={"red"} variant={"solid"}>
+
+              <Text
+                as={"span"}
+                bgGradient="linear(to-r, red.500, purple.300)"
+                bgClip="text"
+                fontSize={"2xl"}
+                fontWeight={"bold"}
+              >
+                Coming soon!
+              </Text>
+
+              <Button
+                disabled
+                colorScheme={"gray"}
+                cursor={"not-allowed"}
+                variant={"solid"}
+              >
                 Proceed to payment
               </Button>
             </Stack>

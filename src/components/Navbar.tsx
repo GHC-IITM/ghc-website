@@ -112,7 +112,7 @@ export default function WithSubnavigation() {
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-            <Link to={"/events/ghc1.0/register"}>
+            <Link to={"/register"}>
               <motion.div
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}

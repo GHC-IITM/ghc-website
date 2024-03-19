@@ -10,6 +10,7 @@ export default function CTA() {
         align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 8, md: 16 }}
+        px={{ base: 4, sm: 0 }}
       >
         <Heading
           fontWeight={600}
@@ -34,7 +35,7 @@ export default function CTA() {
           justifyContent={"center"}
           w={"full"}
         >
-          <Link to={"/events/ghc1.0/register"}>
+          <Link to={"/register"}>
             <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
               <Button
                 rounded={"full"}
