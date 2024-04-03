@@ -23,10 +23,10 @@ export default function CTA() {
             now!
           </Text>
         </Heading>
-        <Text color={"gray.500"} maxW={"3xl"} textAlign={"justify"}>
+        <Text color={"gray.500"} maxW={"3xl"} textAlign={"center"}>
           Parivahan - The Global Hyperloop Conference (GHC) will be happening on
-          19th, 20th and 21st of April 2024 at IIT Madras Research Park. Make
-          sure to resgister and book your accomodation.
+          20th and 21st of April 2024 at IIT Madras Research Park. Make sure to
+          get your passes now!.
         </Text>
         <Stack
           spacing={6}

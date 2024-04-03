@@ -323,14 +323,14 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Events",
     children: [
       {
-        label: "The Hyperloop Way",
-        subLabel: "High-Value online lectures!",
-        href: "/events/lecture-series",
-      },
-      {
         label: "Parivahan",
         subLabel: "Global Hyperloop Conference",
         href: "/events/ghc1.0",
+      },
+      {
+        label: "The Hyperloop Way",
+        subLabel: "High-Value online lectures!",
+        href: "/events/lecture-series",
       },
     ],
   },
