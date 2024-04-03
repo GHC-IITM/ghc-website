@@ -46,24 +46,27 @@ export default function HomeHero() {
                 zIndex: -1,
               }}
             >
-              Introducing,
+              Parivahan,
             </Text>
             <br />
             <Text as={"span"} color={"red.400"}>
-              Global Hyperloop Competition
+              Global Hyperloop Conference
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            It's an event, where innovation knows no bounds! Unleash your
+            {/* It's an event, where innovation knows no bounds! Unleash your
             creativity, accelerate breakthroughs, and be a part of the
-            revolution – the Hyperloop revolution starts here!
+            revolution – the Hyperloop revolution starts here! */}
+            Parivahan - Global Hyperloop Conference marks the first-ever
+            international Hyperloop conference to be held in India. The
+            conference will take place on April 20 & 21 at IIT Madras.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
           >
             <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-              <Link to={"/events/ghc1.0"}>
+              <Link to={"/register"}>
                 <Button
                   rounded={"full"}
                   size={"lg"}
@@ -73,7 +76,7 @@ export default function HomeHero() {
                   bg={"red.400"}
                   _hover={{ bg: "red.500" }}
                 >
-                  Get started
+                  Register Now
                 </Button>
               </Link>
             </motion.div>

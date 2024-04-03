@@ -36,7 +36,7 @@ const GHC1 = () => {
           advancement on a worldwide scale. The conference will be the first
           stepping stone to it.
           <br />
-          <Text
+          <Text 
             as={"span"}
             bgGradient="linear(to-r, red.500, purple.300)"
             bgClip="text"

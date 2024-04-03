@@ -23,13 +23,13 @@ const SplitWithImage: React.FC<any> = () => {
             src={"/conf.avif"}
             objectFit={"cover"}
           />
-          <Heading>The Conference</Heading>
+          <Heading>Parivahan - The Conference</Heading>
           <Text color={"gray.500"} fontSize={"lg"} textAlign={"justify"}>
             The Global Hyperloop Conference is a precursor to the magnanimous
             Global Hyperloop Competition where the judges, participants,
             sponsors and orgasnisers will find a platform to interact with each
-            other and the world whilst unveiling the series of events entailed
-            in the Global Hyperloop Competition.
+            other and the world. The conference will feature scientists,
+            national policy-makers and business tycoons from around the world.
           </Text>
           <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
             <Link to={"/events/ghc1.0"}>
@@ -50,10 +50,9 @@ const SplitWithImage: React.FC<any> = () => {
             {/* A melange of science, technology and innovation, the Global Hyperloop Competition brings to India the preliminary stage of the profound idea of the fifth mode of transport - the Hyperloop. */}
             The Global Hyperloop Competition provides a stage for teams, in
             India and abroad, to showcase their innovation and research in the
-            extensive field of hyperloop thereby propagating the concept
-            globally. Conducted by the Indian Institute of Technology, Madras,
-            GHC envisions fostering a spirit of transformation and transition
-            among the young minds of the world!
+            field of Hyperloop thereby propagating the concept globally.
+            Conducted by IIT Madras, the GHC envisions fostering a spirit of
+            transformation and transition among the young minds of the world!
           </Text>
           <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
             <Link to={"/events/ghc1.0"}>
