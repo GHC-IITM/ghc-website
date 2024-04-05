@@ -101,7 +101,7 @@ const StatsText = ({ children }: { children: ReactNode }) => (
 
 const stats = [
   {
-    title: "400m",
+    title: "422m",
     content: <>Length</>,
   },
   {
