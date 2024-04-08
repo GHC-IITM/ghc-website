@@ -48,14 +48,6 @@ export default function CTA() {
               </Button>
             </motion.div>
           </Link>
-
-          <Link to={"/events/ghc1.0/accomodation"}>
-            <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-              <Button rounded={"full"} px={6}>
-                Book accomodation
-              </Button>
-            </motion.div>
-          </Link>
         </Stack>
       </Stack>
     </Container>

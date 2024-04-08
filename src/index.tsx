@@ -26,7 +26,6 @@ import ProfilePage from "./pages/dashboard/Profile";
 import SettingsPage from "./pages/dashboard/Settings";
 import LectureSeries from "./pages/events/LectureSeries";
 import RegisterForConference from "./pages/events/GHC1/Register";
-import HostelAccomodation from "./pages/events/GHC1/HostelAccomodation";
 import Register from "./pages/Register";
 
 const router = createBrowserRouter([
@@ -70,14 +69,6 @@ const router = createBrowserRouter([
     path: "/events/ghc1.0",
     element: <GHC1 />,
   },
-  // {
-  //   path: "/events/ghc1.0/register",
-  //   element: <RegisterForConference />,
-  // },
-  {
-    path: "/events/ghc1.0/accomodation",
-    element: <HostelAccomodation />,
-  },
   {
     path: "/events/lecture-series",
     element: <LectureSeries />,
@@ -89,7 +80,7 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
-  }
+  },
 ]);
 
 const container = document.getElementById("root");
@@ -102,7 +93,6 @@ root.render(
     <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} fallbackElement={<App />} />
-
       </QueryClientProvider>
     </ChakraProvider>
   </React.StrictMode>
