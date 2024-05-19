@@ -112,7 +112,7 @@ export default function WithSubnavigation() {
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-            {/* <Link to={"/"}>
+            <Link to={"/register"}>
               <motion.div
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
@@ -129,10 +129,10 @@ export default function WithSubnavigation() {
                   }}
                   rightIcon={<RxOpenInNewWindow />}
                 >
-                  Interest Form
+                  Register Now
                 </Button>
               </motion.div>
-            </Link> */}
+            </Link>
           </>
         </Stack>
       </Flex>
@@ -323,14 +323,14 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Events",
     children: [
       {
-        label: "The Hyperloop Way",
-        subLabel: "High-Value online lectures!",
-        href: "/events/lecture-series",
-      },
-      {
         label: "Parivahan",
         subLabel: "Global Hyperloop Conference",
         href: "/events/ghc1.0",
+      },
+      {
+        label: "The Hyperloop Way",
+        subLabel: "High-Value online lectures!",
+        href: "/events/lecture-series",
       },
     ],
   },

@@ -8,7 +8,7 @@ import {
   Text,
   Stack,
   useColorModeValue,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 // import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
 // import { ReactElement } from 'react'
 // import { BiMoney } from 'react-icons/bi'
@@ -48,18 +48,38 @@ export default function SplitWithImage() {
           >
             Our Vision
           </Text>
-          <Heading>What is Global Hyperloop Competition?</Heading>
+          <Heading>What is Parivahan?</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            The Global Hyperloop Competition, hosted by the Indian Institute of
-            Technology, Madras, introduces the Hyperloop to India, providing a
-            global platform for innovative teams. It aims to showcase and
-            propagate hyperloop concepts worldwide, fostering a transformative
-            spirit among young minds in the field of transportation.
+            <Text
+              as={"span"}
+              bgGradient="linear(to-r, red.500, purple.300)"
+              bgClip="text"
+              fontSize={"xl"}
+              fontWeight={"bold"}
+            >
+              Parivahan
+            </Text>{" "}
+            - The Global Hyperloop Conference is an international Hyperloop
+            conference to conducted by the GHC at Indian Institute of Technology
+            Madras on{" "}
+            <Text
+              as={"span"}
+              bgGradient="linear(to-r, red.500, purple.300)"
+              bgClip="text"
+              fontSize={"xl"}
+              fontWeight={"bold"}
+            >
+              April 20th and 21st
+            </Text>{" "}
+            , introduces the Hyperloop to India, providing a global platform for
+            innovative teams. It aims to showcase and propagate Hyperloop
+            concepts worldwide, fostering a transformative spirit among young
+            minds in the field of transportation.
           </Text>
           <Text color={"gray.500"} fontSize={"lg"}>
-            With a 400m tube on the edge we have a vision to conduct a global
-            competition to foster innovation, collaboration, and technological
-            advancement on a worldwide scale.{" "}
+            With a 422m tube on the edge, we have a vision to conduct a Global
+            Hyperloop Competition to foster innovation, collaboration, and
+            technological advancement on a worldwide scale.{" "}
           </Text>
           {/* <Stack
             spacing={4}

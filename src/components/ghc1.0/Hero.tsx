@@ -55,7 +55,7 @@ export default function TrackDetails() {
                 fontSize={"xl"}
                 color={"gray.500"}
               >
-                April 2024
+                20 & 21 April, 2024
               </Text>
               <Heading
                 color={useColorModeValue("gray.900", "white")}

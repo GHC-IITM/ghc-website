@@ -20,7 +20,7 @@ import MissionNdVission from "./pages/about/MissionNdVission";
 import Team from "./pages/about/Team";
 import Dashboard from "./pages/dashboard/Dashboard";
 import theme from "./utils/theme";
-import GHC1 from "./pages/events/GHC1";
+import GHC1 from "./pages/events/GHC1/GHC1";
 import Activity from "./pages/about/Activity";
 import ProfilePage from "./pages/dashboard/Profile";
 import SettingsPage from "./pages/dashboard/Settings";
@@ -87,7 +87,6 @@ root.render(
     <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} fallbackElement={<App />} />
-
       </QueryClientProvider>
     </ChakraProvider>
   </React.StrictMode>

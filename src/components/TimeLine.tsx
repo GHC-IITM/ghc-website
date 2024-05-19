@@ -21,29 +21,22 @@ const milestones = [
   {
     id: 2,
     date: "April 2024",
-    title: "Release of track & tube documentation",
-    description:
-      "The documentation of the track and tube will be released to the public.",
-  },
-  {
-    id: 3,
-    date: "April 2024",
-    title: "The Conference",
+    title: "Parivahan",
     description:
       "The conference brings together leading companies, visionary speakers, and enthusiastic Hyperloop student teams on an international collaborative platform!",
   },
   {
-    id: 4,
+    id: 3,
     date: "September 2024",
-    title: "Inaugural of the 400m vacuum  tube",
-    description: `Inauguration of the technological marvel by dignitaries!`,
+    title: "Inauguration of Track-&-Tube",
+    description: `Unveiling of the technological marvel by dignitaries!`,
   },
   {
     id: 5,
     date: "February 2025",
     title: "Global Hyperloop competition",
     description:
-      "With a 400m tube we will conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.",
+      "With a 422m tube we will conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.",
   },
 ];
 
@@ -53,7 +46,7 @@ const Milestones: React.FC<any> = ({ id }: { id: string }) => {
 
   return (
     <Container id={id} maxWidth="7xl" p={8} mb={8}>
-      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={10} textAlign="center">
+      <chakra.h3 fontSize="5xl" fontWeight="bold" mb={10} textAlign="center">
         Timeline of GHC 1.0
       </chakra.h3>
       {milestones.map((milestone) => (

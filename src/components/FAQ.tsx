@@ -40,6 +40,9 @@ export default function SimpleAccordion() {
                 GHC is a student-run organisation, which aims to conduct the
                 Global Hyperloop Competition and create an international
                 collaborative Hyperloop community.
+                GHC is a student-run organisation, which aims to conduct the
+                Global Hyperloop Competition and create an international
+                collaborative Hyperloop community.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -52,6 +55,7 @@ export default function SimpleAccordion() {
             >
               <Text fontSize="xl" textAlign={"left"} pr={4}>
                 {" "}
+                When and where will be Parivahan held?
                 When and where will be Parivahan held?
               </Text>
               <ChevronDownIcon fontSize="24px" />
@@ -70,6 +74,7 @@ export default function SimpleAccordion() {
               justifyContent="space-between"
               p={4}
             >
+              <Text fontSize="xl"> Who can register?</Text>
               <Text fontSize="xl"> Who can register?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>

@@ -59,9 +59,9 @@ export default function TrackDetails() {
               </Heading>
               <Text fontSize={"xl"} color={"gray.400"}>
                 The hyperloop track features a tube of 2-meter diameter tube
-                spanning a length of 400 meters, designed to maximize efficiency
+                spanning a length of 422 meters, designed to maximize efficiency
                 and speed in transportation. The Global Hyperloop Competition
-                will feature Asia’s first student-run 410m vacuum compatible
+                will feature Asia’s first student-run 422m vacuum compatible
                 tube with a focus on aerodynamic excellence, the spacious tube
                 minimizes air resistance, allowing hyperloop pods to achieve
                 high velocities with reduced energy consumption.
@@ -101,7 +101,7 @@ const StatsText = ({ children }: { children: ReactNode }) => (
 
 const stats = [
   {
-    title: "400m",
+    title: "422m",
     content: <>Length</>,
   },
   {
