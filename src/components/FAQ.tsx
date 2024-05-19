@@ -37,10 +37,9 @@ export default function SimpleAccordion() {
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.500">
-                GHC stands for Global Hyperloop Competition, which aims to
-                provide a platform to all the Hyperloop enthusiast teams where
-                they can put forward their ideas and contribute to gloom the
-                Hyperloop community.{" "}
+                GHC is a student-run organisation, which aims to conduct the
+                Global Hyperloop Competition and create an international
+                collaborative Hyperloop community.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -53,15 +52,14 @@ export default function SimpleAccordion() {
             >
               <Text fontSize="xl" textAlign={"left"} pr={4}>
                 {" "}
-                When and Where will GHC be held?
+                When and where will be Parivahan held?
               </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.500">
-                The conference is scheduled for March 2024 and the competition
-                is scheduled for January 2025, both being held in IIT Madras,
-                India
+                The conference was held on 20th and 21st of April 2024 at
+                IIT Madras Research Park.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -72,13 +70,12 @@ export default function SimpleAccordion() {
               justifyContent="space-between"
               p={4}
             >
-              <Text fontSize="xl"> Who can apply?</Text>
+              <Text fontSize="xl"> Who can register?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.500">
-                All the student teams around the globe can participate in the
-                competition.
+                The conference is open to all. You can register for free!
               </Text>
             </AccordionPanel>
           </AccordionItem>

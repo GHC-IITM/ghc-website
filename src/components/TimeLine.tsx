@@ -40,7 +40,7 @@ const milestones = [
   },
   {
     id: 5,
-    date: "January 2025",
+    date: "February 2025",
     title: "Global Hyperloop competition",
     description:
       "With a 400m tube we will conduct a global competition to foster innovation, collaboration, and technological advancement on a worldwide scale.",
