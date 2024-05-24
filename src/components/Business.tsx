@@ -48,9 +48,9 @@ export default function SplitWithImage() {
           >
             Our Vision
           </Text>
-          <Heading>What is Global Hyperloop Competition?</Heading>
+          <Heading>What is Global Hyperloop Competition ?</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            The Global Hyperloop Competition, hosted by the Indian Institute of
+            The Global Hyperloop Competition 2025, hosted by the Indian Institute of
             Technology, Madras, introduces the Hyperloop to India, providing a
             global platform for innovative teams. It aims to showcase and
             propagate hyperloop concepts worldwide, fostering a transformative

@@ -35,7 +35,7 @@ const milestones = [
   {
     id: 4,
     date: "September 2024",
-    title: "Inaugural of the 400m vacuum  tube",
+    title: "Inaugration of the 400m vacuum  tube",
     description: `Inauguration of the technological marvel by dignitaries!`,
   },
   {

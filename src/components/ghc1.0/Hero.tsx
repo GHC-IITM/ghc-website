@@ -68,15 +68,15 @@ export default function TrackDetails() {
                 fontSize={"xl"}
                 color={useColorModeValue("gray.600", "gray.400")}
               >
-                Parivahan - The Global Hyperloop Conference (GHC) will mark
+                Parivahan - The Global Hyperloop Conference (GHC) marked
                 India's first-ever international conference on innovative
-                transportation to be held in India. The conference brings
+                transportation to be held in India. The conference brought
                 together leading companies, visionary speakers, and Hyperloop
                 teams, to give them an unparalleled opportunity of sharing their
                 vision of Hyperloop as a sustainable future transportation
-                system on a leading platform. The conference will host experts
+                system on a leading platform. The conference hosted experts
                 who have significantly contributed to the technological
-                revolution. These leading experts will share their first-hand
+                revolution. These leading experts shared their first-hand
                 experiences, successes, and challenges!
               </Text>
               <Text
@@ -84,9 +84,9 @@ export default function TrackDetails() {
                 color={useColorModeValue("gray.600", "gray.400")}
                 mt={4}
               >
-                The conference will host experts who have significantly
+                The conference hosted experts who have significantly
                 contributed to the technological revolution. These leading
-                experts will be sharing their first-hand experiences, successes
+                experts shared their first-hand experiences, successes
                 and challenges!
               </Text>
             </Box>
