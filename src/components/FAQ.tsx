@@ -52,14 +52,16 @@ export default function SimpleAccordion() {
             >
               <Text fontSize="xl" textAlign={"left"} pr={4}>
                 {" "}
-                When and where will be Parivahan held?
+                What was the Global Hyperloop Conference?
               </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.500">
-                The conference was held on 20th and 21st of April 2024 at
-                IIT Madras Research Park.
+                Parivahan Global Hyperloop Conference was an international
+                scientific conference in April 2024. Conducted by GHC, it was
+                attended by delegates, researchers, startup founders and
+                students from all across the world.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -70,12 +72,17 @@ export default function SimpleAccordion() {
               justifyContent="space-between"
               p={4}
             >
-              <Text fontSize="xl"> Who can register?</Text>
+              <Text fontSize="xl">
+                What are the other events that will be conducted by GHC in the future?
+              </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.500">
-                The conference is open to all. You can register for free!
+                The GHC is poised to conducted the inauguration of its 422 m
+                track-&-tube in 2024 and conduct the Parivahan Global Hyperloop
+                Competition in 2025. More details will be
+                released with due time.
               </Text>
             </AccordionPanel>
           </AccordionItem>

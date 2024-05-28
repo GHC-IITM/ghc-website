@@ -150,54 +150,69 @@ const DesktopNav: React.FC<any> = () => {
   const bgHoverColor = useColorModeValue("gray.200", "gray.700");
   const popoverContentBgColor = useColorModeValue("white", "gray.900");
 
-  return (
-    <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Link to={navItem.href ?? "#"}>
-                <Box
-                  p={2}
-                  fontSize={"sm"}
-                  fontWeight={"medium"}
-                  color={linkColor}
-                  _hover={{
-                    textDecoration: "none",
-                    color: linkHoverColor,
-                    bg: bgHoverColor,
-                  }}
-                  rounded={"md"}
-                  display={"flex"}
-                  alignItems={"center"}
-                >
-                  {navItem.label}
-                  {navItem.children && <Icon as={FaChevronDown} ml={2} />}
-                </Box>
-              </Link>
-            </PopoverTrigger>
+  const handleDownload = () => {
+    window.open(
+      "https://drive.google.com/drive/u/1/folders/1iVzoQsk9yQ1LQ4vAfU7wRwYVHcbwtA_q",
+      "_blank",
+      "noopener noreferrer"
+    );
+  };
 
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-                mt={2}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
+  return (
+    <>
+      <Stack direction={"row"} spacing={4}>
+        {NAV_ITEMS.map((navItem) => (
+          <Box key={navItem.label}>
+            <Popover trigger={"hover"} placement={"bottom-start"}>
+              <PopoverTrigger>
+                <Link to={navItem.href ?? "#"}>
+                  <Box
+                    p={2}
+                    fontSize={"sm"}
+                    fontWeight={"medium"}
+                    color={linkColor}
+                    _hover={{
+                      textDecoration: "none",
+                      color: linkHoverColor,
+                      bg: bgHoverColor,
+                    }}
+                    rounded={"md"}
+                    display={"flex"}
+                    alignItems={"center"}
+                  >
+                    {navItem.label}
+                    {navItem.children && <Icon as={FaChevronDown} ml={2} />}
+                  </Box>
+                </Link>
+              </PopoverTrigger>
+
+              {navItem.children && (
+                <PopoverContent
+                  border={0}
+                  boxShadow={"xl"}
+                  bg={popoverContentBgColor}
+                  p={4}
+                  rounded={"xl"}
+                  minW={"sm"}
+                  mt={2}
+                >
+                  <Stack>
+                    {navItem.children.map((child) => (
+                      <DesktopSubNav key={child.label} {...child} />
+                    ))}
+                  </Stack>
+                </PopoverContent>
+              )}
+            </Popover>
+          </Box>
+        ))}
+      </Stack>
+      <div className="App">
+        <button style={{ padding: 7 }} onClick={handleDownload}>
+          Track&Tube Info
+        </button>
+      </div>
+    </>
   );
 };
 
@@ -240,7 +255,17 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 };
 
 const MobileNav = ({ team }: any) => {
+  const handleDownload = () => {
+    window.open(
+      "https://drive.google.com/drive/u/1/folders/1iVzoQsk9yQ1LQ4vAfU7wRwYVHcbwtA_q",
+      "_blank",
+      "noopener noreferrer"
+    );
+  };
   return (
+
+    <>
+    
     <Stack
       bg={useColorModeValue("gray.50", "gray.900")}
       p={4}
@@ -250,7 +275,13 @@ const MobileNav = ({ team }: any) => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
+     <div className="App">
+     <button style={{ padding: 3 ,fontSize: 15}} onClick={handleDownload}>
+       Track&Tube Info
+     </button>
+   </div>
     </Stack>
+    </>
   );
 };
 

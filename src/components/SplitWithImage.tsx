@@ -20,7 +20,7 @@ const SplitWithImage: React.FC<any> = () => {
           <Image
             rounded={"md"}
             alt={"feature image"}
-            src={"/conf.avif"}
+            src={"/conf.jpg"}
             objectFit={"cover"}
           />
           <Heading>The Conference</Heading>
@@ -41,7 +41,7 @@ const SplitWithImage: React.FC<any> = () => {
           <Image
             rounded={"md"}
             alt={"feature image"}
-            src={"/comp.avif"}
+            src={"/comp.jpg"}
             objectFit={"cover"}
           />
           <Heading>The Competition</Heading>
