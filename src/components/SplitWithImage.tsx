@@ -20,14 +20,14 @@ const SplitWithImage: React.FC<any> = () => {
           <Image
             rounded={"md"}
             alt={"feature image"}
-            src={"/conf.avif"}
+            src={"/conf.jpg"}
             objectFit={"cover"}
           />
           <Heading>The Conference</Heading>
           <Text color={"gray.500"} fontSize={"lg"} textAlign={"justify"}>
-            The Global Hyperloop Conference is a precursor to the magnanimous
-            Global Hyperloop Competition where the judges, participants,
-            sponsors and orgasnisers will find a platform to interact with each
+            The Global Hyperloop Conference was a precursor to the magnanimous
+            Global Hyperloop Competition 2025 where the judges, participants,
+            sponsors and orgasnisers found a platform to interact with each
             other and the world whilst unveiling the series of events entailed
             in the Global Hyperloop Competition.
           </Text>
@@ -41,7 +41,7 @@ const SplitWithImage: React.FC<any> = () => {
           <Image
             rounded={"md"}
             alt={"feature image"}
-            src={"/comp.avif"}
+            src={"/comp.jpg"}
             objectFit={"cover"}
           />
           <Heading>The Competition</Heading>

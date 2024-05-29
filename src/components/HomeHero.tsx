@@ -50,7 +50,7 @@ export default function HomeHero() {
             </Text>
             <br />
             <Text as={"span"} color={"red.400"}>
-              Global Hyperloop Competition
+              Global Hyperloop Competition 2025
             </Text>
           </Heading>
           <Text color={"gray.500"}>
