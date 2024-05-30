@@ -160,7 +160,7 @@ const DesktopNav: React.FC<any> = () => {
 
   return (
     <>
-      <Stack direction={"row"} spacing={4}>
+      <Stack direction={"row"} alignItems={"center"} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -168,7 +168,8 @@ const DesktopNav: React.FC<any> = () => {
                 <Link to={navItem.href ?? "#"}>
                   <Box
                     p={2}
-                    fontSize={"sm"}
+                    px={50}
+                    fontSize={"m"}
                     fontWeight={"medium"}
                     color={linkColor}
                     _hover={{
@@ -208,9 +209,19 @@ const DesktopNav: React.FC<any> = () => {
         ))}
       </Stack>
       <div className="App">
-        <button style={{ padding: 7 }} onClick={handleDownload}>
+        <Button
+          padding={5}
+          rounded={"full"}
+          size={"lg"}
+          fontWeight={"bold"}
+          colorScheme={"red"}
+          bg={"red.400"}
+          marginLeft={4}
+          _hover={{ bg: "red.500" }}
+          onClick={handleDownload}
+        >
           Track&Tube Info
-        </button>
+        </Button>
       </div>
     </>
   );
@@ -263,24 +274,32 @@ const MobileNav = ({ team }: any) => {
     );
   };
   return (
-
     <>
-    
-    <Stack
-      bg={useColorModeValue("gray.50", "gray.900")}
-      p={4}
-      display={{ md: "none" }}
-      borderBottom={"1px"}
-    >
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-     <div className="App">
-     <button style={{ padding: 3 ,fontSize: 15}} onClick={handleDownload}>
-       Track&Tube Info
-     </button>
-   </div>
-    </Stack>
+      <Stack
+        bg={useColorModeValue("gray.50", "gray.900")}
+        p={4}
+        display={{ md: "none" }}
+        borderBottom={"1px"}
+      >
+        {NAV_ITEMS.map((navItem) => (
+          <MobileNavItem key={navItem.label} {...navItem} />
+        ))}
+        <div className="App">
+          <Button
+            padding={2}
+            rounded={"full"}
+            marginTop={2}
+            size={"lg"}
+            fontWeight={"bold"}
+            colorScheme={"red"}
+            bg={"red.400"}
+            _hover={{ bg: "red.500" }}
+            onClick={handleDownload}
+          >
+            Track&Tube Info
+          </Button>
+        </div>
+      </Stack>
     </>
   );
 };
