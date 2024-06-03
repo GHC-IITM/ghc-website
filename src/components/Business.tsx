@@ -87,7 +87,7 @@ export default function SplitWithImage() {
           <Image
             rounded={"md"}
             alt={"feature image"}
-            src={"/ghcomp.jpeg"}
+            src={"/ghcomp.jpg"}
             objectFit={"cover"}
           />
         </Flex>

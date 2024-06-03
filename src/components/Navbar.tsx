@@ -152,7 +152,7 @@ const DesktopNav: React.FC<any> = () => {
 
   const handleDownload = () => {
     window.open(
-      "https://drive.google.com/drive/u/1/folders/1iVzoQsk9yQ1LQ4vAfU7wRwYVHcbwtA_q",
+      "https://ghc-document.s3.ap-south-1.amazonaws.com/GHC+2025+Track+%26+Tube+Documentation.pdf",
       "_blank",
       "noopener noreferrer"
     );
