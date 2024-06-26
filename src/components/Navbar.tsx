@@ -150,13 +150,13 @@ const DesktopNav: React.FC<any> = () => {
   const bgHoverColor = useColorModeValue("gray.200", "gray.700");
   const popoverContentBgColor = useColorModeValue("white", "gray.900");
 
-  const handleDownload = () => {
-    window.open(
-      "https://ghc-document.s3.ap-south-1.amazonaws.com/GHC+2025+Track+%26+Tube+Documentation.pdf",
-      "_blank",
-      "noopener noreferrer"
-    );
-  };
+  // const handleDownload = () => {
+  //   window.open(
+  //     "https://ghc-document.s3.ap-south-1.amazonaws.com/GHC+2025+Track+%26+Tube+Documentation.pdf",
+  //     "_blank",
+  //     "noopener noreferrer"
+  //   );
+  // };
 
   return (
     <>
@@ -209,7 +209,7 @@ const DesktopNav: React.FC<any> = () => {
         ))}
       </Stack>
       <div className="App">
-        <Button
+        {/* <Button
           padding={5}
           rounded={"full"}
           size={"lg"}
@@ -221,7 +221,7 @@ const DesktopNav: React.FC<any> = () => {
           onClick={handleDownload}
         >
           Track&Tube Info
-        </Button>
+        </Button> */}
       </div>
     </>
   );
@@ -266,13 +266,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 };
 
 const MobileNav = ({ team }: any) => {
-  const handleDownload = () => {
-    window.open(
-      "https://drive.google.com/drive/u/1/folders/1iVzoQsk9yQ1LQ4vAfU7wRwYVHcbwtA_q",
-      "_blank",
-      "noopener noreferrer"
-    );
-  };
+  // const handleDownload = () => {
+  //   window.open(
+  //     "https://ghc-document.s3.ap-south-1.amazonaws.com/GHC+2025+Track+%26+Tube+Documentation.pdf",
+  //     "_blank",
+  //     "noopener noreferrer"
+  //   );
+  // };
   return (
     <>
       <Stack
@@ -285,7 +285,7 @@ const MobileNav = ({ team }: any) => {
           <MobileNavItem key={navItem.label} {...navItem} />
         ))}
         <div className="App">
-          <Button
+          {/* <Button
             padding={2}
             rounded={"full"}
             marginTop={2}
@@ -297,7 +297,7 @@ const MobileNav = ({ team }: any) => {
             onClick={handleDownload}
           >
             Track&Tube Info
-          </Button>
+          </Button> */}
         </div>
       </Stack>
     </>
@@ -403,6 +403,10 @@ const NAV_ITEMS: Array<NavItem> = [
         subLabel: "People behind the event!",
       },
     ],
+  },
+  {
+    label: "Documents",
+    href: "/documents",
   },
   {
     label: "Contact Us",
