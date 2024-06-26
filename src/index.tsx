@@ -25,11 +25,16 @@ import Activity from "./pages/about/Activity";
 import ProfilePage from "./pages/dashboard/Profile";
 import SettingsPage from "./pages/dashboard/Settings";
 import LectureSeries from "./pages/events/LectureSeries";
+import Documents from "./pages/Documents"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/documents",
+    element: <Documents />,
   },
   // {
   //   path: "/login",
