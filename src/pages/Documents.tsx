@@ -74,7 +74,7 @@ const Documents = () => {
                 rel="noopener noreferrer"
                 color={useColorModeValue("teal.500", "teal.300")}
               >
-                Rules and Regulation Document
+                Rules and Regulation Version 1.0{" "}
               </LinkOverlay>
             </Heading>
             <Text color={useColorModeValue("gray.600", "gray.300")}>
@@ -107,7 +107,7 @@ const Documents = () => {
                 rel="noopener noreferrer"
                 color={useColorModeValue("teal.500", "teal.300")}
               >
-                Track and Tube Information Document
+                Track and Tube Document
               </LinkOverlay>
             </Heading>
             <Text color={useColorModeValue("gray.600", "gray.300")}>

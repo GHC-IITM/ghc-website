@@ -107,6 +107,7 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={useBreakpointValue({ sm: 1, md: 4 })}
           align={"center"}
+          alignItems={"flex-end"}
         >
           <>
             <Button onClick={toggleColorMode}>
@@ -150,17 +151,9 @@ const DesktopNav: React.FC<any> = () => {
   const bgHoverColor = useColorModeValue("gray.200", "gray.700");
   const popoverContentBgColor = useColorModeValue("white", "gray.900");
 
-  // const handleDownload = () => {
-  //   window.open(
-  //     "https://ghc-document.s3.ap-south-1.amazonaws.com/GHC+2025+Track+%26+Tube+Documentation.pdf",
-  //     "_blank",
-  //     "noopener noreferrer"
-  //   );
-  // };
-
   return (
     <>
-      <Stack direction={"row"} alignItems={"center"} spacing={4}>
+      <Stack direction={"row"} spacing={4} justifyContent={"flex-end"} alignItems={"flex-end"}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -186,7 +179,6 @@ const DesktopNav: React.FC<any> = () => {
                   </Box>
                 </Link>
               </PopoverTrigger>
-
               {navItem.children && (
                 <PopoverContent
                   border={0}
@@ -207,26 +199,11 @@ const DesktopNav: React.FC<any> = () => {
             </Popover>
           </Box>
         ))}
+      
       </Stack>
-      <div className="App">
-        {/* <Button
-          padding={5}
-          rounded={"full"}
-          size={"lg"}
-          fontWeight={"bold"}
-          colorScheme={"red"}
-          bg={"red.400"}
-          marginLeft={4}
-          _hover={{ bg: "red.500" }}
-          onClick={handleDownload}
-        >
-          Track&Tube Info
-        </Button> */}
-      </div>
     </>
   );
 };
-
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link to={href!}>
@@ -285,19 +262,18 @@ const MobileNav = ({ team }: any) => {
           <MobileNavItem key={navItem.label} {...navItem} />
         ))}
         <div className="App">
-          {/* <Button
-            padding={2}
+          <Button
+            padding={5}
             rounded={"full"}
-            marginTop={2}
             size={"lg"}
             fontWeight={"bold"}
             colorScheme={"red"}
             bg={"red.400"}
+            marginLeft={4}
             _hover={{ bg: "red.500" }}
-            onClick={handleDownload}
           >
-            Track&Tube Info
-          </Button> */}
+            <Link to={"/documents" ?? "#"}>Document</Link>
+          </Button>
         </div>
       </Stack>
     </>
